@@ -48,6 +48,15 @@ const Header = () => {
                     Maciel Melo
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/danielnbarros/"
+                    target="_target"
+                    className="text-white"
+                  >
+                    Daniel Barros
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
