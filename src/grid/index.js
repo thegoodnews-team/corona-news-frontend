@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import csv from "csvtojson";
 import request from "request";
-import "../grid/index.css";
+import "./index.css";
 
 const Grid = () => {
   const [goodNews, setGoodNews] = useState([]);
-
+  
   useEffect(() => {
     csv()
-      .fromStream(request.get("https://thegoodnewscoronavirus.com/news.csv"))
+      .fromStream(request.get(`${window.location.origin}/news.csv`))
       .then(json => {
         setGoodNews(json.reverse());
       });
