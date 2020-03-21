@@ -23,12 +23,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - run: npm ci
-    - run: npm run build
     - name: Install Dependencies
-        run: echo ok
-    # - name: Build
-    #     run: npm run build
+      run: npm ci
+    - name: Build
+      run: npm run build
         
     # - name: Deploy to Firebase Staging
     #     if: github.ref == 'refs/heads/dev'
