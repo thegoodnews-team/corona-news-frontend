@@ -37,6 +37,30 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDw1TwakqM6oUZVcnPtXPFOiANfRlFQujg",
+        authDomain: "goodnews-2c75a.firebaseapp.com",
+        databaseURL: "https://goodnews-2c75a.firebaseio.com",
+        projectId: "goodnews-2c75a",
+        storageBucket: "goodnews-2c75a.appspot.com",
+        messagingSenderId: "155498693679",
+        appId: "1:155498693679:web:601fd4e1d636b95c81b2da",
+        measurementId: "G-82RTWRMG64"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
