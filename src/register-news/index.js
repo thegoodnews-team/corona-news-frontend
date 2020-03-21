@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../header/index";
+import Header from "../header";
 import { useFormReducer } from "../hooks/userFormReducer";
 import { SET_ONCHANGE } from "../actions/acation";
 import { HttpRequestService } from "../services/httpRequest.service";
