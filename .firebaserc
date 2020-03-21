@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "goodnews-2c75a"
+  },
+  "targets": {
+    "goodnews-2c75a": {
+      "hosting": {
+        "prod": [
+          "goodnews-2c75a"
+        ],
+        "staging": [
+          "goodnews-staging"
+        ]
+      }
+    }
+  }
+}
