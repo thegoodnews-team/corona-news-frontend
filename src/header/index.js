@@ -15,7 +15,7 @@ const Header = () => {
                 caos. Aqui mostraremos todas as notícias positivas em relação ao
                 corona vírus, com o objetivo de deixar esses dias mais leves e
                 esperançosos, mas lembrem-se, nosso cenário atual é bastante
-                crítico, fiquem em casa e lavem as mãos. ok1
+                crítico, fiquem em casa e lavem as mãos.
               </p>
             </div>
             <div className="col-sm-4 offset-md-1 py-4">
