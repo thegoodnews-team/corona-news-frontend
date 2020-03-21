@@ -1,0 +1,13 @@
+.text {
+  height: 60px;
+}
+.col {
+  margin-bottom: 30px;
+}
+.card {
+  border-radius: 10px;
+}
+.borderimg {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
