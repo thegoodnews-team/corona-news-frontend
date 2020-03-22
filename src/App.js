@@ -1,6 +1,5 @@
 import React from "react";
-import Routes from "./routes";
-import "./App.css";
+import Home from "./home";
 import Header from './header';
 import Footer from './footer';
 
@@ -8,7 +7,7 @@ function App() {
     return (
         <>
             <Header />
-            <Routes />
+            <Home />
             <Footer />
         </>
     );
