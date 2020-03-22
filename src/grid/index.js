@@ -21,13 +21,14 @@ const Grid = () => {
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {goodNews.map(item => (
               <div className="col" key={item.title}>
-                <a className="card shadow-sm" href={item.link} target="_blank">
+                <a className="card shadow-sm" href={item.link} target="_blank" rel="noopener noreferrer">
                   <img
                     className="borderimg"
                     width="100%"
                     height="225"
-                    src={item.linkImg}
-                  ></img>
+					src={item.linkImg}
+					alt={item.title}
+                  />
                   <div className="card-body">
                     <p className="card-text text">{item.title}</p>
                     <div className="d-flex justify-content-between align-items-center">
