@@ -38,26 +38,16 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
-
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161398384-1"></script>
     <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        authDomain: "goodnews-2c75a.firebaseapp.com",
-        apiKey: "AIzaSyDw1TwakqM6oUZVcnPtXPFOiANfRlFQujg",
-        projectId: "goodnews-2c75a",
-        appId: "1:155498693679:web:601fd4e1d636b95c81b2da",
-        measurementId: "G-82RTWRMG64"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-161398384-1');
     </script>
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
