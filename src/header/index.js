@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions */
 import React from "react";
-import "../header/index.css";
+import "./style.css";
 
 const Header = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import csv from "csvtojson";
 import request from "request";
-import "./index.css";
+import "./style.css";
 
 const Grid = () => {
   const [goodNews, setGoodNews] = useState([]);
