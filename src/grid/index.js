@@ -5,7 +5,7 @@ import "./style.css";
 
 const Grid = () => {
   const [goodNews, setGoodNews] = useState([]);
-  
+
   useEffect(() => {
     csv()
       .fromStream(request.get(`${window.location.origin}/news.csv`))
@@ -21,13 +21,18 @@ const Grid = () => {
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {goodNews.map(item => (
               <div className="col" key={item.title}>
-                <a className="card shadow-sm" href={item.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="card shadow-sm"
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     className="borderimg"
                     width="100%"
                     height="225"
-					src={item.linkImg}
-					alt={item.title}
+                    src={item.linkImg}
+                    alt={item.title}
                   />
                   <div className="card-body">
                     <p className="card-text text">{item.title}</p>
@@ -35,7 +40,13 @@ const Grid = () => {
                       <div className="btn-group"></div>
                     </div>
                   </div>
-				  <div className="card-footer bg-transparent color-black">Fonte: {item.fonte}</div>
+                  <div className="floart-left card-footer bg-transparent color-black">
+                    Data: {item.date}
+                  </div>
+
+                  <div className="float-rigt card-footer bg-transparent color-black">
+                    Fonte: {item.fonte}
+                  </div>
                 </a>
               </div>
             ))}
