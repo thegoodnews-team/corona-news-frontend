@@ -35,6 +35,7 @@ const Grid = () => {
                       <div className="btn-group"></div>
                     </div>
                   </div>
+				  <div className="card-footer bg-transparent color-black">Fonte: {item.fonte}</div>
                 </a>
               </div>
             ))}
