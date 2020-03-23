@@ -5,6 +5,24 @@ import "./style.css";
 const Header = () => {
   return (
     <div>
+		<div className="navbar navbar-dark bg-dark shadow-sm-new">
+        <div className="container">
+          <a href="/" className="navbar-brand d-flex align-items-center">
+            <strong>Good Corona News </strong>
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
       <div className="collapse bg-dark" id="navbarHeader">
         <div className="container">
           <div className="row">
@@ -60,24 +78,6 @@ const Header = () => {
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="navbar navbar-dark bg-dark shadow-sm-new">
-        <div className="container">
-          <a href="/" className="navbar-brand d-flex align-items-center">
-            <strong>Good Corona News </strong>
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarHeader"
-            aria-controls="navbarHeader"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
         </div>
       </div>
     </div>
