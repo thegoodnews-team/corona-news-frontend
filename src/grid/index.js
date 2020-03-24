@@ -40,12 +40,14 @@ const Grid = () => {
                       <div className="btn-group"></div>
                     </div>
                   </div>
-                  <div className="floart-left card-footer bg-transparent color-black">
-                    Data: {item.date}
-                  </div>
 
-                  <div className="float-rigt card-footer bg-transparent color-black">
-                    Fonte: {item.fonte}
+                  <div className="float-right card-footer bg-transparent color-black">
+					  <div className="float-left">
+					  	Fonte: {item.fonte}
+					  </div>
+                     <div className="float-right">
+					 	{item.date}
+					</div>
                   </div>
                 </a>
               </div>
