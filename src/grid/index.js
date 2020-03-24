@@ -14,6 +14,16 @@ const Grid = () => {
       });
   }, []);
 
+  const sendAnalitycs = (name) => {
+	const {gtag} = window;
+
+	gtag('event', "CLICK", {
+		'event_category': "NEWS",
+		'event_label': name,
+		'value': 0
+	  });
+  }
+
   return (
     <>
       <div className="album py-5 bg-light">
@@ -25,7 +35,8 @@ const Grid = () => {
                   className="card shadow-sm"
                   href={item.link}
                   target="_blank"
-                  rel="noopener noreferrer"
+				  rel="noopener noreferrer"
+				  onClick={() => sendAnalitycs(item.link)}
                 >
                   <img
                     className="borderimg"
