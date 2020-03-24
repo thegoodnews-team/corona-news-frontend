@@ -5,7 +5,7 @@ import "./style.css";
 
 const Grid = () => {
   const [goodNews, setGoodNews] = useState([]);
-  
+
   useEffect(() => {
     csv()
       .fromStream(request.get(`${window.location.origin}/news.csv`))
@@ -14,6 +14,16 @@ const Grid = () => {
       });
   }, []);
 
+  const sendAnalitycs = (name) => {
+	const {gtag} = window;
+
+	gtag('event', "CLICK", {
+		'event_category': "NEWS",
+		'event_label': name,
+		'value': 0
+	  });
+  }
+
   return (
     <>
       <div className="album py-5 bg-light">
@@ -21,13 +31,19 @@ const Grid = () => {
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {goodNews.map(item => (
               <div className="col" key={item.title}>
-                <a className="card shadow-sm" href={item.link} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="card shadow-sm"
+                  href={item.link}
+                  target="_blank"
+				  rel="noopener noreferrer"
+				  onClick={() => sendAnalitycs(item.link)}
+                >
                   <img
                     className="borderimg"
                     width="100%"
                     height="225"
-					src={item.linkImg}
-					alt={item.title}
+                    src={item.linkImg}
+                    alt={item.title}
                   />
                   <div className="card-body">
                     <p className="card-text text">{item.title}</p>
@@ -35,7 +51,15 @@ const Grid = () => {
                       <div className="btn-group"></div>
                     </div>
                   </div>
-				  <div className="card-footer bg-transparent color-black">Fonte: {item.fonte}</div>
+
+                  <div className="float-right card-footer bg-transparent color-black">
+					  <div className="float-left">
+					  	Fonte: {item.fonte}
+					  </div>
+                     <div className="float-right">
+					 	{item.date}
+					</div>
+                  </div>
                 </a>
               </div>
             ))}
