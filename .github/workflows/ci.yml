@@ -5,6 +5,7 @@ on:
     branches: 
         - master
         - dev
+        - gcp
 
 jobs:
   build:
@@ -29,20 +30,30 @@ jobs:
     - name: Build
       run: npm run build
         
-    - name: Deploy to Firebase Staging
-      if: github.ref == 'refs/heads/dev'
-      uses: w9jds/firebase-action@master
-      with:
-        args: "deploy --only hosting:staging"
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-        PROJECT_ID: 'goodnews-2c75a'
+    # - name: Deploy to Firebase Staging
+    #   if: github.ref == 'refs/heads/dev'
+    #   uses: w9jds/firebase-action@master
+    #   with:
+    #     args: "deploy --only hosting:staging"
+    #   env:
+    #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+    #     PROJECT_ID: 'goodnews-2c75a'
 
-    - name: Deploy to Firebase Prod
-      if: github.ref == 'refs/heads/master'
-      uses: w9jds/firebase-action@master
-      with:
-        args: "deploy --only hosting:prod"
+    # - name: Deploy to Firebase Prod
+    #   if: github.ref == 'refs/heads/master'
+    #   uses: w9jds/firebase-action@master
+    #   with:
+    #     args: "deploy --only hosting:prod"
+    #   env:
+    #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+    #     PROJECT_ID: 'goodnews-2c75a'
+        
+    - name: Deploy to GCP Staging
+      if: github.ref == 'refs/heads/gcp'
+      uses: actions-hub/gcloud@master
       env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-        PROJECT_ID: 'goodnews-2c75a'
+        PROJECT_ID: ${{secrets.GCLOUD_PROJECT_ID}}
+        APPLICATION_CREDENTIALS: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+        CLI: gsutil
+      with:
+        args: gsutil -m rsync -d -r ./build ${{secrets.STAGING_BUCKET}}
