@@ -9,16 +9,13 @@
 	font-size: 0.8rem;
 }
 
-.img-size {
+.news > .news-img {
 	height: 250px;
 	width: 350px;
-}
-
-.card > img {
-	height: 250px;
-	width: 100%;
 	border-top-left-radius: 10px;
- 	border-top-right-radius: 10px
+	border-top-right-radius: 10px;
+	background-position: left bottom;
+	background-size: cover;
 }
 
 .card-body-height {

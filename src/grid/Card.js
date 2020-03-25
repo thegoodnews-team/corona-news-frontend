@@ -22,7 +22,7 @@ export default function Card({ link, linkImg, title, fonte, date }) {
 			onClick={() => sendAnalitycs(link)}>
 			
 			<div className="card news">
-				<img className="card-img-top" src={linkImg} alt={title} />
+				<div className="news-img" style={{ backgroundImage: `url(${linkImg})`}}/>
 
 				<div className="card-body card-body-height">
 					<p className="card-text">{title}</p>
