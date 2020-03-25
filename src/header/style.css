@@ -28,13 +28,40 @@ p {
 }
 
 .navbar-toggler {
-    border-color: transparent !important;
+  border-color: transparent !important;
 }
 
 .navbar-toggler-icon {
-    background-image: url("../assets/menu-icon.svg") !important;
+  background-image: url("../assets/menu-icon.svg") !important;
+}
+
+.navbar-logo-icon {
+  top: 19px;
+  left: 126px;
+  width: 335px;
+  height: 22px;
+  opacity: 1;
+  background-image: url("../assets/logo.svg") !important;
 }
 
 button.navbar-toggler:focus {
-    outline: none;
+  outline: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-logo-icon {
+    width: 225px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navbar-logo-icon {
+    width: 185px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }

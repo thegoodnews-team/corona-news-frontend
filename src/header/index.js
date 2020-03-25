@@ -5,10 +5,10 @@ import "./style.css";
 const Header = () => {
   return (
     <div>
-		<div className="navbar navbar-dark bg-dark shadow-sm-new">
+      <div className="navbar navbar-dark bg-dark shadow-sm-new">
         <div className="container">
           <a href="/" className="navbar-brand d-flex align-items-center">
-            <strong>Good Corona News </strong>
+            <div className="navbar-logo-icon"></div>
           </a>
           <button
             className="navbar-toggler"
