@@ -4,17 +4,20 @@ import request from "request";
 import "./style.css";
 import Card from "./Card";
 
-export default function Grid () {
+export default function Grid() {
   const [goodNews, setGoodNews] = useState([]);
 
   useEffect(() => {
     csv()
-      .fromStream(request.get(`${window.location.origin}/news.csv`))
+      .fromStream(
+        request.get(
+          "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4KL9aw4PCXZ12mT_659WoihJr5Lu7xoZooXWhmcAVgNwfGqbMnX6Wk4MUxUgEYlD9XDeJ_zpXWg5n/pub?gid=0&single=true&output=csv"
+        )
+      )
       .then(json => {
         setGoodNews(json.reverse());
       });
   }, []);
-
 
   return (
     <>
@@ -31,4 +34,4 @@ export default function Grid () {
       </div>
     </>
   );
-};
+}

@@ -3,34 +3,35 @@
 }
 .card {
   border-radius: 10px;
+  width: 350px;
 }
 
 .text-footer-size {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .news > .news-img {
-	height: 250px;
-	width: 350px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	background-position: left bottom;
-	background-size: cover;
+  height: 250px;
+  width: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-position: left bottom;
+  background-size: cover;
 }
 
 .card-body-height {
-	height: 7.5rem;
+  height: 7.5rem;
 }
 
 .news {
-	color: #000;
-	font-weight: 600;
+  color: #000;
+  font-weight: 600;
 }
 
 .news-fonte {
-	color: #1575D5;
+  color: #1575d5;
 }
 
 .news-data {
-	color: #707070;
+  color: #707070;
 }
