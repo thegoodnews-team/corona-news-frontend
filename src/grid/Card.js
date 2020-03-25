@@ -16,24 +16,25 @@ const sendAnalitycs = (name) => {
 export default function Card({ link, linkImg, title, fonte, date }) {
 	return (
 		<a
-			className="card shadow-sm"
 			href={link}
 			target="_blank"
 			rel="noopener noreferrer"
 			onClick={() => sendAnalitycs(link)}>
+			
+			<div className="card news">
+				<img className="card-img-top" src={linkImg} alt={title} />
 
-			<img className="card-img-top" src={linkImg} alt={title} />
-
-			<div className="card-body">
-				<p className="card-text">{title}</p>
-			</div>
-
-			<div className="card-footer bg-transparent color-black text-footer-size">
-				<div className="float-left">
-					Fonte: {fonte}
+				<div className="card-body card-body-height">
+					<p className="card-text">{title}</p>
 				</div>
-				<div className="float-right">
-					{date}
+
+				<div className="card-footer bg-transparent text-footer-size">
+					<div className="float-left news-fonte">
+						{fonte}
+					</div>
+					<div className="float-right news-data">
+						{date}
+					</div>
 				</div>
 			</div>
 		</a>
