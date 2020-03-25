@@ -1,17 +1,36 @@
-.text {
-  height: 60px;
-}
 .col {
   margin-bottom: 30px;
 }
 .card {
   border-radius: 10px;
 }
-.borderimg {
-  border-top-left-radius: 10px !important;
-  border-top-right-radius: 10px !important;
+
+.text-footer-size {
+	font-size: 0.8rem;
 }
 
-.color-black {
+.news > .news-img {
+	height: 250px;
+	width: 350px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-position: left bottom;
+	background-size: cover;
+}
+
+.card-body-height {
+	height: 7.5rem;
+}
+
+.news {
 	color: #000;
+	font-weight: 600;
+}
+
+.news-fonte {
+	color: #1575D5;
+}
+
+.news-data {
+	color: #707070;
 }
