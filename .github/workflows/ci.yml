@@ -29,6 +29,25 @@ jobs:
     - name: Build
       run: npm run build
         
+    - name: Deploy Staging
+      if: github.ref == 'refs/heads/dev'
+      uses: actions-hub/gcloud@master
+      env:
+        PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
+        APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+      with:
+        args: app deploy app.staging.yaml
+        
+    - name: Deploy Production
+      if: github.ref == 'refs/heads/master'
+      uses: actions-hub/gcloud@master
+      env:
+        PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
+        APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+      with:
+        args: app deploy
+    
+          
     - name: Deploy to Firebase Staging
       if: github.ref == 'refs/heads/dev'
       uses: w9jds/firebase-action@master
