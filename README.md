@@ -1,3 +1,12 @@
+## Staging
+Commits on dev goes to staging automatically.
+
+Staging code is hosted on [https://staging.thegoodnewscoronavirus.com](https://staging.thegoodnewscoronavirus.com).
+
+
+================================
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

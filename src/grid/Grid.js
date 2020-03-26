@@ -23,7 +23,7 @@ export default function Grid() {
     <>
       <div className="album py-5 bg-light">
         <div className="container">
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2  row-cols-lg-3 g-3">
             {goodNews.map(item => (
               <div className="col" key={item.title}>
                 <Card key={item.title} {...item} />

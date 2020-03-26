@@ -1,0 +1,14 @@
+runtime: nodejs12
+resources:
+  cpu: 1
+  disk_size_gb: 0.5
+
+handlers:
+  - url: /
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /
+    static_dir: build
+  - url: /.*
+    script: auto
+    secure: always

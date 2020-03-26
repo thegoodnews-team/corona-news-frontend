@@ -3,7 +3,6 @@
 }
 .card {
   border-radius: 10px;
-  width: 350px;
 }
 
 .text-footer-size {
@@ -15,7 +14,7 @@
   width: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background-position: left bottom;
+  background-position: center center;
   background-size: cover;
 }
 
