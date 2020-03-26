@@ -30,29 +30,39 @@ jobs:
     - name: Build
       run: npm run build
         
-    # - name: Deploy to Firebase Staging
-    #   if: github.ref == 'refs/heads/dev'
-    #   uses: w9jds/firebase-action@master
-    #   with:
-    #     args: "deploy --only hosting:staging"
-    #   env:
-    #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-    #     PROJECT_ID: 'goodnews-2c75a'
-
-    # - name: Deploy to Firebase Prod
-    #   if: github.ref == 'refs/heads/master'
-    #   uses: w9jds/firebase-action@master
-    #   with:
-    #     args: "deploy --only hosting:prod"
-    #   env:
-    #     FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-    #     PROJECT_ID: 'goodnews-2c75a'
-        
     - name: Deploy Staging
-      if: github.ref == 'refs/heads/gcp'
+      if: github.ref == 'refs/heads/dev'
       uses: actions-hub/gcloud@master
       env:
-        PROJECT_ID: thegoodnewscoronavirus
-        APPLICATION_CREDENTIALS: ewogICJ0eXBlIjogInNlcnZpY2VfYWNjb3VudCIsCiAgInByb2plY3RfaWQiOiAidGhlZ29vZG5ld3Njb3JvbmF2aXJ1cyIsCiAgInByaXZhdGVfa2V5X2lkIjogImJjODIwYWQxOTRiZDQ4YWY3NDkzZGFjMWQ1ZmFjMTI0ZGJjYTYwMzQiLAogICJwcml2YXRlX2tleSI6ICItLS0tLUJFR0lOIFBSSVZBVEUgS0VZLS0tLS1cbk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktjd2dnU2pBZ0VBQW9JQkFRRGNBSnBZQ0k0ci9nTHVcbnNYZEMrSHhJZHFHL2p1ak1RUS9mNys2aExjL2ZMZ1RJT3FRNG1zbldVb1A1aWQyTVozVEsxeW52dnp2ODNCdHZcblpUOW44UWJVQVNLdXhudEJHVGNxTkppZFhDSTVIcXgrMmdEZDE1UW0vVTBEZldFN2o4aEw2QzVGU05HTWZ4K2xcbkdjblU0UFBhNUhKRnFWdVFmWDFPZ3BSUGZ3ZXo0WDAzWkR1TnVRV2NhbmhVWHZtUjEra1h6am9HUG9XMjdHQUhcbldpWWZxd2thS0pNcGljT0NxODkzR0tvVzYzNzdkcGZFeHBReGh4cXUyN3NON25uNTA1M0FJRUJtNHpJRUprZ0JcbkNtZ0krOU1vS21WaG1FNWhFTVZoeS96cFlHNjVROUY4TWdtTEhFS2h6djhXcWVjdE5MWlAwRUpJVkNLMVFWWUZcbmxTTHU3bkdaQWdNQkFBRUNnZ0VBYkZEbHJNTWxrRlpEQmxjY296M3BIdG85bjYwU1JBSWllVHhOamxDYVlFVHRcbmVOR2FhZjRYc3F3MHF3YnNLOFVCOVI1RFdQVWI2VTVMT2FpdE01VXhLZThYTHRxczgydWhRK2ZhWGR0dlJCVXNcbmsxWHRDRXdyOXBoT3N4R25iaVpIMU11UEFIQ3VMeENsdVdrOWZGQjI3MFg3VnYzZmhYK3JVcHlxdllzSzlVMzhcbjVZZ2ExS3A0T0NHSjR2K3V4RlN4U0laaTdaWXJWSzkzZ3ZvRVp2ZDZGQXFGaXZhMUNueFVZZU0wYTZaU1lDVkVcbmJhN2Q1VmRKUC9PSkR4YjExTEI0REhPVHlSK1AzcGpVNDd5VFlHMzQxQ1dMK2VSRVkwUUErNmxtWE5DVFV6b0tcbnpaalpreGFpbkQ5MGgzVHJQYlhER1dzZjRkamhqSEFpVEErUGxSeERHd0tCZ1FEOU1GMjdrdWdFY2pyTzZ4Y3RcbnF3d0w0dlZZcGZrcFdpbSs5Ymg5ZXcxQkZ6UDV1UFlLd1JWVjI3S28wOElDUFp0NHkxRmVnTHdvWkJ6ZWhsTlFcbmdBdzlUVjFldlpEck1IVHR6cExLTnpzUWkrazc5c05PZ2IvbnhqWENJNU50bE51dWl5N2w2Nm5XUFdmUGtmUkxcbklUOFRBc2xSL2tuT1NHSUNVTHF4Uy9ZR0F3S0JnUURlY2VsRnZocUllaUpoVnRSZUg2bS9UMGNZU1hiUFJEMzRcbjdmcnJuQVZZcjhCb3l3S0k2TDBnVGhUbjV4aEpURjR4WEprTDhNMWVtcUpLa24vTmNPUHo3c0p6Z0ZEc2lxTzZcbjJnVW5JTFpzbVFXL1k0bndPZk12RVdvYjNFSWRzN0xRZDVvbThaVE5zZDJNdGdMZ1lXNkNRQzBrWGlPTWNMTDBcbll3RUxsczhWTXdLQmdRQ0dsdTFjeHMwYmYvV1BCUjEvSTB2MkRhSEtqQUFWWVY2THFtZDJITEdCQm1xVXR5UGpcbnQ1dzExZUgxS1F3YTBORVN0MUg3NEljbEdZTFhMNlNlU0ZNNVN5VDFOZVFSZ2VMR2YyYzhvM3Q4WWtPTG9yTlRcbnlsbFBSZWhSMlVPSG52ZmdveEE5SExkZHNhcTdocVRNUTFJYU13TDkyU1UyeVBlQXI1VnVwaWlVTFFLQmdDNWhcbnNCTWp0V0tabk11UkVFemo2MEFCcHNCUXFSNUVpMnQ1SzZXdTdZcDFjdmdteEV1Snc4MlZtbFJVWWtMK1VuR1dcbmJpOElNYm8xSWZ2TW1pdGJDNXpVUHVWWWJ3Y3pUVHBydFVGWVY5RkRBdWpLTjN2SWlZVlo2emNOOFJkQ1hkbUxcbjVxK1NGY1hoL1dFV25uanN0OThleElyZHVpblJZZThGS2JXaDUySHpBb0dBQVZDemtiNEVxTVBxL1grS09hU1Vcbk90RXJtMmViczhuOWVVS1ozdVA4T3kvOWE0RGZqSm1qYmw4RU5sSWJPYmdSWlMyZzdwYUtCMERCYWVNRzdaeWJcbmx5ZmE2S1JrYU42RzB5ZzZMUjBtTUd5aGNvWDQxL2QxcERDRkRvZHk1bi9kU2lmeHNoU3FZbFJXQ2FFcVMva01cbkFOaUJiMEdIeVA4WnVxamJHV2dvc0FrPVxuLS0tLS1FTkQgUFJJVkFURSBLRVktLS0tLVxuIiwKICAiY2xpZW50X2VtYWlsIjogInRtcDItMjJAdGhlZ29vZG5ld3Njb3JvbmF2aXJ1cy5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsCiAgImNsaWVudF9pZCI6ICIxMDA4NDc2MjkyNzM5ODM4NzcwODQiLAogICJhdXRoX3VyaSI6ICJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20vby9vYXV0aDIvYXV0aCIsCiAgInRva2VuX3VyaSI6ICJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsCiAgImF1dGhfcHJvdmlkZXJfeDUwOV9jZXJ0X3VybCI6ICJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9vYXV0aDIvdjEvY2VydHMiLAogICJjbGllbnRfeDUwOV9jZXJ0X3VybCI6ICJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9yb2JvdC92MS9tZXRhZGF0YS94NTA5L3RtcDItMjIlNDB0aGVnb29kbmV3c2Nvcm9uYXZpcnVzLmlhbS5nc2VydmljZWFjY291bnQuY29tIgp9Cg==
+        PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
+        APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
         args: app deploy app.staging.yaml
+        
+    - name: Deploy Production
+      if: github.ref == 'refs/heads/master'
+      uses: actions-hub/gcloud@master
+      env:
+        PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
+        APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+      with:
+        args: app deploy
+    
+          
+    - name: Deploy to Firebase Staging
+      if: github.ref == 'refs/heads/dev'
+      uses: w9jds/firebase-action@master
+      with:
+        args: "deploy --only hosting:staging"
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        PROJECT_ID: 'goodnews-2c75a'
+
+    - name: Deploy to Firebase Prod
+      if: github.ref == 'refs/heads/master'
+      uses: w9jds/firebase-action@master
+      with:
+        args: "deploy --only hosting:prod"
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        PROJECT_ID: 'goodnews-2c75a'
