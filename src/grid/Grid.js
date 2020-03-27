@@ -21,7 +21,7 @@ export default function Grid() {
 
   return (
     <>
-      <div className="album py-5 bg-light">
+      <div className="album py-5">
         <div className="container">
           <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2  row-cols-lg-3 g-3">
             {goodNews.map(item => (
