@@ -10,8 +10,8 @@ const About = () => {
   return (
     <>
       <div className="container">
-        <h1 className="row-sm title">Sobre</h1>
-        <div className="row-sm subtitle">
+        <h1 className=" row-sm title">Sobre</h1>
+        <div className=" row-sm subtitle">
           <h2>Nossa missão</h2>
           <p className="description">
             Criamos este site para mostrar que existe esperança em meio ao caos.
