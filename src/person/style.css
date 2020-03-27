@@ -3,8 +3,10 @@
   text-align: left;
   font-weight: bold;
   margin: 0px;
+  font-size: 24px;
 }
 
 .func {
   color: #505050;
+  font-weight: 500;
 }
