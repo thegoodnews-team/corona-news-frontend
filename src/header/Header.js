@@ -4,6 +4,7 @@ import logo from '../assets/logo.svg'
 
 const Header = () => {
 	return (
+		<>
 		<nav className={`navbar navbar-expand-lg navbar-light sticky-top ${style.nav}`}>
 			<div className={`container ${style.containerPadX}`}>
 
@@ -22,7 +23,6 @@ const Header = () => {
 
 					<span className={`navbar-toggler-icon ${style.togglerIcon}`} />
 				</button>
-
 				<div className="collapse navbar-collapse" id="toggler">
 					<ul className="navbar-nav ml-auto mt-lg-0">
 						<li className={`nav-item ${style.navItem}`}>
@@ -36,6 +36,10 @@ const Header = () => {
 
 			</div>
 		</nav>
+		<div className={`text-center sticky-top ${style.headerMsg}`}> 
+			<span>As noticias não mudam o cenário atual do Brasil.</span> Fiquem em casa e lavem as mãos.
+		</div>
+		</>
 	);
 };
 
