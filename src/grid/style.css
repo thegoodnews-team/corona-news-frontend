@@ -34,3 +34,7 @@
 .news-data {
   color: #707070;
 }
+
+.row {
+  margin-right: -15px !important;
+}
