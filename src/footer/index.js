@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-sm">
               <h1 className="row-sm contact">Contato</h1>
-              <div className="row-sm">
+              <div className="row-sm social2">
                 <a
                   href="https://instagram.com/thegoodnewscoronavirus"
                   target="_blank"

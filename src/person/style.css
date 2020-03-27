@@ -1,0 +1,10 @@
+.name {
+  width: 244px;
+  height: 30px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.description {
+  color: #505050;
+}
