@@ -1,0 +1,35 @@
+.bg {
+  margin-top: 60px;
+  background: #f5f7fc 0% 0% no-repeat padding-box;
+  height: 400px;
+}
+
+.h1 {
+  color: black !important;
+}
+
+.tw {
+  margin-top: 40px;
+  width: 265px;
+  height: 40px;
+}
+
+.social {
+  margin-top: 50px !important;
+  width: 100px !important;
+  height: 100px !important;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-left: -10px;
+}
+
+.col {
+  flex-grow: 0;
+}
+
+.contact {
+  margin-bottom: 40px;
+}
+.social2 {
+  margin-bottom: 40px;
+}

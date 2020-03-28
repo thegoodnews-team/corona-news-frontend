@@ -1,0 +1,31 @@
+.title {
+  margin-top: 79px !important;
+  font-size: 54px;
+}
+
+.subtitle {
+  margin-top: 60px !important;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+.description {
+  margin-top: 24px !important;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.person {
+  margin-top: 40px;
+}
+
+.img {
+  width: 139px;
+  height: 138px;
+}
+
+.row {
+  margin-right: 50px;
+}
