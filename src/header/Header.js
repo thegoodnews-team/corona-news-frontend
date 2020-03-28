@@ -37,7 +37,8 @@ const Header = () => {
 			</div>
 		</nav>
 		<div className={`text-center sticky-top ${style.headerMsg} p-1 shadow-sm`}> 
-			<span>As noticias não mudam o cenário atual do Brasil.</span> Fiquem em casa e lavem as mãos.
+            <span>Vale lembrar que as noticias não mudam o cenário atual do Brasil.</span>
+            Fiquem em casa e lavem as mãos.
 		</div>
 		</>
 	);
