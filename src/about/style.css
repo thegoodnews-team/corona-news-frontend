@@ -1,0 +1,47 @@
+/* About style */
+.title {
+  margin-top: 79px !important;
+  font-size: 54px;
+}
+
+.subtitle {
+  margin-top: 60px !important;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+.description {
+  margin-top: 24px !important;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.person {
+  margin-top: 40px;
+}
+
+.img {
+  width: 139px;
+  height: 138px;
+}
+/* 
+.row {
+  margin-right: 50px;
+} */
+
+
+/* Person style */
+.name {
+  min-width: 244px;
+  /* text-align: left; */
+  font-weight: bold;
+  margin: 0px;
+  font-size: 24px;
+}
+
+.role {
+  color: #505050;
+  font-weight: 500;
+}

@@ -1,16 +1,16 @@
 import React from "react";
-import Home from "./home";
-import Header from './header';
-import Footer from './footer';
+import Routes from "./routes";
+import Header from "./header";
+import Footer from "./footer";
 
 function App() {
-    return (
-        <>
-            <Header />
-            <Home />
-            <Footer />
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <Routes></Routes>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
