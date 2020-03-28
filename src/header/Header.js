@@ -8,7 +8,7 @@ const Header = () => {
 		<nav className={`navbar navbar-expand-lg navbar-light sticky-top ${style.nav}`}>
 			<div className={`container ${style.containerPadX}`}>
 
-				<a className="navbar-brand" href="#top">
+				<a className="navbar-brand" href="/">
 					<img className={style.logoIcon} src={logo} alt='The Good News Corona Virus'/>
 				</a>
 
@@ -26,7 +26,7 @@ const Header = () => {
 				<div className="collapse navbar-collapse" id="toggler">
 					<ul className="navbar-nav ml-auto mt-lg-0">
 						<li className={`nav-item ${style.navItem}`}>
-							<a className={`nav-link ${style.navLink}`} href="/">Inicio</a>
+							<a className={`nav-link ${style.navLink}`} href="/">Notícias</a>
 						</li>
 						<li className={`nav-item ${style.navItem}`}>
 							<a className={`nav-link ${style.navLink}`} href="/sobre">Sobre</a>
@@ -36,7 +36,7 @@ const Header = () => {
 
 			</div>
 		</nav>
-		<div className={`text-center sticky-top ${style.headerMsg}`}> 
+		<div className={`text-center sticky-top ${style.headerMsg} p-1 shadow-sm`}> 
 			<span>As noticias não mudam o cenário atual do Brasil.</span> Fiquem em casa e lavem as mãos.
 		</div>
 		</>

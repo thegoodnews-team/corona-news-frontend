@@ -14,12 +14,14 @@ export default function Grid() {
   const [hasMoreItems, setHasMoreItems] = useState(true);
 
   useEffect(() => {
+
     const loadAllItems = async () => {
       const json = await csv().fromStream(
         request.get(
           "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4KL9aw4PCXZ12mT_659WoihJr5Lu7xoZooXWhmcAVgNwfGqbMnX6Wk4MUxUgEYlD9XDeJ_zpXWg5n/pub?gid=0&single=true&output=csv"
         )
       );
+
       setAllItems(json.reverse());
       setPageIndex(1);
     };
@@ -28,12 +30,9 @@ export default function Grid() {
   }, []);
 
   useEffect(() => {
-    const start = (pageIndex - 1) * BATCH_SIZE;
     const end = pageIndex * BATCH_SIZE;
-
-    const items = allItems.slice(start, end);
-
-    setVisibleItems(visibleItems.concat(items));
+    
+    setVisibleItems(allItems.slice(0, end));
     setHasMoreItems(allItems.length > visibleItems.length);
   }, [pageIndex]);
 

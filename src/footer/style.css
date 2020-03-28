@@ -1,5 +1,5 @@
 .bg {
-  margin-top: 60px;
+  margin-top: 40px;
   background: #f5f7fc 0% 0% no-repeat padding-box;
   height: 400px;
 }
@@ -20,7 +20,6 @@
   height: 100px !important;
   margin-left: 0px;
   margin-right: 0px;
-  margin-left: -10px;
 }
 
 .col {
@@ -32,4 +31,9 @@
 }
 .social2 {
   margin-bottom: 40px;
+}
+
+.info {
+  font-weight: 600;
+  color: #505050;
 }
