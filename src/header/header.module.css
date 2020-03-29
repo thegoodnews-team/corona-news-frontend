@@ -1,6 +1,7 @@
 .nav {
 	background-color: #1575d5;
 	padding: 15px;
+	z-index: 900;
 }
 
 .containerPadX {
@@ -46,6 +47,7 @@
 	top: 70px;
 	font-style: italic;
 	background-color: #fff;
+	z-index: 850;
 }
 
 @media only screen and (max-width: 991px) {
