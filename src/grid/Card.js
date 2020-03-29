@@ -1,15 +1,7 @@
 import React from "react";
 import "./style.css";
+import sendAnalitycs from '../analitycs'
 
-const sendAnalitycs = name => {
-  const { gtag } = window;
-
-  gtag("event", "CLICK", {
-    event_category: "NEWS",
-    event_label: name,
-    value: 0
-  });
-};
 
 export default function Card({ link, linkImg, title, fonte, date }) {
   return (
@@ -17,7 +9,7 @@ export default function Card({ link, linkImg, title, fonte, date }) {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => sendAnalitycs(link)}
+      onClick={() => sendAnalitycs({name: link, category: "NEWS", type: "CLICK"})}
     >
       <div className="card news">
         <div
