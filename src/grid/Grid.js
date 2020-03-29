@@ -34,29 +34,38 @@ export default function Grid() {
     
     setVisibleItems(allItems.slice(0, end));
     setHasMoreItems(allItems.length > visibleItems.length);
-  }, [pageIndex]);
+  }, [allItems, pageIndex, visibleItems.length]);
 
   const fetchMoreData = () => {
     setPageIndex(pageIndex + 1);
   };
 
-  return (
-    <InfiniteScroll
-      dataLength={visibleItems.length}
-      next={fetchMoreData}
-      hasMore={hasMoreItems}
-    >
-      <div className="album py-5">
-        <div className="container">
-          <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
-            {visibleItems.map(item => (
-              <div className="col" key={item.title}>
-                <Card key={item.title} {...item} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </InfiniteScroll>
-  );
+  if (allItems.length > 0) {
+	return (
+		<InfiniteScroll
+			dataLength={visibleItems.length}
+			next={fetchMoreData}
+			hasMore={hasMoreItems}
+		>
+			<div className="album py-5">
+				<div className="container">
+					<div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+						{visibleItems.map(item => (
+							<div className="col" key={item.title}>
+								<Card key={item.title} {...item} />
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</InfiniteScroll>
+	);
+	}
+	return (
+		<div className="fluid-container text-center">
+			<div className="spinner-grow text-primary load-spin" role="status">
+				<span className="sr-only">Carregando...</span>
+			</div>
+		</div>
+	)
 }
