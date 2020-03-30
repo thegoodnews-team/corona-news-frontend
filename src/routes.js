@@ -1,9 +1,9 @@
-import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "./home";
-import About from "./about";
+import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Home from './home'
+import About from './about'
 
-export default function Routes() {
+export default function Routes () {
   return (
     <BrowserRouter>
       <Switch>
@@ -11,5 +11,5 @@ export default function Routes() {
         <Route exact path="/sobre" component={About} />
       </Switch>
     </BrowserRouter>
-  );
+  )
 }

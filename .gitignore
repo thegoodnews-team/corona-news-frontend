@@ -2,3 +2,4 @@ node_modules
 build
 .firebase
 */**/.DS_Store
+build/
