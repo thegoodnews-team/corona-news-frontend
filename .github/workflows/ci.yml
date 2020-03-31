@@ -37,7 +37,7 @@ jobs:
         PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
-        args: app deploy app.staging.yaml --version=staging
+        args: app deploy app.staging.yaml --version=dev
         
     - name: Deploy Production
       if: github.ref == 'refs/heads/master'
