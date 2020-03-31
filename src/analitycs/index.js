@@ -1,3 +1,3 @@
 import a from './analytics'
 
-export default a;
+export default a

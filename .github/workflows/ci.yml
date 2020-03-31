@@ -28,28 +28,8 @@ jobs:
 
     - name: Build
       run: npm run build
-        
-    
-    - name: Deploy to Firebase Staging
-      if: github.ref == 'refs/heads/dev'
-      uses: w9jds/firebase-action@master
-      with:
-        args: "deploy --only hosting:staging"
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-        PROJECT_ID: 'goodnews-2c75a'
 
-    - name: Deploy to Firebase Prod
-      if: github.ref == 'refs/heads/master'
-      uses: w9jds/firebase-action@master
-      with:
-        args: "deploy --only hosting:prod"
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-        PROJECT_ID: 'goodnews-2c75a'
-
-
-    
+      
     - name: Deploy Staging
       if: github.ref == 'refs/heads/dev'
       uses: actions-hub/gcloud@master
@@ -57,7 +37,7 @@ jobs:
         PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
-        args: app deploy app.staging.yaml
+        args: app deploy app.staging.yaml --version=dev
         
     - name: Deploy Production
       if: github.ref == 'refs/heads/master'
@@ -66,4 +46,4 @@ jobs:
         PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
-        args: app deploy
+        args: app deploy --version=prod

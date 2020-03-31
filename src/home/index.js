@@ -1,9 +1,9 @@
-import React from "react";
-import Grid from "../grid";
+import React from 'react'
+import Grid from '../grid'
 const Home = () => {
-    return (
-        <Grid></Grid>
-    );
-};
+  return (
+    <Grid></Grid>
+  )
+}
 
-export default Home;
+export default Home
