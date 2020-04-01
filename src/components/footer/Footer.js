@@ -1,9 +1,9 @@
 import React from 'react'
 import './style.css'
-import TW from '../assets/tw.png'
-import insta from '../assets/insta.svg'
-import email from '../assets/email.svg'
-import send from '../analitycs'
+import TW from '../../assets/tw.png'
+import insta from '../../assets/insta.svg'
+import email from '../../assets/email.svg'
+import send from '../../analitycs'
 
 const Footer = () => {
   return (
