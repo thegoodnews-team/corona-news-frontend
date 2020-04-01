@@ -80,7 +80,7 @@ export default function Home () {
     return (
       <>
         <div className='col' key={item.title}>
-          <Card {...item} />
+          <Card key={item.title} {...item} />
         </div>
         {/* {ad} */}
       </>

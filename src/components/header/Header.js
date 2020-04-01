@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './header.module.css'
 import logo from '../../assets/logo.svg'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -26,10 +27,11 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="toggler">
             <ul className="navbar-nav ml-auto mt-lg-0">
               <li className={`nav-item ${style.navItem}`}>
-                <a className={`nav-link ${style.navLink}`} href="/">Notícias</a>
+                <Link to="/" className={`nav-link ${style.navLink}`}> Notícias </Link>
               </li>
               <li className={`nav-item ${style.navItem}`}>
-                <a className={`nav-link ${style.navLink}`} href="/sobre">Sobre</a>
+                <Link to="/sobre" className={`nav-link ${style.navLink}`}> Sobre </Link>
+
               </li>
             </ul>
           </div>
