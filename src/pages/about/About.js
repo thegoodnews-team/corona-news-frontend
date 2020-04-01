@@ -1,10 +1,10 @@
 import React from 'react'
 import './style.css'
 import Person from './Person'
-import Adnet from '../assets/adnet.png'
-import Maciel from '../assets/maciel.png'
-import Rafa from '../assets/rafa.png'
-import Urso from '../assets/urso.png'
+import Adnet from '../../assets/adnet.png'
+import Maciel from '../../assets/maciel.png'
+import Rafa from '../../assets/rafa.png'
+import Urso from '../../assets/urso.png'
 
 const About = () => {
   return (
