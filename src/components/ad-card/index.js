@@ -1,3 +1,3 @@
 import AdCard from './AdCard'
 
-export default AdCard;
+export default AdCard

@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import csv from 'csvtojson';
-import request from 'request';
-import './style.css';
-import Card from './Card';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import React, { useState, useEffect } from 'react'
+import csv from 'csvtojson'
+import request from 'request'
+import './style.css'
+import Card from './Card'
+import InfiniteScroll from 'react-infinite-scroll-component'
 // import AdCard from '../../components/ad-card';
 
-export default function Home() {
-  const BATCH_SIZE = 9;
+export default function Home () {
+  const BATCH_SIZE = 9
 
   // const [adItems, setAdItems] = useState([]);
-  const [allItems, setAllItems] = useState([]);
-  const [visibleItems, setVisibleItems] = useState([]);
-  const [pageIndex, setPageIndex] = useState(0);
-  const [hasMoreItems, setHasMoreItems] = useState(true);
+  const [allItems, setAllItems] = useState([])
+  const [visibleItems, setVisibleItems] = useState([])
+  const [pageIndex, setPageIndex] = useState(0)
+  const [hasMoreItems, setHasMoreItems] = useState(true)
 
   useEffect(() => {
     const loadAllItems = async () => {
@@ -21,10 +21,10 @@ export default function Home() {
         request.get(
           'https://docs.google.com/spreadsheets/d/e/2PACX-1vS4KL9aw4PCXZ12mT_659WoihJr5Lu7xoZooXWhmcAVgNwfGqbMnX6Wk4MUxUgEYlD9XDeJ_zpXWg5n/pub?gid=0&single=true&output=csv'
         )
-      );
+      )
 
-      setAllItems(newsJson.reverse());
-      setPageIndex(1);
+      setAllItems(newsJson.reverse())
+      setPageIndex(1)
 
       // const adsJson = await csv().fromStream(
       //   request.get(
@@ -32,21 +32,21 @@ export default function Home() {
       //   )
       // );
       // setAdItems(adsJson);
-    };
+    }
 
-    loadAllItems();
-  }, []);
+    loadAllItems()
+  }, [])
 
   useEffect(() => {
-    const end = pageIndex * BATCH_SIZE;
+    const end = pageIndex * BATCH_SIZE
 
-    setVisibleItems(allItems.slice(0, end));
-    setHasMoreItems(allItems.length > visibleItems.length);
-  }, [allItems, pageIndex, visibleItems.length]);
+    setVisibleItems(allItems.slice(0, end))
+    setHasMoreItems(allItems.length > visibleItems.length)
+  }, [allItems, pageIndex, visibleItems.length])
 
   const fetchMoreData = () => {
-    setPageIndex(pageIndex + 1);
-  };
+    setPageIndex(pageIndex + 1)
+  }
 
   const buildLoading = () => {
     return (
@@ -55,8 +55,8 @@ export default function Home() {
           <span className='sr-only'>Carregando...</span>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   // const buildAd = index => {
   //   if (index < adItems.length) {
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
         {/* {ad} */}
       </>
-    );
+    )
   }
 
   const buildContent = () => {
@@ -100,9 +100,9 @@ export default function Home() {
           </div>
         </div>
       </InfiniteScroll>
-    );
-  };
+    )
+  }
 
-  console.log('render');
-  return allItems.length > 0 ? buildContent() : buildLoading();
+  console.log('render')
+  return allItems.length > 0 ? buildContent() : buildLoading()
 }

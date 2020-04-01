@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import './style.css';
-import sendAnalitycs from '../../analitycs';
-import PropTypes from 'prop-types';
+import React, { useEffect } from 'react'
+import './style.css'
+import sendAnalitycs from '../../analitycs'
+import PropTypes from 'prop-types'
 
-export default function AdCard({ link, image, title }) {
+export default function AdCard ({ link, image, title }) {
   useEffect(() => {
-    sendAnalitycs({ name: title, category: 'ADS', type: 'VIEW' });
-  }, [title]);
+    sendAnalitycs({ name: title, category: 'ADS', type: 'VIEW' })
+  }, [title])
 
   return (
     <a className='link' href={link} target='_blank' rel='noopener noreferrer' onClick={() => sendAnalitycs({ name: link, category: 'ADS', type: 'CLICK' })}>
@@ -18,11 +18,11 @@ export default function AdCard({ link, image, title }) {
         {/* <div className='ad-img' style={{ backgroundImage: `url('${image}')` }} /> */}
       </div>
     </a>
-  );
+  )
 }
 
 AdCard.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired
-};
+}
