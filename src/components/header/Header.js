@@ -30,6 +30,7 @@ const Header = () => {
                 <Link to="/" className={`nav-link ${style.navLink}`}> Notícias </Link>
               </li>
               <li className={`nav-item ${style.navItem}`}>
+                {/* <a className={`nav-link ${style.navLink}`} href="/sobre">Sobre</a> */}
                 <Link to="/sobre" className={`nav-link ${style.navLink}`}> Sobre </Link>
 
               </li>
