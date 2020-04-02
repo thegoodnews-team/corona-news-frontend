@@ -93,6 +93,6 @@ export default function CardsGrid({ content, ads, analyticsCategory }) {
 }
 
 CardsGrid.propTypes = {
-  items: PropTypes.array.isRequired,
+  content: PropTypes.array.isRequired,
   analyticsCategory: PropTypes.string.isRequired
 };
