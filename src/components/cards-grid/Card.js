@@ -3,13 +3,13 @@ import './style.css'
 import sendAnalitycs from '../../analitycs'
 import PropTypes from 'prop-types'
 
-export default function Card ({ link, linkImg, title, fonte, date }) {
+export default function Card ({ link, linkImg, title, fonte, date, analyticsCategory }) {
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => sendAnalitycs({ name: link, category: 'NEWS', type: 'CLICK' })}
+      onClick={() => sendAnalitycs({ name: link, category: analyticsCategory, type: 'CLICK' })}
     >
       <div className="card news">
         <div
