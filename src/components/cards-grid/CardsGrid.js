@@ -43,7 +43,7 @@ export default function CardsGrid({ content, analyticsCategory }) {
           <div className="container">
             <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
               {visibleItems.map(item => (
-                <div className="col" key={item.title}>
+                <div className="col" key={`${item.title}-${item.fonte}`}>
                   <Card {...item} analyticsCategory={analyticsCategory} />
                 </div>
               ))}
