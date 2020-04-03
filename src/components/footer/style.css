@@ -8,10 +8,12 @@
   color: black !important;
 }
 
-.tw {
-  margin-top: 40px;
-  width: 265px;
+.support-img-wide {
   height: 40px;
+}
+
+.support-img-tall {
+  height: 70px;
 }
 
 .social {
@@ -26,7 +28,7 @@
   flex-grow: 0;
 }
 
-.contact {
+.footer-title {
   margin-bottom: 40px;
 }
 .social2 {

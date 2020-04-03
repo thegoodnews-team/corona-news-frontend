@@ -3,10 +3,7 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard'
-  ],
+  extends: ['plugin:react/recommended', 'standard'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -18,14 +15,20 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  plugins: [
-    'react'
-  ],
+  plugins: ['react'],
   rules: {
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'never',
+        asyncArrow: 'always',
+        named: 'never'
+      }
+    ]
   },
-  "settings": {
-    "react": {
-      "version": "16.13.1"
+  settings: {
+    react: {
+      version: '16.13.1'
     }
   }
 }

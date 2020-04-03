@@ -1,4 +1,4 @@
-export default function send ({ name, type, category }) {
+export default function send({ name, type, category }) {
   const { gtag } = window
   gtag('event', type, {
     event_category: category,
