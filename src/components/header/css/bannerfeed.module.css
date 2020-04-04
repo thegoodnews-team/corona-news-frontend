@@ -1,0 +1,69 @@
+.counterBanner {
+	height: 72px;
+	background: #5E9FE2 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 6px #00000029;
+	border-radius: 0px 0px 10px 10px;
+	text-align: center;
+}
+
+.counterBanner:hover {
+	text-decoration: none;
+}
+
+.counterBannerTitle {
+	font-size: 14px;
+	color: #FFFFFF;
+	margin-top: 0.8rem;
+	margin-bottom: 0.2rem;
+}
+
+.counterBannerText {
+	font-weight: bold;
+	color: #FFFFFF;
+	opacity: 1;
+	margin-right: 2.5rem;
+}
+
+.counterBannerText:first-child {
+	margin-left: 1rem;
+}
+
+
+.counterBannerFlag {
+	margin-right: 0.5rem;
+}
+
+
+@media only screen and (max-width: 991px) {
+	.counterBanner {
+		width: 100%;
+		height: 2rem;
+		border-radius: .5rem .5rem 0 0;
+	}
+
+	.counterBannerTitle > span {
+		display: none;
+	}
+
+	.counterBannerText {
+		margin-right: 0.5rem;
+		font-size: 0.8rem;
+	}
+
+	.counterBannerText:first-child {
+		margin-left: 0.25rem;
+	}
+
+	.counterBannerText:nth-child(2) {
+		margin-right: 0px;
+	}
+
+
+	.counterBannerFlag {
+		height: 0.8rem;
+	}
+
+	.displayMdInline {
+		display: inline;
+	}
+}

@@ -1,0 +1,130 @@
+.nav {
+	background-color: #1575d5;
+	z-index: 900;
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+
+.brand {
+	margin-top: 0.8rem
+}
+
+.containerPadX {
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+
+.navLink {
+	padding: 0 1.5rem;
+	color: #fff !important;
+}
+
+.navItem {
+    padding: 0 1.5rem;
+	border-left: #fff solid thin;
+	color: #fff;
+	margin: 1rem 0;
+}
+
+.navItem:hover {
+	color: #fff;
+	font-weight: bold;
+}
+
+.active {
+	font-weight: bold;
+}
+
+.navItem:first-child {
+	margin-left: auto;
+}
+
+.navItem > .active {
+	font-weight: bold;
+}
+
+.navItem:first-child {
+	border-style: none;
+}
+
+.logoIcon {
+	top: 19px;
+	left: 126px;
+	width: 335px;
+	height: 22px;
+}
+
+.headerMsg {
+	font-size: 14px;
+	font-style: italic;
+	background-color: #fff;
+	z-index: 850;
+}
+
+.headerLinks {
+	font-size: 14px;
+	top: 92px;
+	background-color: #5E9FE2;
+	text-decoration: none;
+	color: #fff;
+}
+
+.codiv {
+    margin-right: 1rem
+}
+
+.headerMsg {
+	top: 153px;
+}
+
+/* Corte do Bootstrap de MD para LG */
+@media only screen and (max-width: 991px) {
+	.navItem {
+		padding: 0.5rem 0 0;
+		border-style: none;
+	}
+
+	.navItem:hover {
+		color: #fff;
+	}
+
+	.headerLinks {
+		display: none;
+	}
+
+	.nav {
+		padding-bottom: 0;
+	}
+
+	.brand {
+		margin-bottom: 1rem
+	}
+
+	.headerMsg {
+		top: 102px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.logoIcon {
+		width: 12rem;
+	}
+
+	.codiv {
+		height: 2rem;
+	}
+
+	.headerMsg > span {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 361px) {
+	.logoIcon {
+		width: 9rem;
+	}
+
+	.codiv {
+		height: 1.5rem;
+	}
+}
