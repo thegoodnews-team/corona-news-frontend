@@ -5,6 +5,7 @@ import Selector from '../../components/services/selector'
 import './style.css'
 import Badge from '../../components/services/badge'
 import toHexColor from '../../components/util/color-picker'
+import Search from '../../components/services/search'
 
 export default function Services() {
   const [services, setServices] = useState([])
@@ -45,7 +46,14 @@ export default function Services() {
     <div className="services pt-5" services={services}>
       <div className="container">
         <h1>Qual serviço gratuito você está buscando?</h1>
-        <Selector items={categories} onChange={setCategories} />
+        <div className="row">
+          <div className="col-4">
+            <Selector items={categories} onChange={setCategories} />
+          </div>
+          <div className="col-8">
+            <Search />
+          </div>
+        </div>
         <div className="categoriesActive">
           {
             categories.map(category =>
