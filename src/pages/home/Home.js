@@ -1,22 +1,19 @@
 import React, { useState, useEffect } from 'react'
-// import csv from 'csvtojson'
-// import request from 'request'
 import './style.css'
 import Card from './Card'
 import InfiniteScroll from 'react-infinite-scroll-component'
-// import AdCard from '../../components/ad-card';
 import getItemsFromSpreadsheet from '../../utils/spreadsheet'
+import content from '../../utils/content'
 
 export default function Home () {
   const BATCH_SIZE = 9
 
-  // const [adItems, setAdItems] = useState([]);
   const [allItems, setAllItems] = useState([])
   const [visibleItems, setVisibleItems] = useState([])
   const [pageIndex, setPageIndex] = useState(0)
   const [hasMoreItems, setHasMoreItems] = useState(true)
 
-  const news = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS4KL9aw4PCXZ12mT_659WoihJr5Lu7xoZooXWhmcAVgNwfGqbMnX6Wk4MUxUgEYlD9XDeJ_zpXWg5n/pub?gid=0&single=true&output=csv'
+  const { news } = content
 
   useEffect(async () => {
     const items = await getItemsFromSpreadsheet(news)
