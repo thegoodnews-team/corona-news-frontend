@@ -30,7 +30,6 @@ export const FeedBanner = ({ displayBanner }) => {
     })()
   }, [])
 
-  console.log(feed)
   return (
     <a className={`${style.counterBanner} ${themes[theme + '-secundary']}`} style={{ display: displayBanner }}
       href='https://google.com/covid19-map/?hl=pt' target='_blank' rel="noopener noreferrer">
