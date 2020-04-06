@@ -13,12 +13,23 @@ const About = () => {
       <div className="subtitle">
         <h2>Nossa missão</h2>
         <p className="description">
-          Criamos este site para mostrar que existe esperança em meio ao caos.
-          Aqui mostraremos todas as notícias positivas em relação ao corona
-          vírus, com o objetivo de deixar esses dias mais leves e esperançosos,
-          mas lembrem-se, nosso cenário atual é bastante crítico.
-          <br />
-          Fiquem em casa e lavem as mãos.
+          A catástrofe desenhada pela Covid-19 nos direciona, naturalmente, para um cenário de desesperança. São tantos aspectos negativos que esquecemos que existem notícias fantásticas: número de curados, buscas por uma vacina em uma velocidade sem precedentes, colaboração entre organismos internacionais e a sociedade civil. Por isso precisamos ampliar o nosso olhar.
+        </p>
+        <p className="description">
+          E é para isso que o “The Good News Coronavírus” foi concebido: ser um farol de esperança para quem se sente afogado em um oceano de más notícias, que apesar de serem importantes para a prevenção da pandemia, causam ansiedade e desespero.
+        </p>
+        <p className="description">
+          Através desse portal a sociedade vai saber que existe um amanhã de possibilidades e que a derrota ao Coronavírus vai entrar na história como o momento em que nos conectamos  e construímos um futuro melhor.
+        </p>
+      </div>
+
+      <div className="subtitle">
+        <h2>Nota</h2>
+        <p className="description">
+          Esse portal não tem qualquer direcionamento político, nenhum relacionamento ou suporte vindo de qualquer nível de governo ou seus terceiros, tendo sua idealização e desenvolvimento inteiramente partido de membros da sociedade civil.
+        </p>
+        <p className="description">
+          As pessoas  desse grupo são favoráveis ao isolamento social como melhor medida para o combate ao Covid-19 e defendem que todas as medidas e recomendação da Organização Mundial de Saúde (OMS) no combate ao Covid-19 sejam seguidas.
         </p>
       </div>
 
