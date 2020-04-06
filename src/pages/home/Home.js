@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import csv from 'csvtojson'
-import request from 'request'
+// import csv from 'csvtojson'
+// import request from 'request'
 import './style.css'
 import Card from './Card'
 import InfiniteScroll from 'react-infinite-scroll-component'
 // import AdCard from '../../components/ad-card';
+import getItemsFromSpreadsheet from '../../utils/spreadsheet'
 
 export default function Home () {
   const BATCH_SIZE = 9
@@ -15,26 +16,12 @@ export default function Home () {
   const [pageIndex, setPageIndex] = useState(0)
   const [hasMoreItems, setHasMoreItems] = useState(true)
 
-  useEffect(() => {
-    const loadAllItems = async () => {
-      const newsJson = await csv().fromStream(
-        request.get(
-          'https://docs.google.com/spreadsheets/d/e/2PACX-1vS4KL9aw4PCXZ12mT_659WoihJr5Lu7xoZooXWhmcAVgNwfGqbMnX6Wk4MUxUgEYlD9XDeJ_zpXWg5n/pub?gid=0&single=true&output=csv'
-        )
-      )
+  const news = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS4KL9aw4PCXZ12mT_659WoihJr5Lu7xoZooXWhmcAVgNwfGqbMnX6Wk4MUxUgEYlD9XDeJ_zpXWg5n/pub?gid=0&single=true&output=csv'
 
-      setAllItems(newsJson.reverse())
-      setPageIndex(1)
-
-      // const adsJson = await csv().fromStream(
-      //   request.get(
-      //     'https://docs.google.com/spreadsheets/d/e/2PACX-1vQfy4ZRC64gsDElbs_50g_dzAoRMw1Xih8Jz-v65WS1Xt7Afvx0ryWMDgclCMF4XdtJf-jhNiGqdDZQ/pub?gid=0&single=true&output=csv'
-      //   )
-      // );
-      // setAdItems(adsJson);
-    }
-
-    loadAllItems()
+  useEffect(async () => {
+    const items = await getItemsFromSpreadsheet(news)
+    setAllItems(items.reverse())
+    setPageIndex(1)
   }, [])
 
   useEffect(() => {
@@ -103,6 +90,5 @@ export default function Home () {
     )
   }
 
-  console.log('render')
   return allItems.length > 0 ? buildContent() : buildLoading()
 }
