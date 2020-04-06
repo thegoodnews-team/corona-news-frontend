@@ -3,7 +3,7 @@ import './style.css'
 import sendAnalitycs from '../../analitycs'
 import PropTypes from 'prop-types'
 
-export default function AdCard ({ link, image, title }) {
+export default function AdCard({ link, image, title }) {
   useEffect(() => {
     sendAnalitycs({ name: title, category: 'ADS', type: 'VIEW' })
   }, [title])

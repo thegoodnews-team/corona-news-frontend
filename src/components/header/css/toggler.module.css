@@ -1,0 +1,30 @@
+.togglerIcon {
+	background-image: url("../../../assets/menu-icon.svg") !important;
+}
+
+.togglerClose {
+	background-image: url("../assets/cancel.svg") !important;
+	height: 1rem;
+}
+
+.togglerBtn {
+	border: none;
+	display: none;
+	margin-top: 1rem;
+}
+
+.togglerBtn:focus {
+	outline: none;
+}
+
+
+@media only screen and (max-width: 991px) {
+	.togglerBtn {
+		display: inline-block;
+		margin-bottom: 1rem;
+	}
+
+	.mobileNavLinks {
+		width: 100%;
+	}
+}
