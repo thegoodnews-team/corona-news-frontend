@@ -4,6 +4,7 @@ import request from 'request'
 import Selector from '../../components/services/selector'
 import './style.css'
 import Badge from '../../components/services/badge'
+import toHexColor from '../../components/util/color-picker'
 
 export default function Services() {
   const [services, setServices] = useState([])
@@ -49,7 +50,7 @@ export default function Services() {
           {
             categories.map(category =>
               category.filterActive &&
-              <Badge key={category.label} text={category.label} backgroundcolor="#2CC6BA" onClick={() => { handleDesactive(category) }} />
+              <Badge key={category.label} text={category.label} backgroundcolor={'#' + toHexColor(category.label)} onClick={() => { handleDesactive(category) }} />
             )
           }
 
