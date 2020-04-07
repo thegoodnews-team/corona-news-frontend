@@ -39,7 +39,11 @@
   opacity: 0;
   position: absolute;
   top: 40px;
-  width: 100%;
+  width: 94%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 150px;
+  width: -moz-available;
 }
 
 .selector .arrow {
@@ -59,7 +63,7 @@
 }
 
 .isOpen span {
-  padding: 10px 11.5px 11px 11.5px;
+  padding: 7px 11.5px 11px 11.5px;
 }
 
 .isOpen {
@@ -87,5 +91,5 @@
   visibility: visible;
   opacity: 1;
   margin-top: 14px;
-  transition: all 0.5s;
+  transition: opacity 0.5s;
 }
