@@ -23,10 +23,11 @@ h2 {
 }
 
 .img {
-  width: 139px;
-  height: 138px;
+  width: 185px;
+  height: 230px;
+  border-radius: 10px;
 }
-/* 
+/*
 .row {
   margin-right: 50px;
 } */
@@ -38,7 +39,7 @@ h2 {
   /* text-align: left; */
   font-weight: bold;
   margin: 0px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .role {
