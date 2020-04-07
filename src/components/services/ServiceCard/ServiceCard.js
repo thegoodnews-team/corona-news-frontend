@@ -55,5 +55,5 @@ ServiceCard.propTypes = {
   category: PropTypes.string.isRequired,
   linkImage: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  analyticsCategory: PropTypes.string
+  analyticsCategory: PropTypes.string.isRequired
 }
