@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './style.css'
 import Person from './Person'
 import Adnet from '../../assets/people/idealizadores/adnet.JPG'
@@ -17,8 +17,23 @@ import Barbara from '../../assets/people/colaboradores/barbara.jpeg'
 import Yula from '../../assets/people/colaboradores/yula.jpeg'
 import Antonio from '../../assets/people/colaboradores/antonio.jpeg'
 import Roberto from '../../assets/people/colaboradores/roberto.jpeg'
+import getItemsFromSpreadsheet from '../../utils/spreadsheet'
+import content from '../../utils/content'
+
+// const [creators, setCreators] = useState([])
+// const [colaborators, setColaborators] = useState([])
 
 const About = () => {
+  const { people } = content
+
+  useEffect(() => {
+    const loadPeople = async () => {
+      const peopleJson = await getItemsFromSpreadsheet(people)
+      console.log(peopleJson)
+    }
+    loadPeople()
+  }, [])
+
   return (
     <div className="container">
       <h1 className="title">Sobre</h1>
