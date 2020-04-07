@@ -40,7 +40,7 @@ export default function Routes() {
         </Route>
 
         <Route exact path="/sobre">
-          <ThemeProvider value={themes.blue} >
+          <ThemeProvider value={themes.orange} >
             <MainLayout>
               <About />
             </MainLayout>
