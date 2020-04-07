@@ -4,7 +4,7 @@ import request from 'request'
 import Selector from '../../components/services/selector'
 import './style.css'
 import Badge from '../../components/services/badge'
-import toHexColor from '../../components/util/color-picker'
+import toHexColor from '../../utils/ColorPicker'
 import Search from '../../components/services/search'
 
 export default function Services() {
