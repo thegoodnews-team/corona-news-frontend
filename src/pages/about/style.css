@@ -23,10 +23,28 @@ h2 {
 }
 
 .img {
-  width: 185px;
-  height: 230px;
-  border-radius: 10px;
+  border-radius: 50%;
 }
+
+.note {
+  margin-left: 40%;
+  color: #F67A31;
+  position: relative;
+}
+
+blockquote p:first-child:before {
+  content: '\201C';
+  position: absolute;
+  top: 0em;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  height: 2rem;
+  font: 10em/1.08em 'PT Sans', sans-serif;
+  color: #F67A31;
+  text-align: center;
+}
+
 /*
 .row {
   margin-right: 50px;
