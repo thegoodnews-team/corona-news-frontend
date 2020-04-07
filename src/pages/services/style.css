@@ -10,3 +10,20 @@
 .services .categoriesActive {
   margin-top: 24px;
 }
+
+@media only screen and (max-width: 995px) {
+  .filterContainer {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+
+  .filterContainer div {
+    max-width: 100%;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .filterContainer > :last-child {
+    margin-bottom: 10px;
+  }
+}

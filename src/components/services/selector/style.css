@@ -3,17 +3,18 @@
   width: 100%;
   z-index: 1;
   height: 40px;
+  min-width: 286px;
 }
 
 .selector {
-  border: 2px solid #51983B;
+  border: 2px solid #51983b;
   border-radius: 24px;
   height: 40px;
   display: flex;
   position: absolute;
   background-color: white;
   width: 100%;
-  transition: height .3s;
+  transition: height 0.3s;
 }
 
 .selector span {
@@ -28,7 +29,7 @@
   align-items: flex-start;
 }
 
-.selector span p{
+.selector span p {
   margin: 0;
   margin-right: auto;
 }
@@ -46,9 +47,9 @@
   padding-top: 6px;
 }
 
-.selector .counter{
+.selector .counter {
   border-radius: 12px;
-  background-color: #51983B;
+  background-color: #51983b;
   color: white;
   width: 32px;
   height: 24px;
@@ -66,19 +67,19 @@
   align-items: flex-start;
   padding-left: 12.5px;
   padding-right: 12.5px;
-  transition: height .2s;
+  transition: height 0.2s;
 }
 
 .isOpen span {
-  border-bottom: 2px solid #51983B;
+  border-bottom: 2px solid #51983b;
 }
 
-.isOpen ul{
+.isOpen ul {
   list-style: none;
   padding-left: 11.5px;
 }
 
-.isOpen ul li{
+.isOpen ul li {
   margin-bottom: 13px;
 }
 
@@ -86,5 +87,5 @@
   visibility: visible;
   opacity: 1;
   margin-top: 14px;
-  transition: all .5s;
+  transition: all 0.5s;
 }

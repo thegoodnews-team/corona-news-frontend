@@ -1,0 +1,48 @@
+.infinite-scroll-component {
+  overflow-x: hidden !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.news > .news-img {
+  height: 250px;
+  width: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-body {
+  padding: 14px;
+}
+
+.card-body .card-description {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #707070;
+}
+
+.card-body .card-title {
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 500;
+  color: #252525;
+  border-bottom: 1px solid #f3f3f3;
+  padding-bottom: 8px;
+}
+
+.category {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 2px 26px 4px 16px;
+  width: fit-content;
+  width: intrinsic;
+  border-bottom-right-radius: 10px;
+}

@@ -3,26 +3,30 @@ import Selector from '../../components/services/selector'
 import Badge from '../../components/services/badge'
 import toHexColor from '../../utils/ColorPicker'
 import Search from '../../components/services/search'
-import getItemsFromSpreadsheet from '../../utils/spreadsheet'
+import getservicesFromSpreadsheet from '../../utils/spreadsheet'
 import content from '../../utils/content'
 
 import './style.css'
+import Grid from '../../components/services/grid'
+import normalizeText from '../../utils/NormalizeText'
 
 export default function Services() {
+  const [allServices, setAllServices] = useState([])
   const [services, setServices] = useState([])
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
-    getItemsFromSpreadsheet(content.freeServices)
+    getservicesFromSpreadsheet(content.freeServices)
       .then(service => {
         setServices(service)
+        setAllServices(service)
         setCategories([...getCategories(service)])
       })
   }, [])
 
-  function getCategories(items) {
-    return items
-      .map(item => item.category)
+  function getCategories(services) {
+    return services
+      .map(service => service.category)
       .sort((a, b) => a.localeCompare(b))
       .filter((category, index, self) => self.indexOf(category) === index)
       .map(category => {
@@ -37,18 +41,53 @@ export default function Services() {
     const index = categories.indexOf(category)
     categories[index].filterActive = !category.filterActive
     setCategories([...categories])
+    filter()
+  }
+
+  function handleSelectorChange(categories) {
+    setCategories([...categories])
+    filter()
+  }
+
+  function filter(searchText = '') {
+    let filterServices = allServices
+    const normalizedSearchText = normalizeText(searchText)
+
+    const categoriesNameWithFilterActive = categories
+      .filter(category => category.filterActive)
+      .map(category => category.label)
+
+    console.log(categoriesNameWithFilterActive)
+
+    if (categoriesNameWithFilterActive.length > 0) {
+      filterServices = filterServices.filter(service =>
+        categoriesNameWithFilterActive.includes(service.category)
+      )
+    }
+
+    if (normalizedSearchText) {
+      filterServices = filterServices.filter(service => {
+        return (
+          normalizeText(service.category).includes(normalizedSearchText) ||
+          normalizeText(service.title).includes(normalizedSearchText) ||
+          normalizeText(service.description).includes(normalizedSearchText)
+        )
+      })
+    }
+
+    setServices([...filterServices])
   }
 
   return (
-    <div className="services pt-5" services={services}>
+    <div className="services pt-5">
       <div className="container">
         <h1>Qual serviço gratuito você está buscando?</h1>
-        <div className="row">
+        <div className="row filterContainer">
           <div className="col-4">
-            <Selector items={categories} onChange={setCategories} />
+            <Selector items={categories} onChange={handleSelectorChange} />
           </div>
           <div className="col-8">
-            <Search />
+            <Search filter={filter} />
           </div>
         </div>
         <div className="categoriesActive">
@@ -59,6 +98,7 @@ export default function Services() {
             )
           }
         </div>
+        <Grid content={services} analyticsCategory="SERVICES" />
       </div>
     </div>
   )
