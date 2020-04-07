@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './style.css'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import PropTypes from 'prop-types'
-import ServiceCard from '../ServiceCard'
+import ServiceCard from '../service-card'
 import Loading from '../../loading'
 
 export default function Grid({ content, analyticsCategory }) {
