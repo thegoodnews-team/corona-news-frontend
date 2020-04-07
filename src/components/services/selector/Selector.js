@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './style.css'
 import Checkbox from '../checkbox'
-import arrowDown from '../../../assets/arrow_down.svg'
-import arrowUp from '../../../assets/arrow_up.svg'
+import arrowDown from './assets/arrow_down.svg'
+import arrowUp from './assets/arrow_up.svg'
 import PropTypes from 'prop-types'
 
 export default function Selector({ items, onChange }) {
@@ -59,7 +59,7 @@ export default function Selector({ items, onChange }) {
             {
               categories.map(option => (
                 <li key={option.label}>
-                  <Checkbox label={option.label} onChange={() => { handleCheckbox(option) }} value={option.filterActive}/>
+                  <Checkbox label={option.label} onChange={() => { handleCheckbox(option) }} value={option.filterActive} />
                 </li>
               ))
             }
