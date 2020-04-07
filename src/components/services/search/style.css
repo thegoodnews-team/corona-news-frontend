@@ -27,6 +27,7 @@ input {
   letter-spacing: 0;
   color: #898989;
   opacity: 1;
+  outline: none;
 }
 
 @media only screen and (max-width: 600px) {
