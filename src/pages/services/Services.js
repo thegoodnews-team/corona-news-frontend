@@ -1,26 +1,23 @@
 import React, { useState, useEffect } from 'react'
-import csv from 'csvtojson'
-import request from 'request'
 import Selector from '../../components/services/selector'
-import './style.css'
 import Badge from '../../components/services/badge'
 import toHexColor from '../../utils/ColorPicker'
 import Search from '../../components/services/search'
+import getItemsFromSpreadsheet from '../../utils/spreadsheet'
+import content from '../../utils/content'
+
+import './style.css'
 
 export default function Services() {
   const [services, setServices] = useState([])
   const [categories, setCategories] = useState([])
 
   useEffect(() => {
-    csv().fromStream(
-      request.get(
-        'https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=2015075532&single=true&output=csv'
-      )
-    ).then(service => {
-      setServices(service)
-      setCategories([...getCategories(service)])
-    }
-    )
+    getItemsFromSpreadsheet(content.freeServices)
+      .then(service => {
+        setServices(service)
+        setCategories([...getCategories(service)])
+      })
   }, [])
 
   function getCategories(items) {
@@ -61,7 +58,6 @@ export default function Services() {
               <Badge key={category.label} text={category.label} backgroundcolor={'#' + toHexColor(category.label)} onClick={() => { handleDesactive(category) }} />
             )
           }
-
         </div>
       </div>
     </div>
