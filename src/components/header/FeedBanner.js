@@ -4,21 +4,18 @@ import brFlag from './assets/brazil.svg'
 import worldFlag from './assets/planet-earth.svg'
 import ThemeContext from '../context/ThemeContext'
 import themes from '../context/themes.module.css'
-import csv from 'csvtojson'
-import request from 'request'
 import PropTypes from 'prop-types'
+import getItemsFromSpreadsheet from '../../utils/spreadsheet'
+import content from '../../utils/content'
 
 export const FeedBanner = ({ displayBanner }) => {
   const [feed, setFeed] = useState({})
   const theme = useContext(ThemeContext)
+  const { recovery } = content
 
   useEffect(() => {
     (async () => {
-      const csvData = await csv().fromStream(
-        request.get(
-          'https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=219739080&single=true&output=csv'
-        )
-      )
+      const csvData = await getItemsFromSpreadsheet(recovery)
 
       const transfomedFeed = csvData.reduce(
         (acc, curr) => {
@@ -30,7 +27,6 @@ export const FeedBanner = ({ displayBanner }) => {
     })()
   }, [])
 
-  console.log(feed)
   return (
     <a className={`${style.counterBanner} ${themes[theme + '-secundary']}`} style={{ display: displayBanner }}
       href='https://google.com/covid19-map/?hl=pt' target='_blank' rel="noopener noreferrer">
