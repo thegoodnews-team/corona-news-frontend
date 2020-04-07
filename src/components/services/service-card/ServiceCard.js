@@ -13,8 +13,8 @@ export default function ServiceCard({
   analyticsCategory
 }) {
   const truncateDescription = str => {
-    return str && str.length > 80
-      ? str.substring(0, 73) + '...'
+    return str && str.length > 120
+      ? str.substring(0, 117) + '...'
       : str
   }
 
