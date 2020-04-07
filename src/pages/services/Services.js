@@ -18,7 +18,7 @@ export default function Services() {
   useEffect(() => {
     getservicesFromSpreadsheet(content.freeServices)
       .then(service => {
-        setServices(service)
+        setServices(service.reverse())
         setAllServices(service)
         setCategories([...getCategories(service)])
       })
