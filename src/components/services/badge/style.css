@@ -1,0 +1,15 @@
+.badge {
+  border-radius: 12px;
+  padding: 2px 0px 4px 16px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  margin-right: 16px;
+}
+
+.badge .desactive {
+  margin-left: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}

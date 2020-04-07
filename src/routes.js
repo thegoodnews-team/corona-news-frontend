@@ -4,6 +4,7 @@ import Home from './pages/home'
 import About from './pages/about'
 import { MainLayout } from './pages/MainLayout'
 import { ThemeProvider, themes } from './components/context/ThemeContext'
+import Services from './pages/services/Services'
 
 export default function Routes() {
   return (
@@ -34,7 +35,7 @@ export default function Routes() {
         <Route exact path="/servicos">
           <ThemeProvider value={themes.green} >
             <MainLayout>
-              <Home />
+              <Services />
             </MainLayout>
           </ThemeProvider>
         </Route>
