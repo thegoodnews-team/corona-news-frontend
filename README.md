@@ -1,77 +1,39 @@
-## Staging
-Commits on dev goes to staging automatically.
 
-Staging code is hosted on [https://staging.thegoodnewscoronavirus.com](https://staging.thegoodnewscoronavirus.com).
+# The Good News Corona Virus (As boas notícias do Corona Vírus)
+## Sobre o projeto
+O “The Good News Coronavírus” foi concebido para ser um farol de esperança para quem se sente afogado em um oceano de más notícias, que apesar de serem importantes para a prevenção da pandemia, causam ansiedade e desespero.
 
+Através desse portal a sociedade vai saber que existe um amanhã de possibilidades e que a derrota ao Coronavírus vai entrar na história como o momento em que nos conectamos e construímos um futuro melhor.
 
-================================
+OBS: Esse portal não tem qualquer direcionamento político, nenhum relacionamento ou suporte vindo de qualquer nível de governo ou seus terceiros, tendo sua idealização e desenvolvimento inteiramente partido de membros da sociedade civil.
 
+## Como contribuir
+* Faça um Fork do repositório
+* Inclua a funcionalidade, fix, sugestão etc
+* Contextualize nos commit para identificarmos fácil o que foi feito.
+* Antes de solicitar um [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests), lembre-se de realizar merge com as atualizações mais recente da DEV.
+* Solicite o Pull Request e obrigado pela contribuição ^^
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Tech Stack
+- React - ([Create React App](https://github.com/facebook/create-react-app)).
+- Bootstrap
 
-## Available Scripts
+### Ambientes
 
-In the project directory, you can run:
+#### Staging
 
-### `npm start`
+Todo commit em dev automaticamente é carregado para [Staging](https://staging.thegoodnewscoronavirus.com).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Produção
+Todo commit em master automaticamente é carregado para [Produçao](http://thegoodnewscoronavirus.com/)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Idealizadores
 
-### `npm test`
+  - (Fernando Fernandes)[https://www.linkedin.com/in/flasfl/]
+  - (Maciel Melo)[https://www.linkedin.com/in/macielmelo/]
+  - (Rafaela Fernandes)[https://www.linkedin.com/in/rafaela-fernandes/]
+  - (Daniel Barros)[https://www.linkedin.com/in/danielnbarros/]
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Apoiadores
+  - (Thougtworks)[https://www.thoughtworks.com/locations/brasil]
+  - (Agência AIDS)[https://agenciaaids.com.br/]
