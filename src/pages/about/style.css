@@ -52,6 +52,7 @@ blockquote p:first-child:before {
   border-radius: 50%;
   width: 200px;
   height: 200px;
+  object-fit: cover;
 }
 
 .person {
