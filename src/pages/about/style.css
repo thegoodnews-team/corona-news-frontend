@@ -18,14 +18,6 @@ h2 {
   font-size: 20px;
 }
 
-.person {
-  margin-top: 40px;
-}
-
-.img {
-  border-radius: 50%;
-}
-
 .note {
   margin-left: 40%;
   color: #F67A31;
@@ -45,19 +37,21 @@ blockquote p:first-child:before {
   text-align: center;
 }
 
-/*
-.row {
-  margin-right: 50px;
-} */
-
-
 /* Person style */
 .name {
-  min-width: 244px;
-  /* text-align: left; */
   font-weight: bold;
   margin: 0px;
   font-size: 18px;
+}
+
+.img {
+  border-radius: 50%;
+  width: 70%;
+  height: 200px;
+}
+
+.person {
+  margin-top: 40px;
 }
 
 .role {

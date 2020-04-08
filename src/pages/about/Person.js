@@ -6,8 +6,8 @@ import PropTypes from 'prop-types'
 const Person = ({ name, role, link, linkImg }) => {
   return (
     <div className='col-xs-12 col-md-3 mb-4'>
-      <div className='row d-flex align-items-center justify-content-center'>
-        <a className='col-xs-12 col-md-auto' href={link} target='_blank' rel='noopener noreferrer'
+      <div className='row d-flex justify-content-center'>
+        <a className='col-xs-12 col-md-12 d-flex justify-content-center' href={link} target='_blank' rel='noopener noreferrer'
           onClick={() => send({ name: name, category: 'LINKEDIN', type: 'CLICK' })}>
           <img className='img' src={linkImg} alt={`Foto de ${name}`} />
         </a>
