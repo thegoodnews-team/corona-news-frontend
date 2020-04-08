@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import loup from './assets/loupe.svg'
 import './style.css'
 
-export default function Search({ filter }) {
+export default function Search({ filter, color, labelSearch }) {
   const [searchtext, setSearchText] = useState('')
 
   return (
@@ -13,7 +13,8 @@ export default function Search({ filter }) {
       <img src={loup} alt="icon" />
       <input
         className="search"
-        placeholder="Buscar serviços"
+        style={{ borderColor: color }}
+        placeholder={labelSearch}
         onChange={e => {
           setSearchText(e.target.value)
           filter(e.target.value)
@@ -25,5 +26,7 @@ export default function Search({ filter }) {
 }
 
 Search.propTypes = {
-  filter: PropTypes.func.isRequired
+  filter: PropTypes.func.isRequired,
+  color: PropTypes.string.isRequired,
+  labelSearch: PropTypes.string.isRequired
 }

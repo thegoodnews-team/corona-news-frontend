@@ -1,0 +1,28 @@
+.services h1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #575756;
+  margin-bottom: 24px;
+}
+
+.services .categoriesActive {
+  margin-top: 24px;
+}
+
+@media only screen and (max-width: 995px) {
+  .filterContainer {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+
+  .filterContainer div {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .filterContainer > :last-child {
+    margin-bottom: 10px;
+  }
+}
