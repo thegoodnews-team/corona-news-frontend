@@ -4,7 +4,9 @@ import Home from './pages/home'
 import About from './pages/about'
 import { MainLayout } from './pages/MainLayout'
 import { ThemeProvider, themes } from './components/context/ThemeContext'
-import Services from './pages/services/Services'
+import content from './utils/content'
+import Initiatives from './pages/initiatives'
+import FreeServices from './pages/free-service/FreeServices'
 
 export default function Routes() {
   return (
@@ -19,15 +21,7 @@ export default function Routes() {
         <Route exact path="/iniciativas">
           <ThemeProvider value={themes.purple} >
             <MainLayout>
-              <Home />
-            </MainLayout>
-          </ThemeProvider>
-        </Route>
-
-        <Route exact path="/existe-amor">
-          <ThemeProvider value={themes.lemon} >
-            <MainLayout>
-              <Home />
+              <Initiatives color={themes.purple} spreadsheetLink={content.initiatives} />
             </MainLayout>
           </ThemeProvider>
         </Route>
@@ -35,13 +29,13 @@ export default function Routes() {
         <Route exact path="/servicos">
           <ThemeProvider value={themes.green} >
             <MainLayout>
-              <Services />
+              <FreeServices color={themes.green} spreadsheetLink={content.freeServices}></FreeServices>
             </MainLayout>
           </ThemeProvider>
         </Route>
 
         <Route exact path="/sobre">
-          <ThemeProvider value={themes.blue} >
+          <ThemeProvider value={themes.orange} >
             <MainLayout>
               <About />
             </MainLayout>

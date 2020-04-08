@@ -18,30 +18,68 @@ h2 {
   font-size: 20px;
 }
 
-.person {
-  margin-top: 40px;
+.note {
+  margin-left: 40%;
+  color: #F67A31;
+  position: relative;
 }
 
-.img {
-  width: 139px;
-  height: 138px;
+blockquote p:first-child:before {
+  content: '\201C';
+  position: absolute;
+  top: 0em;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  height: 2rem;
+  font: 10em/1.08em 'PT Sans', sans-serif;
+  color: #F67A31;
+  text-align: center;
 }
-/* 
-.row {
-  margin-right: 50px;
-} */
 
+.p-border {
+  border-radius: 1rem;
+}
 
 /* Person style */
 .name {
-  min-width: 244px;
-  /* text-align: left; */
   font-weight: bold;
   margin: 0px;
-  font-size: 24px;
+  font-size: 18px;
+}
+
+.img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.person {
+  margin-top: 40px;
 }
 
 .role {
   color: #505050;
   font-weight: 500;
+}
+
+/* ----- Mobile ----- */
+
+/* Extra Small devices */
+@media only screen and (max-width: 575.98px) {
+  .note {
+    margin-left: 15%;
+  }
+
+  blockquote p:first-child:before {
+    left: -16%;
+  }
+}
+
+/* Small devices */
+@media only screen and (max-width: 767.98px) {
+  .note {
+    margin-left: 25%;
+  }
 }

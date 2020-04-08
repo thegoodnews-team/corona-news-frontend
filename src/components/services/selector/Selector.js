@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './style.css'
 import Checkbox from '../checkbox'
-import arrowDown from './assets/arrow_down.svg'
-// import arrowUp from './assets/arrow_up.svg'
+import getIcon from '../../../utils/Icons'
 import PropTypes from 'prop-types'
 
-export default function Selector({ items, onChange }) {
+export default function Selector({ color, items, onChange, labelFilter }) {
   const [isOpen, setIsOpen] = useState(false)
   const [categories, setCategories] = useState([])
 
@@ -40,23 +39,23 @@ export default function Selector({ items, onChange }) {
 
   return (
     <div className="selectorContainer" ref={selectorRef} >
-      <div className={`selector ${isOpen ? 'isOpen' : ''}`}>
+      <div className={`selector ${isOpen ? 'isOpen' : ''}`} style={{ borderColor: color, borderBottomColor: color, color: color }}>
         <span onClick={handleOpenSelector}>
-          <p>Filtrar serviços por categoria</p>
+          <p>{labelFilter}</p>
           {
-            counterCategoriesActive() > 0 && <span className="counter">{counterCategoriesActive()}</span>
+            counterCategoriesActive() > 0 && <span className="counter" style={{ backgroundColor: color }}>{counterCategoriesActive()}</span>
           }
 
-          <img className={`arrow ${isOpen ? 'arrowUp' : ''}` } src={arrowDown} />
+          <img className={`arrow ${isOpen ? 'arrowUp' : ''}`} src={getIcon(color).arrow} />
 
         </span>
 
-        <div className='listItem scroll'>
+        <div className='listItem scroll' style={{ boxShadowColor: color }}>
           <ul>
             {
               categories.map(option => (
                 <li key={option.label}>
-                  <Checkbox label={option.label} onChange={() => { handleCheckbox(option) }} value={option.filterActive} />
+                  <Checkbox color={color} label={option.label} onChange={() => { handleCheckbox(option) }} value={option.filterActive} />
                 </li>
               ))
             }
@@ -68,6 +67,8 @@ export default function Selector({ items, onChange }) {
 }
 
 Selector.propTypes = {
+  color: PropTypes.string.isRequired,
   items: PropTypes.array.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  labelFilter: PropTypes.string.isRequired
 }
