@@ -5,6 +5,7 @@ import Adnet from '../../assets/fernando.png'
 import Maciel from '../../assets/maciel.png'
 import Rafa from '../../assets/rafa.png'
 import Urso from '../../assets/urso.png'
+import Antonio from '../../assets/antonio.jpg'
 
 const About = () => {
   return (
@@ -59,6 +60,12 @@ const About = () => {
             role="Desenvolvedor"
             link="https://www.linkedin.com/in/danielnbarros/"
             linkImg={Urso}
+          />
+          <Person
+            name="Antonio Aureliano"
+            role="Consultor"
+            link="https://www.linkedin.com/in/antonioaureliano/"
+            linkImg={Antonio}
           />
         </div>
       </div>

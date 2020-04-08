@@ -26,7 +26,11 @@ h2 {
   width: 139px;
   height: 138px;
 }
-/* 
+
+.p-border {
+  border-radius: 1rem;
+}
+/*
 .row {
   margin-right: 50px;
 } */
