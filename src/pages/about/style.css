@@ -46,7 +46,7 @@ blockquote p:first-child:before {
 
 .img {
   border-radius: 50%;
-  width: 70%;
+  width: 200px;
   height: 200px;
 }
 
@@ -57,4 +57,24 @@ blockquote p:first-child:before {
 .role {
   color: #505050;
   font-weight: 500;
+}
+
+/* ----- Mobile ----- */
+
+/* Extra Small devices */
+@media only screen and (max-width: 575.98px) {
+  .note {
+    margin-left: 15%;
+  }
+
+  blockquote p:first-child:before {
+    left: -16%;
+  }
+}
+
+/* Small devices */
+@media only screen and (max-width: 767.98px) {
+  .note {
+    margin-left: 25%;
+  }
 }
