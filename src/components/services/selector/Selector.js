@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './style.css'
 import Checkbox from '../checkbox'
-import arrowDown from './assets/arrow_down.svg'
+import getIcon from '../../../utils/Icons'
 import PropTypes from 'prop-types'
 
 export default function Selector({ color, items, onChange, labelFilter }) {
@@ -46,7 +46,7 @@ export default function Selector({ color, items, onChange, labelFilter }) {
             counterCategoriesActive() > 0 && <span className="counter" style={{ backgroundColor: color }}>{counterCategoriesActive()}</span>
           }
 
-          <img className={`arrow ${isOpen ? 'arrowUp' : ''}`} src={arrowDown} />
+          <img className={`arrow ${isOpen ? 'arrowUp' : ''}`} src={getIcon(color).arrow} />
 
         </span>
 

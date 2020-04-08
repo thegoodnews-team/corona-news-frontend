@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-
 import PropTypes from 'prop-types'
 
-import loup from './assets/loupe.svg'
+import getIcon from '../../../utils/Icons'
 import './style.css'
 
 export default function Search({ filter, color, labelSearch }) {
@@ -10,7 +9,7 @@ export default function Search({ filter, color, labelSearch }) {
 
   return (
     <div className="input-custom px-0">
-      <img src={loup} alt="icon" />
+      <img src={getIcon(color).loup} alt="icon" />
       <input
         className="search"
         style={{ borderColor: color }}
