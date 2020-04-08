@@ -9,7 +9,7 @@ const Person = ({ name, role, link, linkImg }) => {
       <div className='row d-flex justify-content-center'>
         <a className='col-xs-12 col-md-12 d-flex justify-content-center' href={link} target='_blank' rel='noopener noreferrer'
           onClick={() => send({ name: name, category: 'LINKEDIN', type: 'CLICK' })}>
-          <img className='img' src={linkImg} alt={`Foto de ${name}`} />
+          <img className='img p-border' src={linkImg} alt={`Foto de ${name}`} />
         </a>
         <div className='col-xs-12 col-md-auto text-center'>
           <p className='name'>{name}</p>

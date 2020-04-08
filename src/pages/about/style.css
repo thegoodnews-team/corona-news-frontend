@@ -37,6 +37,10 @@ blockquote p:first-child:before {
   text-align: center;
 }
 
+.p-border {
+  border-radius: 1rem;
+}
+
 /* Person style */
 .name {
   font-weight: bold;
