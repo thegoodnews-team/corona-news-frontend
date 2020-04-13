@@ -9,7 +9,7 @@ export default function Search({ filter, color, labelSearch }) {
 
   return (
     <div className="input-custom px-0">
-      <img src={getIcon(color).loup} alt="icon" />
+      <img src={getIcon(color).loupe} alt="icon" />
       <input
         className="search"
         style={{ borderColor: color }}

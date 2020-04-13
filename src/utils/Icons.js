@@ -5,12 +5,16 @@ import purpleArrow from '../assets/purple-arrow-down.svg'
 
 const ICONS = {
   green: {
-    loup: greenLoupe,
+    loupe: greenLoupe,
     arrow: greenArrow
   },
   purple: {
-    loup: purpleLoupe,
+    loupe: purpleLoupe,
     arrow: purpleArrow
+  },
+  red: {
+    loupe: '',
+    arrow: ''
   }
 }
 
