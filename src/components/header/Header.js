@@ -16,6 +16,7 @@ const Header = () => {
   const navLinks = () => (
     <>
       <Link to="/" className={`nav-link ${style.navItem} ${pathname === '/' ? style.active : ''}`}> Notícias </Link>
+      <Link to="/doacoes" className={`nav-link ${style.navItem} ${pathname === '/doacoes' ? style.active : ''}`}> Doações </Link>
       <Link to="/iniciativas" className={`nav-link ${style.navItem} ${pathname === '/iniciativas' ? style.active : ''}`}> Iniciativas </Link>
       <Link to="/servicos" className={`nav-link ${style.navItem} ${pathname === '/servicos' ? style.active : ''}`}> Serviços Gratuitos </Link>
       <Link to="/sobre" className={`nav-link ${style.navItem} ${pathname === '/sobre' ? style.active : ''}`}> Sobre </Link>

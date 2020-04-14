@@ -7,6 +7,7 @@ import { ThemeProvider, themes } from './components/context/ThemeContext'
 import content from './utils/content'
 import Initiatives from './pages/initiatives'
 import FreeServices from './pages/free-service/FreeServices'
+import Donation from './pages/donation'
 
 export default function Routes() {
   return (
@@ -30,6 +31,14 @@ export default function Routes() {
           <ThemeProvider value={themes.green} >
             <MainLayout>
               <FreeServices color={themes.green} spreadsheetLink={content.freeServices}></FreeServices>
+            </MainLayout>
+          </ThemeProvider>
+        </Route>
+
+        <Route exact path="/doacoes">
+          <ThemeProvider value={themes.pink} >
+            <MainLayout>
+              <Donation color={themes.pink} spreadsheetLink={content.donation}></Donation>
             </MainLayout>
           </ThemeProvider>
         </Route>

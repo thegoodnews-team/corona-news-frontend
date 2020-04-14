@@ -5,7 +5,8 @@ export const themes = {
   purple: 'purple',
   green: 'green',
   lemon: 'lemon',
-  orange: 'orange'
+  orange: 'orange',
+  pink: 'pink'
 }
 
 const ThemeContext = React.createContext(themes.blue)
