@@ -36,9 +36,9 @@ export default function Routes() {
         </Route>
 
         <Route exact path="/doacoes">
-          <ThemeProvider value={themes.red} >
+          <ThemeProvider value={themes.pink} >
             <MainLayout>
-              <Donation color={themes.red} spreadsheetLink={content.donation}></Donation>
+              <Donation color={themes.pink} spreadsheetLink={content.donation}></Donation>
             </MainLayout>
           </ThemeProvider>
         </Route>
