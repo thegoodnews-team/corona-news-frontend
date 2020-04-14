@@ -52,7 +52,7 @@ const About = () => {
         <h2>Idealizadores</h2>
         <div className="row mt-5">
           {creators.map(creator => (
-            <Person key="idealizadores"
+            <Person key={creator.Nome}
               name={creator.Nome}
               role={creator.Cargo}
               link={creator.Link}
@@ -65,7 +65,7 @@ const About = () => {
           <h2>Colaboradores</h2>
           <div className="row mt-5">
             {colaborators.map(colaborator => (
-              <Person key="colaboradores"
+              <Person key={colaborator.Nome}
                 name={colaborator.Nome}
                 role={colaborator.Cargo}
                 link={colaborator.Link}
