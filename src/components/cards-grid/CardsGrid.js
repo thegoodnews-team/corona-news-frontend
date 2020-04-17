@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './style.css'
 import Card from './Card'
+import AdCard from './AdCard'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import PropTypes from 'prop-types'
 import Loading from '../loading'
-import AdSense from 'react-adsense'
 
 export default function CardsGrid({ content, analyticsCategory }) {
   const BATCH_SIZE = 9
@@ -49,7 +49,7 @@ export default function CardsGrid({ content, analyticsCategory }) {
                   <div className="col" key={`${item.title}-${item.fonte}`}>
                     <Card {...item} analyticsCategory={analyticsCategory} />
                   </div>
-                  {buildAd(index, `${item.title}-${item.fonte}ad`)}
+                  <AdCard index={index} frequency="3" />
                 </>
               ))}
             </div>
@@ -57,24 +57,6 @@ export default function CardsGrid({ content, analyticsCategory }) {
         </div>
       </InfiniteScroll>
     )
-  }
-
-  function buildAd(index, key) {
-    if (index % 2 === 1) {
-      return (
-        <div className="col" key={key}>
-          <AdSense.Google
-            client="ca-pub-2186608926010606"
-            slot="6057077357"
-            style={{ display: 'block' }}
-            layoutKey="-6g+bz+1g-9+dz"
-            format="fluid"
-          />
-        </div>
-      )
-    } else {
-      return null
-    }
   }
 
   return allItems.length > 0 ? buildContent() : <Loading />
