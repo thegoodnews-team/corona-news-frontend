@@ -5,6 +5,7 @@
   "dependencies": {
     "csvtojson": "^2.0.10",
     "react": "^16.13.1",
+    "react-adsense": "^0.1.0",
     "react-dom": "^16.13.1",
     "react-infinite-scroll-component": "^5.0.4",
     "react-router-dom": "^5.1.2",
