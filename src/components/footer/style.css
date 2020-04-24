@@ -1,41 +1,30 @@
-.bg {
-  margin-top: 40px;
-  background: #f5f7fc 0% 0% no-repeat padding-box;
-  height: 450px;
-}
-
-.h1 {
-  color: black !important;
-}
-
-.support-img-wide {
-  height: 40px;
-}
-
-.support-img-tall {
-  height: 70px;
-}
-
-.social {
-  margin-top: 50px !important;
-  width: 100px !important;
-  height: 100px !important;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.col {
-  flex-grow: 0;
+.footer {
+  height: 258px;
+  border-top: 2px solid #e6e6e6;
+  color: #252525;
+  font-family: "Muli", sans-serif;
 }
 
 .footer-title {
-  margin-bottom: 40px;
-}
-.social2 {
-  margin-bottom: 40px;
+  font-size: 30px;
+  margin-bottom: 22px;
 }
 
-.info {
-  font-weight: 600;
-  color: #505050;
+.footer-social-icon {
+  height: 40px;
+  margin: auto 10px;
+}
+
+.footer-logo--tw {
+  height: 40px;
+}
+
+.footer-logo--agenciaAids {
+  height: 114px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .agencia {
+    text-align: right !important;
+  }
 }
