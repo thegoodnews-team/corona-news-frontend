@@ -97,21 +97,29 @@
 	}
 
 	.brand {
-		margin-bottom: 1rem
+		margin-bottom: 1rem;
+		margin-right: 0;
 	}
+
+    .codiv {
+        margin-right: 0.8rem;
+        margin-left: 0.2rem;
+    }
 
 	.headerMsg {
 		top: 102px;
 	}
+
+	.containerPadX {
+    	padding-left: 0 !important;
+    	padding-right: 0 !important;
+    }
+
 }
 
 @media only screen and (max-width: 600px) {
 	.logoIcon {
-		width: 12rem;
-	}
-
-	.codiv {
-		height: 2rem;
+		width: 14.5rem;
 	}
 
 	.headerMsg > span {
@@ -121,10 +129,10 @@
 
 @media only screen and (max-width: 361px) {
 	.logoIcon {
-		width: 9rem;
+		width: 11rem;
 	}
 
 	.codiv {
-		height: 1.5rem;
+		height: 2rem;
 	}
 }
