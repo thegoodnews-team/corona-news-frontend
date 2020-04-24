@@ -14,6 +14,11 @@ const Header = () => {
   const { pathname } = useLocation()
   const theme = useContext(ThemeContext)
   const pages = intl.get('header')
+
+  const setLocale = (locale) => {
+    localStorage.setItem('goodnewscoronavirus', locale)
+    window.location.href = '/'
+  }
   const navLinks = () => (
     <>
       {
@@ -41,7 +46,10 @@ const Header = () => {
             <img className={style.codiv} src={covid} alt="Covidzinho" />
             <img className={style.logoIcon} src={logo} alt='The Good News Corona Virus' />
           </a>
-
+          <div>
+            <a onClick={() => { setLocale('pt-BR') }}>pt-br</a>
+            <a onClick={() => { setLocale('en-US') }}>en-us</a>
+          </div>
           <TooglerNav onClickAct={() => displayBanner === 'none' ? setDisplayBanner('block') : setDisplayBanner('none')}>
             {navLinks()}
           </TooglerNav>
