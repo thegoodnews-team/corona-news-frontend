@@ -16,7 +16,7 @@ export default function Routes() {
     'en-US': require('./locales/en-US.json')
   }
 
-  const currentLocale = 'en-US'
+  const currentLocale = localStorage.getItem('goodnewscoronavirus') ? localStorage.getItem('goodnewscoronavirus') : locales[navigator.language] ? navigator.language : 'pt-BR'
 
   intl.init({
     currentLocale,
