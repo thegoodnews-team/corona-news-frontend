@@ -19,11 +19,12 @@ const Header = () => {
     localStorage.setItem('goodnewscoronavirus', locale)
     window.location.href = '/'
   }
+
   const navLinks = () => (
     <>
       {
         Object.keys(pages).map((item, index) => (
-          <Link key={index} to={item} className={`nav-link ${style.navItem} ${pathname === item} ? style.active : ''}`}> {pages[item]} </Link>
+          <Link key={index} to={item} className={`nav-link ${style.navItem} ${pathname === item} ? style.active : ''}`} onClick={ () => { scrollTop() } }> {pages[item]} </Link>
         ))
       }
     </>
@@ -36,6 +37,11 @@ const Header = () => {
       </nav>
     </div>
   )
+
+  function scrollTop() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+  }
 
   return (
     <>
