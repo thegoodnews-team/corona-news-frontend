@@ -15,11 +15,11 @@ const Header = () => {
 
   const navLinks = () => (
     <>
-      <Link to="/" className={`nav-link ${style.navItem} ${pathname === '/' ? style.active : ''}`}> Notícias </Link>
-      <Link to="/doacoes" className={`nav-link ${style.navItem} ${pathname === '/doacoes' ? style.active : ''}`}> Doações </Link>
-      <Link to="/iniciativas" className={`nav-link ${style.navItem} ${pathname === '/iniciativas' ? style.active : ''}`}> Iniciativas </Link>
-      <Link to="/servicos" className={`nav-link ${style.navItem} ${pathname === '/servicos' ? style.active : ''}`}> Serviços Gratuitos </Link>
-      <Link to="/sobre" className={`nav-link ${style.navItem} ${pathname === '/sobre' ? style.active : ''}`}> Sobre </Link>
+      <Link to="/" className={`nav-link ${style.navItem} ${pathname === '/' ? style.active : ''}`} onClick={ () => { scrollTop() } }> Notícias </Link>
+      <Link to="/doacoes" className={`nav-link ${style.navItem} ${pathname === '/doacoes' ? style.active : ''}`} onClick={ () => { scrollTop() } }> Doações </Link>
+      <Link to="/iniciativas" className={`nav-link ${style.navItem} ${pathname === '/iniciativas' ? style.active : ''}`} onClick={ () => { scrollTop() } }> Iniciativas </Link>
+      <Link to="/servicos" className={`nav-link ${style.navItem} ${pathname === '/servicos' ? style.active : ''}`} onClick={ () => { scrollTop() } }> Serviços Gratuitos </Link>
+      <Link to="/sobre" className={`nav-link ${style.navItem} ${pathname === '/sobre' ? style.active : ''}`} onClick={ () => { scrollTop() } }> Sobre </Link>
     </>
   )
 
@@ -30,6 +30,11 @@ const Header = () => {
       </nav>
     </div>
   )
+
+  function scrollTop() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+  }
 
   return (
     <>
