@@ -8,8 +8,21 @@ import content from './utils/content'
 import Initiatives from './pages/initiatives'
 import FreeServices from './pages/free-service/FreeServices'
 import Donation from './pages/donation'
+import intl from 'react-intl-universal'
 
 export default function Routes() {
+  const locales = {
+    'pt-BR': require('./locales/pt-BR.json'),
+    'en-US': require('./locales/en-US.json')
+  }
+
+  const currentLocale = 'pt-BR'
+
+  intl.init({
+    currentLocale,
+    locales
+  })
+
   return (
     <BrowserRouter>
       <Switch>
@@ -19,7 +32,13 @@ export default function Routes() {
           </MainLayout>
         </Route>
 
-        <Route exact path="/iniciativas">
+        <Route exact path="/news">
+          <MainLayout>
+            <Home />
+          </MainLayout>
+        </Route>
+
+        <Route exact path="/initiative">
           <ThemeProvider value={themes.purple} >
             <MainLayout>
               <Initiatives color={themes.purple} spreadsheetLink={content.initiatives} />
@@ -27,7 +46,7 @@ export default function Routes() {
           </ThemeProvider>
         </Route>
 
-        <Route exact path="/servicos">
+        <Route exact path="/services">
           <ThemeProvider value={themes.green} >
             <MainLayout>
               <FreeServices color={themes.green} spreadsheetLink={content.freeServices}></FreeServices>
@@ -35,7 +54,7 @@ export default function Routes() {
           </ThemeProvider>
         </Route>
 
-        <Route exact path="/doacoes">
+        <Route exact path="/donate">
           <ThemeProvider value={themes.pink} >
             <MainLayout>
               <Donation color={themes.pink} spreadsheetLink={content.donation}></Donation>
@@ -43,7 +62,7 @@ export default function Routes() {
           </ThemeProvider>
         </Route>
 
-        <Route exact path="/sobre">
+        <Route exact path="/about">
           <ThemeProvider value={themes.orange} >
             <MainLayout>
               <About />
