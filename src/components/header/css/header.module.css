@@ -27,8 +27,8 @@
 }
 
 .navItem:hover {
-	color: #fff;
-	font-weight: bold;
+	text-decoration: underline;
+	color: #FFF;
 }
 
 .active {
