@@ -1,0 +1,42 @@
+{
+  "header": {
+    "news": "Notícias",
+    "donate": "Doações",
+    "initiative": "Iniciativas",
+    "services": "Serviços Gratuitos",
+    "about": "Sobre"
+  },
+  "json-data": {
+    "newsLink": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=180992092&single=true&output=csv",
+    "initiatives": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=288463825&single=true&output=csv",
+    "freeServices": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=2015075532&single=true&output=csv",
+    "donation": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=328239309&single=true&output=csv"
+  },
+  "about": {
+    "mission": "Missão",
+    "creators": "Idealizadores",
+    "collaborators": "Colaboradores",
+    "msg1": "A catástrofe desenhada pela Covid-19 nos direciona, naturalmente, para um cenário de desesperança. São tantos aspectos negativos que esquecemos que existem notícias fantásticas: número de curados, buscas por uma vacina em uma velocidade sem precedentes, colaboração entre organismos internacionais e a sociedade civil. Por isso precisamos ampliar o nosso olhar.",
+    "msg2": "E é para isso que o “The Good News Coronavírus” foi concebido: ser um farol de esperança para quem se sente afogado em um oceano de más notícias, que apesar de serem importantes para a prevenção da pandemia, causam ansiedade e desespero.",
+    "msg3": "Através desse portal a sociedade vai saber que existe um amanhã de possibilidades e que a derrota ao Coronavírus vai entrar na história como o momento em que nos conectamos  e construímos um futuro melhor.",
+    "msg4": "Esse portal não tem qualquer direcionamento político, nenhum relacionamento ou suporte vindo de qualquer nível de governo ou seus terceiros, tendo sua idealização e desenvolvimento inteiramente partido de membros da sociedade civil.",
+    "msg5": "As pessoas  desse grupo são favoráveis ao isolamento social como melhor medida para o combate ao Covid-19 e defendem que todas as medidas e recomendação da Organização Mundial de Saúde (OMS) no combate ao Covid-19 sejam seguidas.",
+    "people": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1528195957&single=true&output=csv"
+  },
+  "recovery": {
+    "content": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=219739080&single=true&output=csv",
+    "description": "Pessoas curadas ",
+    "description2": "do coronavírus"
+  },
+  "footer": {
+    "contact": "Contato",
+    "support": "Apoio"
+  },
+  "ad": {
+    "donate": "O dinheiro desse anúncio será doado."
+  },
+  "sticky": {
+    "msg1": "Vale lembrar que as noticias não mudam o cenário atual do Brasil. ",
+    "msg2": "Fiquem em casa e lavem as mãos."
+  }
+}
