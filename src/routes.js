@@ -8,21 +8,8 @@ import content from './utils/content'
 import Initiatives from './pages/initiatives'
 import FreeServices from './pages/free-service/FreeServices'
 import Donation from './pages/donation'
-import intl from 'react-intl-universal'
 
 export default function Routes() {
-  const locales = {
-    'pt-BR': require('./locales/pt-BR.json'),
-    'en-US': require('./locales/en-US.json')
-  }
-
-  const currentLocale = localStorage.getItem('goodnewscoronavirus') ? localStorage.getItem('goodnewscoronavirus') : locales[navigator.language] ? navigator.language : 'pt-BR'
-
-  intl.init({
-    currentLocale,
-    locales
-  })
-
   return (
     <BrowserRouter>
       <Switch>

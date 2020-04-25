@@ -25,9 +25,11 @@ const Header = () => {
     <>
       {
         Object.keys(pages).map((item, index) => (
-          <Link key={index} to={item} className={`nav-link ${style.navItem} ${pathname === item} ? style.active : ''}`} onClick={ () => { scrollTop() } }> {pages[item]} </Link>
+          <Link key={index} to={item} className={`nav-link ${style.navItem} ${pathname === '/' + item ? style.active : ''}`} onClick={ () => { scrollTop() } }> {pages[item]} </Link>
         ))
       }
+      <Link className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'pt-BR' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('pt-BR') } }> PT </Link>
+      <Link className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'en-US' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('en-US') } }> EN </Link>
     </>
   )
 
@@ -53,15 +55,15 @@ const Header = () => {
             <img className={style.codiv} src={covid} alt="Covidzinho" />
             <img className={style.logoIcon} src={logo} alt='The Good News Corona Virus' />
           </a>
-          <div>
-            <a onClick={() => { setLocale('pt-BR') }}>pt-br</a>
-            <a onClick={() => { setLocale('en-US') }}>en-us</a>
-          </div>
+
           <TooglerNav onClickAct={() => displayBanner === 'none' ? setDisplayBanner('block') : setDisplayBanner('none')}>
             {navLinks()}
           </TooglerNav>
+
           <FeedBanner displayBanner={displayBanner} />
+
         </div>
+
       </nav>
 
       {renderDesktopNav()}
