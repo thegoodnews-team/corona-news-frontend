@@ -34,22 +34,19 @@ export const FeedBanner = ({ displayBanner }) => {
     <a className={`${style.counterBanner} ${themes[theme + '-secundary']}`} style={{ display: displayBanner }}
       href='https://google.com/covid19-map/?hl=pt' target='_blank' rel="noopener noreferrer">
 
-      {locale === 'en-US' ? (
-        <>
-          <div className={`${style.counterBannerTitle} ${style.displayMdInline}`}> {recoveryData.description} <span> coronavírus</span></div>
-          <span className={style.counterBannerText}><img src={worldFlag} className={style.counterBannerFlag} alt='Mundo' />{feed.World}</span>
-        </>
-      )
-        : (
+      <div className={`${style.counterBannerTitle} ${style.displayMdInline}`}> {recoveryData.description} <span> {recoveryData.description2}</span></div>
+      <div className={style.displayMdInline}>
+
+        {locale === 'pt-BR' ? (
           <>
-            <div className={`${style.counterBannerTitle} ${style.displayMdInline}`}> {recoveryData.description} <span> coronavírus</span></div>
-            <div className={style.displayMdInline}>
-              <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' />{feed.Brasil}</span>
-              <span className={style.counterBannerText}><img src={worldFlag} className={style.counterBannerFlag} alt='Mundo' />{feed.World}</span>
-            </div>
+            <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' />{feed.Brasil}</span>
           </>
-        )
-      }
+        ) : <></>
+        }
+        <span className={style.counterBannerText}><img src={worldFlag} className={style.counterBannerFlag} alt='Mundo' />{feed.World}</span>
+
+      </div>
+
     </a >
   )
 }

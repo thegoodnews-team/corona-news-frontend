@@ -25,7 +25,8 @@
   },
   "recovery": {
     "content": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=219739080&single=true&output=csv",
-    "description": "Pessoas recuperadas do "
+    "description": "Pessoas curadas ",
+    "description2": "do coronavírus"
   },
   "footer": {
     "contact": "Contato",
