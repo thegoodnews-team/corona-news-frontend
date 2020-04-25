@@ -2,19 +2,16 @@ import React, { useEffect, useState } from 'react'
 import './style.css'
 import Person from './Person'
 import getItemsFromSpreadsheet from '../../utils/spreadsheet'
-import content from '../../utils/content'
 import intl from 'react-intl-universal'
 
 const About = () => {
-  const { people: link } = content
-
   const [creators, setCreators] = useState([])
   const [colaborators, setColaborators] = useState([])
   const about = intl.get('about')
 
   useEffect(() => {
     const loadPeople = async () => {
-      const peopleJson = await getItemsFromSpreadsheet(link)
+      const peopleJson = await getItemsFromSpreadsheet(about.people)
       listOfPeople(peopleJson)
     }
     loadPeople()

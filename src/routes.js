@@ -4,12 +4,14 @@ import Home from './pages/home'
 import About from './pages/about'
 import { MainLayout } from './pages/MainLayout'
 import { ThemeProvider, themes } from './components/context/ThemeContext'
-import content from './utils/content'
 import Initiatives from './pages/initiatives'
 import FreeServices from './pages/free-service/FreeServices'
 import Donation from './pages/donation'
+import intl from 'react-intl-universal'
 
 export default function Routes() {
+  const content = intl.get('json-data')
+
   return (
     <BrowserRouter>
       <Switch>
