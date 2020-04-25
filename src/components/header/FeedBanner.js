@@ -32,7 +32,7 @@ export const FeedBanner = ({ displayBanner }) => {
 
   return (
     <a className={`${style.counterBanner} ${themes[theme + '-secundary']}`} style={{ display: displayBanner }}
-      href='https://google.com/covid19-map/?hl=pt' target='_blank' rel="noopener noreferrer">
+      href='https://www.worldometers.info/coronavirus' target='_blank' rel="noopener noreferrer">
 
       <div className={`${style.counterBannerTitle} ${style.displayMdInline}`}> {recoveryData.description} <span> {recoveryData.description2}</span></div>
       <div className={style.displayMdInline}>
