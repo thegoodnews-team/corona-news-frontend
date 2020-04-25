@@ -9,16 +9,14 @@ import send from '../../analitycs'
 import './style.css'
 
 const Footer = () => {
-  const contact = intl.get('footer.contact')
-  const support = intl.get('footer.support')
-  const locale = intl.options.currentLocale
+  const footer = intl.get('footer')
 
   return (
     <footer className="footer py-5 mt-4">
       <div className="container text-center text-md-left">
         <div className="row">
           <div className="col-md-4 mt-md-0 my-3 mb-5">
-            <h2 className="footer-title">{contact}:</h2>
+            <h2 className="footer-title">{footer.contact}:</h2>
             <a
               href="https://instagram.com/thegoodnewscoronavirus"
               target="_blank"
@@ -36,7 +34,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="col-md-4 mb-md-0 mb-3">
-            <h2 className="footer-title">{support}:</h2>
+            <h2 className="footer-title">{footer.support}:</h2>
             <a
               href="https://www.thoughtworks.com/pt/remote-work-playbook"
               target="_blank"
@@ -46,7 +44,7 @@ const Footer = () => {
             </a>
           </div>
 
-          {locale === 'en-US' ? (
+          {intl.options.currentLocale === 'en-US' ? (
             <>
             </>
           )

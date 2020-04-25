@@ -14,8 +14,7 @@ const Header = () => {
   const { pathname } = useLocation()
   const theme = useContext(ThemeContext)
   const pages = intl.get('header')
-  const msg1 = intl.get('sticky.msg1')
-  const msg2 = intl.get('sticky.msg2')
+  const sticky = intl.get('sticky')
 
   const setLocale = (locale) => {
     localStorage.setItem('goodnewscoronavirus', locale)
@@ -68,7 +67,7 @@ const Header = () => {
       {renderDesktopNav()}
 
       <div className={`text-center sticky-top ${style.headerMsg} p-1 shadow-sm`}>
-        <span>{msg1}</span>{msg2}
+        <span>{sticky.msg1}</span>{sticky.msg2}
       </div>
     </>
   )

@@ -10,14 +10,7 @@ const About = () => {
 
   const [creators, setCreators] = useState([])
   const [colaborators, setColaborators] = useState([])
-  const creatorsTitle = intl.get('about.creators')
-  const collaboratorsTitle = intl.get('about.collaborators')
-  const msg1 = intl.get('about.msg1')
-  const msg2 = intl.get('about.msg2')
-  const msg3 = intl.get('about.msg3')
-  const msg4 = intl.get('about.msg4')
-  const msg5 = intl.get('about.msg5')
-  const mission = intl.get('about.mission')
+  const about = intl.get('about')
 
   useEffect(() => {
     const loadPeople = async () => {
@@ -37,24 +30,24 @@ const About = () => {
   return (
     <div className="container">
       <div className="subtitle">
-        <h2>{mission}</h2>
+        <h2>{about.mission}</h2>
         <p className="description">
-          {msg1}
+          {about.msg1}
         </p>
         <p className="description">
-          {msg2}        </p>
+          {about.msg2}        </p>
         <p className="description">
-          {msg3}        </p>
+          {about.msg3}        </p>
         <blockquote>
           <p className="description note">
-            {msg4}          </p>
+            {about.msg4}          </p>
         </blockquote>
         <p className="description">
-          {msg5}        </p>
+          {about.msg5}        </p>
       </div>
 
       <div className="subtitle">
-        <h2>{creatorsTitle}</h2>
+        <h2>{about.creators}</h2>
         <div className="row mt-5">
           {creators.map(creator => (
             <Person key={creator.Nome}
@@ -67,7 +60,7 @@ const About = () => {
         </div>
 
         <div className="subtitle">
-          <h2>{collaboratorsTitle}</h2>
+          <h2>{about.collaborators}</h2>
           <div className="row mt-5">
             {colaborators.map(colaborator => (
               <Person key={colaborator.Nome}
