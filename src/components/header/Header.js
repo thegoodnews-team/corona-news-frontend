@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react'
 import style from './css/header.module.css'
 import logo from '../../assets/logo.svg'
-import covid from './assets/covidzinho.png'
 import { Link, useLocation } from 'react-router-dom'
 import ThemeContext from '../context/ThemeContext'
 import themes from '../context/themes.module.css'
@@ -52,7 +51,6 @@ const Header = () => {
         <div className={`container ${style.containerPadX}`}>
 
           <a className={`navbar-brand ${style.brand}`} href="/">
-            <img className={style.codiv} src={covid} alt="Covidzinho" />
             <img className={style.logoIcon} src={logo} alt='The Good News Corona Virus' />
           </a>
 
