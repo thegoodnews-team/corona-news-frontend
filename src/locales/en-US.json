@@ -1,0 +1,36 @@
+{
+  "header": {
+    "news": "News",
+    "about": "About"
+  },
+  "json-data": {
+    "newsLink": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=503048262&single=true&output=csv"
+  },
+  "about": {
+    "mission": "Mission",
+    "creators": "Creators",
+    "collaborators": "Collaborators",
+    "msg1": "The Covid-19 crisis points out, naturally, to a hopeless moment. There are so many negative aspects that we forget that there are amazing news: number of healed people, searches for a vaccine in an unprecedented speed, collaboration between international community and civil society, that is why we need to expand our point of view.",
+    "msg2": "And that’s why “The Good News Coronavirus” was created: to be a light of hope to those who feel drowned in an ocean of bad news, in spite of being important to the pandemic preventions, cause nothing but anxiety and despair",
+    "msg3": "Through this portal, the society will know that there is a world of possibilities and that the defeat of the coronavirus will be in history as the moment that we got connected and built a better future",
+    "msg4": "This portal has no political engagement whatsoever, nor any support coming from any government or his third parties, with its idealization and development being entitlement of members of the civil society",
+    "msg5": "The people of this group are in favor of  social distancing as the best approach to fight the covid-19 and strongly advise that all the measures recommended by the World Health Organization (WHO) are followed.",
+    "people": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1528195957&single=true&output=csv"
+  },
+  "recovery": {
+    "content": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=219739080&single=true&output=csv",
+    "description": "People healed ",
+    "description2": "from coronavírus"
+  },
+  "footer": {
+    "contact": "Contact",
+    "support": "Support"
+  },
+  "ad": {
+    "donate": "The money for this ad will be donated."
+  },
+  "sticky": {
+    "msg1": "It’s worth reminding that these news does not change the actual situation in the world. ",
+    "msg2": "Stay home and wash your hands."
+  }
+}
