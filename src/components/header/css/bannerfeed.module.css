@@ -13,7 +13,7 @@
 .counterBannerTitle {
   font-size: 14px;
   color: #ffffff;
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.2rem;
   margin-left: 10px;
   margin-right: 10px;
@@ -35,6 +35,11 @@
 }
 
 @media only screen and (max-width: 991px) {
+  .counterBannerTitle {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
   .counterBanner {
     width: 100%;
     height: 2rem;
