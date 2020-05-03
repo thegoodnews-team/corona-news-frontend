@@ -6,6 +6,7 @@ import { MainLayout } from './pages/MainLayout'
 import { ThemeProvider, themes } from './components/context/ThemeContext'
 import Initiatives from './pages/initiatives'
 import FreeServices from './pages/free-service/FreeServices'
+import FutureAfterCovid from './pages/future-after-covid/futureAfterCovid'
 import Donation from './pages/donation'
 import intl from 'react-intl-universal'
 
@@ -39,6 +40,14 @@ export default function Routes() {
           <ThemeProvider value={themes.green} >
             <MainLayout>
               <FreeServices color={themes.green} spreadsheetLink={content.freeServices}></FreeServices>
+            </MainLayout>
+          </ThemeProvider>
+        </Route>
+
+        <Route exact path="/future">
+          <ThemeProvider value={themes.darkKhaki} >
+            <MainLayout>
+              <FutureAfterCovid color={themes.darkKhaki} spreadsheetLink={content.future}></FutureAfterCovid>
             </MainLayout>
           </ThemeProvider>
         </Route>

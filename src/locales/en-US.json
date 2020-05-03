@@ -1,10 +1,12 @@
 {
   "header": {
     "news": "News",
+    "future": "After Coronavírus",
     "about": "About"
   },
   "json-data": {
-    "newsLink": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=503048262&single=true&output=csv"
+    "newsLink": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=503048262&single=true&output=csv",
+    "future": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1458968004&single=true&output=csv"
   },
   "about": {
     "mission": "Mission",
@@ -30,7 +32,12 @@
     "donate": "The money for this ad will be donated."
   },
   "sticky": {
-    "msg1": "It’s worth reminding that these news does not change the actual situation in the world. ",
+    "msg1": "It’s worth reminding that these news do not change the actual situation in the world. ",
     "msg2": "Stay home and wash your hands."
+  },
+  "future": {
+    "title": "What article are you looking for?",
+    "arrow": "Filter articles by category",
+    "selector": "Search article"
   }
 }
