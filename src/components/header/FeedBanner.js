@@ -5,25 +5,20 @@ import worldFlag from './assets/planet-earth.svg'
 import ThemeContext from '../context/ThemeContext'
 import themes from '../context/themes.module.css'
 import PropTypes from 'prop-types'
-import getItemsFromSpreadsheet from '../../utils/spreadsheet'
-import content from '../../utils/content'
+import recovered from '../../utils/Recover'
 
 export const FeedBanner = ({ displayBanner }) => {
-  const [feed, setFeed] = useState({})
+  const [worldRecovered, setWorldRecovered] = useState('')
+  const [brazilRecovered, setBrazilRecovered] = useState('')
   const theme = useContext(ThemeContext)
-  const { recovery } = content
 
   useEffect(() => {
     (async () => {
-      const csvData = await getItemsFromSpreadsheet(recovery)
+      const recoveredWorld = await recovered('https://covid19-server.chrismichael.now.sh/api/v1/AllReports')
+      setWorldRecovered(recoveredWorld.reports[0].recovered)
 
-      const transfomedFeed = csvData.reduce(
-        (acc, curr) => {
-          acc[curr.country] = curr.number
-          return acc
-        }, {})
-
-      setFeed(transfomedFeed)
+      const recoveredBrazil = await recovered('https://covid19-server.chrismichael.now.sh/api/v1/ReportsByCountries/BRAZIL')
+      setBrazilRecovered(recoveredBrazil.report.recovered)
     })()
   }, [])
 
@@ -32,8 +27,8 @@ export const FeedBanner = ({ displayBanner }) => {
       href='https://google.com/covid19-map/?hl=pt' target='_blank' rel="noopener noreferrer">
       <div className={`${style.counterBannerTitle} ${style.displayMdInline}`}>Pessoas curadas <span>do coronavírus</span></div>
       <div className={style.displayMdInline}>
-        <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' />{feed.Brasil}</span>
-        <span className={style.counterBannerText}><img src={worldFlag} className={style.counterBannerFlag} alt='Mundo' />{feed.World}</span>
+        <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' />{brazilRecovered}</span>
+        <span className={style.counterBannerText}><img src={worldFlag} className={style.counterBannerFlag} alt='Mundo' />{worldRecovered}</span>
       </div>
     </a >
   )
