@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import getItemsFromSpreadsheet from '../../utils/spreadsheet'
 import CardsGrid from '../../components/cards-grid'
-import content from '../../utils/content'
+import intl from 'react-intl-universal'
 
 export default function Home() {
   const [news, setNews] = useState([])
-  const { newsLink } = content
+
+  const newsLink = intl.get('json-data.newsLink')
 
   useEffect(() => {
     const loadContent = async () => {
