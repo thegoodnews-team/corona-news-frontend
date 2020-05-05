@@ -5,23 +5,26 @@ import worldFlag from './assets/planet-earth.svg'
 import ThemeContext from '../context/ThemeContext'
 import themes from '../context/themes.module.css'
 import PropTypes from 'prop-types'
-import recovered from '../../utils/Recover'
+import recovered from '../../utils/Recovered'
 import { forkJoin, from } from 'rxjs'
+import formatNumber from '../../utils/FormatNumber'
+import content from '../../utils/content'
 
 export const FeedBanner = ({ displayBanner }) => {
   const [worldRecovered, setWorldRecovered] = useState('')
   const [brazilRecovered, setBrazilRecovered] = useState('')
+  const { recoveryWorld, recoveryBrazil } = content
   const theme = useContext(ThemeContext)
 
   useEffect(() => {
     (async () => {
       forkJoin(
-        from(recovered('https://covid19-server.chrismichael.now.sh/api/v1/AllReports')),
-        from(recovered('https://covid19-server.chrismichael.now.sh/api/v1/ReportsByCountries/BRAZIL'))
+        from(recovered(recoveryWorld)),
+        from(recovered(recoveryBrazil))
       ).subscribe(([a, b]) => {
         var recovered = [a, b]
-        setWorldRecovered(recovered[0].reports[0].recovered)
-        setBrazilRecovered(recovered[1].report.recovered)
+        setWorldRecovered(formatNumber(recovered[0].reports[0].recovered))
+        setBrazilRecovered(formatNumber(recovered[1].report.recovered))
       })
     })()
   }, [])
