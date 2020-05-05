@@ -6,6 +6,7 @@ import ThemeContext from '../context/ThemeContext'
 import themes from '../context/themes.module.css'
 import PropTypes from 'prop-types'
 import recovered from '../../utils/Recover'
+import { forkJoin, from } from 'rxjs'
 
 export const FeedBanner = ({ displayBanner }) => {
   const [worldRecovered, setWorldRecovered] = useState('')
@@ -14,11 +15,14 @@ export const FeedBanner = ({ displayBanner }) => {
 
   useEffect(() => {
     (async () => {
-      const recoveredWorld = await recovered('https://covid19-server.chrismichael.now.sh/api/v1/AllReports')
-      setWorldRecovered(recoveredWorld.reports[0].recovered)
-
-      const recoveredBrazil = await recovered('https://covid19-server.chrismichael.now.sh/api/v1/ReportsByCountries/BRAZIL')
-      setBrazilRecovered(recoveredBrazil.report.recovered)
+      forkJoin(
+        from(recovered('https://covid19-server.chrismichael.now.sh/api/v1/AllReports')),
+        from(recovered('https://covid19-server.chrismichael.now.sh/api/v1/ReportsByCountries/BRAZIL'))
+      ).subscribe(([a, b]) => {
+        var recovered = [a, b]
+        setWorldRecovered(recovered[0].reports[0].recovered)
+        setBrazilRecovered(recovered[1].report.recovered)
+      })
     })()
   }, [])
 
