@@ -34,6 +34,9 @@ a:hover {
   color: #252525;
   border-bottom: 1px solid #f3f3f3;
   padding-bottom: 8px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .category {

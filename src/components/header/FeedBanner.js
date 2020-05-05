@@ -6,11 +6,12 @@ import ThemeContext from '../context/ThemeContext'
 import themes from '../context/themes.module.css'
 import PropTypes from 'prop-types'
 import intl from 'react-intl-universal'
-
-import getItemsFromSpreadsheet from '../../utils/spreadsheet'
+import recovered from '../../utils/Recovered'
+import formatNumber from '../../utils/FormatNumber'
 
 export const FeedBanner = ({ displayBanner }) => {
-  const [feed, setFeed] = useState({})
+  const [worldRecovered, setWorldRecovered] = useState('')
+  const [brazilRecovered, setBrazilRecovered] = useState('')
   const theme = useContext(ThemeContext)
   const recoveryData = intl.get('recovery')
   const locale = intl.options.currentLocale
@@ -18,15 +19,10 @@ export const FeedBanner = ({ displayBanner }) => {
   useEffect(() => {
     (async () => {
       const { content } = recoveryData
-      const csvData = await getItemsFromSpreadsheet(content)
 
-      const transfomedFeed = csvData.reduce(
-        (acc, curr) => {
-          acc[curr.country] = curr.number
-          return acc
-        }, {})
-
-      setFeed(transfomedFeed)
+      const data = await recovered(content)
+      setWorldRecovered(formatNumber(data.reports[0].recovered))
+      setBrazilRecovered(formatNumber(data.reports[0].table[0][9].TotalRecovered))
     })()
   }, [])
 
@@ -39,11 +35,11 @@ export const FeedBanner = ({ displayBanner }) => {
 
         {locale === 'pt-BR' ? (
           <>
-            <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' />{feed.Brasil}</span>
+            <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' />{brazilRecovered}</span>
           </>
         ) : <></>
         }
-        <span className={style.counterBannerText}><img src={worldFlag} className={style.counterBannerFlag} alt='Mundo' />{feed.World}</span>
+        <span className={style.counterBannerText}><img src={worldFlag} className={style.counterBannerFlag} alt='Mundo' />{worldRecovered}</span>
 
       </div>
 
