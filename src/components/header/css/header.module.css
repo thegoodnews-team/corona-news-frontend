@@ -1,130 +1,173 @@
 .nav {
-	background-color: #1575d5;
-	z-index: 900;
-	padding-top: 0px;
-	padding-bottom: 20px;
+  background-color: #1575d5;
+  z-index: 900;
+  padding-top: 0px;
+  padding-bottom: 20px;
 }
 
 .brand {
-	margin-top: 0.8rem
+  margin-top: 0.8rem;
 }
 
 .containerPadX {
-	padding-left: 15px !important;
-	padding-right: 15px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }
 
 .navLink {
-	padding: 0 1.5rem;
-	color: #fff !important;
+  padding: 0 1.5rem;
+  color: #fff !important;
+}
+
+.pt {
+  margin-right: 20px;
 }
 
 .navItem {
-    padding: 0 1.5rem;
-	border-left: #fff solid thin;
-	color: #fff;
-	margin: 1rem 0;
+  padding: 0 1.5rem;
+  border-left: #fff solid thin;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+.intlNavItem {
+  color: white;
+  width: 22px;
+  height: 22px;
+  align-self: center;
+  align-content: center;
+  margin-right: 5px;
+  padding: 1px;
+}
+
+.intlNavItem:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.intlNavItem:first-child {
+  border-style: none;
 }
 
 .navItem:hover {
-	color: #fff;
-	font-weight: bold;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.intlNavItemActive {
+  background: white;
+  color: black;
 }
 
 .active {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .navItem:first-child {
-	margin-left: auto;
+  margin-left: auto;
 }
 
 .navItem > .active {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .navItem:first-child {
-	border-style: none;
+  border-style: none;
 }
 
 .logoIcon {
-	top: 19px;
-	left: 126px;
-	width: 335px;
-	height: 22px;
+  top: 19px;
+  left: 126px;
+  height: 50px;
 }
 
 .headerMsg {
-	font-size: 14px;
-	font-style: italic;
-	background-color: #fff;
-	z-index: 850;
+  font-size: 14px;
+  font-style: italic;
+  background-color: #fff;
+  z-index: 850;
 }
 
 .headerLinks {
-	font-size: 14px;
-	top: 92px;
-	background-color: #5E9FE2;
-	text-decoration: none;
-	color: #fff;
+  font-size: 14px;
+  top: 92px;
+  background-color: #5e9fe2;
+  text-decoration: none;
+  color: #fff;
 }
 
 .codiv {
-    margin-right: 1rem
+  margin-right: 1rem;
 }
 
 .headerMsg {
-	top: 153px;
+  top: 153px;
+}
+
+.customselect {
+  width: auto !important;
+  align-self: center;
 }
 
 /* Corte do Bootstrap de MD para LG */
 @media only screen and (max-width: 991px) {
-	.navItem {
-		padding: 0.5rem 0 0;
-		border-style: none;
-	}
+  .navItem {
+    padding: 0.5rem 0 0;
+    border-style: none;
+  }
 
-	.navItem:hover {
-		color: #fff;
-	}
+  .customselect {
+    margin-bottom: 10px;
+  }
 
-	.headerLinks {
-		display: none;
-	}
+  .navItem:hover {
+    color: #fff;
+  }
 
-	.nav {
-		padding-bottom: 0;
-	}
+  .headerLinks {
+    display: none;
+  }
 
-	.brand {
-		margin-bottom: 1rem
-	}
+  .nav {
+    padding-bottom: 0;
+  }
 
-	.headerMsg {
-		top: 102px;
-	}
+  .brand {
+    margin-bottom: 1rem;
+    margin-right: 0;
+    margin-left: 41px !important;
+  }
+
+  .headerMsg {
+    top: 90px;
+  }
+
+  .containerPadX {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-	.logoIcon {
-		width: 12rem;
-	}
+  .logoIcon {
+    width: 16.5rem;
+  }
 
-	.codiv {
-		height: 2rem;
-	}
+  .brand {
+    margin-left: 11px !important;
+  }
 
-	.headerMsg > span {
-		display: none;
-	}
+  .headerMsg > span {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 361px) {
-	.logoIcon {
-		width: 9rem;
-	}
+  .logoIcon {
+    width: 14rem;
+  }
 
-	.codiv {
-		height: 1.5rem;
-	}
+  .brand {
+    margin-left: 0px !important;
+  }
 }

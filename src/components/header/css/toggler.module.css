@@ -1,30 +1,30 @@
 .togglerIcon {
-	background-image: url("../../../assets/menu-icon.svg") !important;
+  background-image: url('../../../assets/menu-icon.svg') !important;
 }
 
 .togglerClose {
-	background-image: url("../assets/cancel.svg") !important;
-	height: 1rem;
+  background-image: url('../assets/cancel.svg') !important;
+  height: 1rem;
 }
 
 .togglerBtn {
-	border: none;
-	display: none;
-	margin-top: 1rem;
+  border: none;
+  display: none;
+  margin-top: 1rem;
 }
 
 .togglerBtn:focus {
-	outline: none;
+  outline: none;
 }
 
-
 @media only screen and (max-width: 991px) {
-	.togglerBtn {
-		display: inline-block;
-		margin-bottom: 1rem;
-	}
+  .togglerBtn {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
 
-	.mobileNavLinks {
-		width: 100%;
-	}
+  .mobileNavLinks {
+    width: 100%;
+    margin-bottom: 18px;
+  }
 }

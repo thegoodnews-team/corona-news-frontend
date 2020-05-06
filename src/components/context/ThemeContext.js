@@ -4,7 +4,7 @@ export const themes = {
   blue: 'blue',
   purple: 'purple',
   green: 'green',
-  lemon: 'lemon',
+  darkKhaki: 'darkKhaki',
   orange: 'orange',
   pink: 'pink'
 }
