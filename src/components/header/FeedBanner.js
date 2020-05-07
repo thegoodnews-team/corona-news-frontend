@@ -35,7 +35,7 @@ export const FeedBanner = ({ displayBanner }) => {
 
         {locale === 'pt-BR' ? (
           <>
-            <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' />{brazilRecovered}</span>
+            <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' /> 55.350</span>
           </>
         ) : <></>
         }
