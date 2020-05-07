@@ -11,7 +11,7 @@ import formatNumber from '../../utils/FormatNumber'
 
 export const FeedBanner = ({ displayBanner }) => {
   const [worldRecovered, setWorldRecovered] = useState('')
-  const [brazilRecovered, setBrazilRecovered] = useState('')
+  // const [brazilRecovered, setBrazilRecovered] = useState('')
   const theme = useContext(ThemeContext)
   const recoveryData = intl.get('recovery')
   const locale = intl.options.currentLocale
@@ -22,7 +22,7 @@ export const FeedBanner = ({ displayBanner }) => {
 
       const data = await recovered(content)
       setWorldRecovered(formatNumber(data.reports[0].recovered))
-      setBrazilRecovered(formatNumber(data.reports[0].table[0][9].TotalRecovered))
+      // setBrazilRecovered(formatNumber(data.reports[0].table[0][9].TotalRecovered))
     })()
   }, [])
 
@@ -35,7 +35,7 @@ export const FeedBanner = ({ displayBanner }) => {
 
         {locale === 'pt-BR' ? (
           <>
-            <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' /> 55.350</span>
+            <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' /> 55 350</span>
           </>
         ) : <></>
         }
