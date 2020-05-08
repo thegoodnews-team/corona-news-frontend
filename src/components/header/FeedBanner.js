@@ -22,7 +22,7 @@ export const FeedBanner = ({ displayBanner }) => {
 
       const data = await recovered(content)
       setWorldRecovered(formatNumber(data.reports[0].recovered))
-      setBrazilRecovered(formatNumber(data.reports[0].table[0][9].TotalRecovered))
+      setBrazilRecovered(formatNumber(data.reports[0].table[0][8].TotalRecovered))
     })()
   }, [])
 
@@ -35,7 +35,7 @@ export const FeedBanner = ({ displayBanner }) => {
 
         {locale === 'pt-BR' ? (
           <>
-            <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' />{brazilRecovered}</span>
+            <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' /> {brazilRecovered}</span>
           </>
         ) : <></>
         }
