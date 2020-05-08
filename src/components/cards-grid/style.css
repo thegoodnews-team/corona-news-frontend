@@ -19,7 +19,7 @@
 }
 
 .card-body-height {
-  height: 7.5rem;
+  /*height: 7.5rem;*/
 }
 
 .news {
@@ -40,5 +40,5 @@
 }
 
 .ad {
-    height: 100%
+  height: 100%;
 }
