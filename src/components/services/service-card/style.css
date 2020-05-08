@@ -22,15 +22,19 @@ a:hover {
 
 .card-body .card-description {
   font-size: 14px;
-  line-height: 18px;
+  min-height: 58px;
   font-weight: 500;
   color: #707070;
+  line-height: 25px;
+  padding-bottom: 8px;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .card-body .card-title {
+  min-height: 72px;
   font-size: 18px;
   line-height: 32px;
   font-weight: 500;
