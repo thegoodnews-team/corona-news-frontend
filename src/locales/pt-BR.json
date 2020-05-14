@@ -44,6 +44,7 @@
   "future": {
     "title": "Qual o artigo que você está buscando?",
     "arrow": "Filtre artigos por categoria",
-    "selector": "Buscar artigos"
+    "selector": "Buscar artigos",
+    "author": "Autor"
   }
 }

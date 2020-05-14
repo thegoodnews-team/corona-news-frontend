@@ -6,8 +6,13 @@ a:hover {
   text-decoration: none;
 }
 
+.card-height {
+  min-height: 430px;
+  max-height: 430px;
+}
+
 .news > .news-img {
-  height: 250px;
+  height: 240px;
   width: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -16,8 +21,8 @@ a:hover {
   background-repeat: no-repeat;
 }
 
-.card-body {
-  padding: 14px;
+.card-body-service {
+  padding: 14px 14px 0px 14px;
 }
 
 .card-body .card-description {
@@ -29,21 +34,21 @@ a:hover {
   padding-bottom: 8px;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  color: #252525;
+  border-top: 1px solid #f3f3f3;
+  padding-top: 8px;
 }
 
 .card-body .card-title {
-  min-height: 72px;
   font-size: 18px;
   line-height: 32px;
   font-weight: 500;
-  color: #252525;
-  border-bottom: 1px solid #f3f3f3;
-  padding-bottom: 8px;
+
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 

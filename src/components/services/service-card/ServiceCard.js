@@ -3,6 +3,7 @@ import './style.css'
 import sendAnalitycs from '../../../analitycs'
 import PropTypes from 'prop-types'
 import toHexColor from '../../../utils/ColorPicker'
+import intl from 'react-intl-universal'
 
 export default function ServiceCard({
   link,
@@ -10,13 +11,16 @@ export default function ServiceCard({
   title,
   description,
   category,
+  author,
   analyticsCategory
 }) {
   const truncateDescription = str => {
-    return str && str.length > 120
-      ? str.substring(0, 117) + '...'
+    return str && str.length > 200
+      ? str.substring(0, 150) + '...'
       : str
   }
+
+  const future = intl.get('future')
 
   return (
     <a
@@ -31,7 +35,7 @@ export default function ServiceCard({
         })
       }
     >
-      <div className="card news">
+      <div className="card news card-height">
         <div
           className="news-img"
           style={{ backgroundImage: `url('${linkImage}')` }}
@@ -40,10 +44,19 @@ export default function ServiceCard({
           {category}
         </span>
 
-        <div className="card-body card-body-height">
+        <div className="card-body card-body-height card-body-service">
           <p className="card-title">{title}</p>
+          {!author &&
           <p className="card-description">{truncateDescription(description)}</p>
+          }
         </div>
+
+        {author &&
+             <div className="card-footer bg-transparent text-footer-size">
+               <div className="float-left news-fonte">{future.author}</div>
+               <div className="float-right news-data">{author}</div>
+             </div>
+        }
       </div>
     </a>
   )
@@ -52,6 +65,7 @@ export default function ServiceCard({
 ServiceCard.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   linkImage: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
