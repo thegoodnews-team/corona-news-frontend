@@ -38,6 +38,7 @@
   "future": {
     "title": "What article are you looking for?",
     "arrow": "Filter articles by category",
-    "selector": "Search article"
+    "selector": "Search article",
+    "author": "Author"
   }
 }
