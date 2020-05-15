@@ -19,7 +19,11 @@
 }
 
 .card-body-height {
-  /*height: 7.5rem;*/
+  height: 7.5rem;
+}
+
+.margin-right {
+  margin-right: 10px;
 }
 
 .news {
@@ -41,4 +45,24 @@
 
 .ad {
   height: 100%;
+}
+
+.shareButton {
+  display: none;
+}
+
+.share {
+  height: 15px;
+  width: 15px;
+}
+
+.news-compartilhar {
+  color: #707070;
+}
+
+@media only screen and (max-width: 991px) {
+  .shareButton {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
 }
