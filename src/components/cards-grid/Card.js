@@ -2,7 +2,7 @@ import React from 'react'
 import './style.css'
 import sendAnalitycs from '../../analitycs'
 import PropTypes from 'prop-types'
-
+import Share from '../../assets/share.png'
 export default function Card({
   link,
   linkImg,
@@ -11,35 +11,54 @@ export default function Card({
   date,
   analyticsCategory
 }) {
-  return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={() =>
-        sendAnalitycs({
-          name: link,
-          category: analyticsCategory,
-          type: 'CLICK'
-        })
+  function buildURL() {
+    return encodeURI(`${'https://www.thegoodnewscoronavirus.com'}`)
+  }
+
+  function onShareVia() {
+    if (HasNavigatorShare()) {
+      const data = {
+        title: 'The Good News Corona Virus',
+        text: `The Good News Corona Virus: [${date}] [Fonte: ${fonte}]  ${title}. Veja mais em: ${buildURL()}`
       }
-    >
-      <div className="card news">
-        <div
-          className="news-img"
-          style={{ backgroundImage: `url('${linkImg}')` }}
-        />
+      navigator.share(data)
+    }
+  }
 
-        <div className="card-body card-body-height">
-          <p className="card-text">{title}</p>
-        </div>
+  return (
+    <>
+      <div className="card">
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() =>
+            sendAnalitycs({
+              name: link,
+              category: analyticsCategory,
+              type: 'CLICK'
+            })
+          }
+        >
+          <div className="news">
+            <div
+              className="news-img"
+              style={{ backgroundImage: `url('${linkImg}')` }}
+            />
 
+            <div className="card-body card-body-height">
+              <p className="card-text">{title}</p>
+            </div>
+
+          </div>
+        </a>
         <div className="card-footer bg-transparent text-footer-size">
-          <div className="float-left news-fonte">{fonte}</div>
-          <div className="float-right news-data">{date}</div>
+          <div className="float-left news-fonte w-50">{fonte}</div>
+          <ShareBtn onClick={() => onShareVia()} />
+          <div className={HasNavigatorShare() ? 'float-right margin-right' : 'float-right'}>{date}</div>
         </div>
       </div>
-    </a>
+    </>
   )
 }
 
@@ -50,4 +69,23 @@ Card.propTypes = {
   date: PropTypes.string.isRequired,
   fonte: PropTypes.string.isRequired,
   analyticsCategory: PropTypes.string
+}
+
+function ShareBtn({ onClick }) {
+  if (HasNavigatorShare()) {
+    return (
+      <div className="float-right">
+        <img
+          onClick={onClick}
+          className="share "
+          src={Share}
+          alt="icon clock"
+        ></img>
+      </div>
+    )
+  } else return null
+}
+
+function HasNavigatorShare() {
+  return navigator && navigator.share
 }
