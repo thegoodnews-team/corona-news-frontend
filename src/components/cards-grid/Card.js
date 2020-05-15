@@ -24,6 +24,7 @@ export default function Card({
       const data = {
         text: `[${date}] [${card.source} ${fonte}]  ${title}. ${card.knowmore} ${buildURL()}`
       }
+
       navigator.share(data)
     }
   }
