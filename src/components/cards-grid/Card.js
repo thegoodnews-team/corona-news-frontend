@@ -18,8 +18,7 @@ export default function Card({
   function onShareVia() {
     if (HasNavigatorShare()) {
       const data = {
-        title: 'The Good News Corona Virus',
-        text: `The Good News Corona Virus: [${date}] [Fonte: ${fonte}]  ${title}. Veja mais em: ${buildURL()}`
+        text: `[${date}] [Fonte: ${fonte}]  ${title}. Veja mais em: ${buildURL()}`
       }
       navigator.share(data)
     }
