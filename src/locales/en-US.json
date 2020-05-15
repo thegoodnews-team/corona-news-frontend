@@ -40,5 +40,9 @@
     "arrow": "Filter articles by category",
     "selector": "Search article",
     "author": "Author"
+  },
+  "card": {
+    "source": "Source:",
+    "knowmore": "Learn more at:"
   }
 }

@@ -3,6 +3,8 @@ import './style.css'
 import sendAnalitycs from '../../analitycs'
 import PropTypes from 'prop-types'
 import Share from '../../assets/share.png'
+import intl from 'react-intl-universal'
+
 export default function Card({
   link,
   linkImg,
@@ -11,6 +13,8 @@ export default function Card({
   date,
   analyticsCategory
 }) {
+  const card = intl.get('card')
+
   function buildURL() {
     return encodeURI(`${'https://www.thegoodnewscoronavirus.com'}`)
   }
@@ -18,7 +22,7 @@ export default function Card({
   function onShareVia() {
     if (HasNavigatorShare()) {
       const data = {
-        text: `[${date}] [Fonte: ${fonte}]  ${title}. Veja mais em: ${buildURL()}`
+        text: `[${date}] [${card.source} ${fonte}]  ${title}. ${card.knowmore} ${buildURL()}`
       }
       navigator.share(data)
     }

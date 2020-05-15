@@ -46,5 +46,9 @@
     "arrow": "Filtre artigos por categoria",
     "selector": "Buscar artigos",
     "author": "Autor"
+  },
+  "card": {
+    "source": "Fonte:",
+    "knowmore": "Saiba mais em:"
   }
 }
