@@ -13,7 +13,7 @@ export default function Card({
   date,
   analyticsCategory
 }) {
-  const card = intl.get('card')
+  const cardProp = intl.get('card')
 
   function buildURL() {
     return encodeURI(`${'https://www.thegoodnewscoronavirus.com'}`)
@@ -22,9 +22,8 @@ export default function Card({
   function onShareVia() {
     if (HasNavigatorShare()) {
       const data = {
-        text: `[${date}] [${card.source} ${fonte}]  ${title}. ${card.knowmore} ${buildURL()}`
+        text: `[${date}] [${cardProp.source} ${fonte}]  ${title}. ${cardProp.knowmore} ${buildURL()}`
       }
-
       navigator.share(data)
     }
   }
