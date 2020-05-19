@@ -1,6 +1,7 @@
 import React from 'react'
-import Routes from './routes'
+import CookieConsent from 'react-cookie-consent'
 import intl from 'react-intl-universal'
+import Routes from './routes'
 
 function App() {
   const locales = {
@@ -17,8 +18,13 @@ function App() {
     locales
   })
 
+  const textCookies = intl.get('cookies')
+
   return (
-    <Routes />
+    <>
+      <Routes />
+      <CookieConsent buttonText={textCookies.button}>{textCookies.consent}</CookieConsent>
+    </>
   )
 }
 
