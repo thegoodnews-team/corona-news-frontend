@@ -20,11 +20,18 @@ const Header = () => {
     window.location.href = '/'
   }
 
+  const hideMobileNavLinks = () => {
+    const toggler = window.$('#toggler')
+    if (toggler) {
+      toggler.collapse('hide')
+    }
+  }
+
   const navLinks = () => (
     <>
       {
         Object.keys(pages).map((item, index) => (
-          <Link key={index} to={item} className={`nav-link ${style.navItem} ${pathname === '/' + item ? style.active : ''}`} onClick={ () => { scrollTop() } }> {pages[item]} </Link>
+          <Link key={index} to={item} className={`nav-link ${style.navItem} ${pathname === '/' + item ? style.active : ''}`} onClick={ () => { scrollTop(); hideMobileNavLinks() } }> {pages[item]} </Link>
         ))
       }
       <Link className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'pt-BR' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('pt-BR') } }> PT </Link>

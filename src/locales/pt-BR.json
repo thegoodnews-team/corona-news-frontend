@@ -51,5 +51,9 @@
   "card": {
     "source": "Fonte:",
     "knowmore": "Saiba mais em:"
+  },
+  "cookies": {
+    "consent": "Utilizamos cookies para personalizar anúncios e analisar nosso tráfego. Nós não compartilhamos suas informações.",
+    "button": "Eu entendi"
   }
 }

@@ -45,5 +45,9 @@
   "card": {
     "source": "Source:",
     "knowmore": "Learn more at:"
+  },
+  "cookies": {
+    "consent": "We use cookies to personalise ads and to analyse our traffic. We don't share your information.",
+    "button": "I understand"
   }
 }
