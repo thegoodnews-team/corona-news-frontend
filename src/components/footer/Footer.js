@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="col-md-4 mt-md-0 my-3 mb-5">
             <h2 className="footer-title">{footer.contact}:</h2>
             <a
-              href="https://instagram.com/thegoodnewscoronavirus"
+              href={footer.instagramLink}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => send({ name: 'INSTAGRAM', category: 'FOOTER', type: 'CLICK' })}>
