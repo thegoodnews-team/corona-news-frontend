@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.notification {
+  width: 500px;
+  height: 80px;
+  border-radius: 6px;
+  background: #1874d5;
+  color: white;
+}
+
+.notification p {
+  margin-left: 20px;
+}
+
+.notification .notificationTitle {
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.notification .notificationDescription {
+  font-weight: 400;
+  margin-left: 50px;
+  margin-top: -7px;
+}

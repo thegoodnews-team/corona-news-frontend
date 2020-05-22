@@ -34,7 +34,8 @@
     "contact": "Contato",
     "support": "Apoio",
     "instagramLink": "https://www.instagram.com/thegoodnewscoronavirus",
-    "msgInstagram": "Clica aqui e siga-nos no instagram"
+    "msgInstagram": "Clica aqui para seguir nosso instagram",
+    "instagramName": "@thegoodnewscoronavirus"
   },
   "ad": {
     "donate": "O dinheiro desse anúncio será doado."

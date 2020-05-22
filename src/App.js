@@ -4,6 +4,7 @@ import intl from 'react-intl-universal'
 import Routes from './routes'
 import 'react-notifications-component/dist/theme.css'
 import ReactNotification, { store } from 'react-notifications-component'
+import './index.css'
 
 function App() {
   const locales = {
@@ -24,27 +25,39 @@ function App() {
     locales
   })
 
+  function notificationCard(title, description, notificationClass) {
+    return (
+      <div className='notification'>
+        <p className="notificationTitle">{title}</p>
+        <p className="notificationDescription">{description}</p>
+      </div>
+    )
+  }
+
   useEffect(() => {
     const footer = intl.get('footer')
 
-    store.addNotification({
-      title: footer.msgInstagram,
-      message: '@thegoodnewscoronavirus',
-      type: 'default',
-      insert: 'bottom',
-      container: 'bottom-center',
-      animationIn: ['animated', 'fadeIn'],
-      animationOut: ['animated', 'fadeOut'],
-      dismiss: {
-        duration: 8000,
-        onScreen: false
-      },
-      onRemoval: (id, removedBy) => {
-        if (removedBy !== 'timeout') {
-          window.open(footer.instagramLink, '_self')
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+      store.addNotification({
+        title: footer.msgInstagram,
+        message: footer.instagramName,
+        type: 'default',
+        insert: 'bottom',
+        content: notificationCard(footer.msgInstagram, footer.instagramName),
+        container: 'bottom-center',
+        animationIn: ['animated fadeIn'],
+        animationOut: ['animated fadeOut'],
+        dismiss: {
+          duration: 8000,
+          onScreen: false
+        },
+        onRemoval: (id, removedBy) => {
+          if (removedBy !== 'timeout') {
+            window.open(footer.instagramLink, '_self')
+          }
         }
-      }
-    })
+      })
+    }
   }, [])
 
   const textCookies = intl.get('cookies')
