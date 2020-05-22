@@ -41,7 +41,10 @@ function App() {
       },
       onRemoval: (id, removedBy) => {
         if (removedBy !== 'timeout') {
-          window.open(footer.instagramLink, '_system')
+          var a = document.createElement('a')
+          a.setAttribute('href', footer.instagramLink)
+          a.setAttribute('target', '_blank')
+          a.click()
         }
       }
     })
