@@ -27,7 +27,8 @@
   "footer": {
     "contact": "Contact",
     "support": "Support",
-    "instagramLink": "https://www.instagram.com/thegoodnewscoronavirusen"
+    "instagramLink": "https://www.instagram.com/thegoodnewscoronavirusen",
+    "msgInstagram": "Click here and follows us on instagram"
   },
   "ad": {
     "donate": "This ad's revenue will be donated to help fight Covid."
