@@ -40,10 +40,9 @@ function App() {
         onScreen: false
       },
       onRemoval: (id, removedBy) => {
-        var a = document.createElement('a')
-        a.setAttribute('href', footer.instagramLink)
-        a.setAttribute('target', '_blank')
-        a.click()
+        if (removedBy !== 'timeout') {
+          window.open(footer.instagramLink, '_self')
+        }
       }
     })
   }, [])
