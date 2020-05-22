@@ -41,8 +41,8 @@ function App() {
       },
       onRemoval: (id, removedBy) => {
         if (removedBy !== 'timeout') {
-          var win = window.open(footer.instagramLink, '_blank')
-          win.focus()
+          var windowReference = window.open()
+          windowReference.location = footer.instagramLink
         }
       }
     })
