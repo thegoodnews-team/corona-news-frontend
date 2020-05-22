@@ -33,7 +33,8 @@
   "footer": {
     "contact": "Contato",
     "support": "Apoio",
-    "instagramLink": "https://www.instagram.com/thegoodnewscoronavirus"
+    "instagramLink": "https://www.instagram.com/thegoodnewscoronavirus",
+    "msgInstagram": "Clica aqui e nos segue no instagram"
   },
   "ad": {
     "donate": "O dinheiro desse anúncio será doado."
