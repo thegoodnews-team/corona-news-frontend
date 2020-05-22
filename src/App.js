@@ -30,8 +30,8 @@ function App() {
     title: footer.msgInstagram,
     message: '@thegoodnewscoronavirus',
     type: 'default',
-    insert: 'top',
-    container: 'top-right',
+    insert: 'bottom',
+    container: 'bottom-center',
     animationIn: ['animated', 'fadeIn'],
     animationOut: ['animated', 'fadeOut'],
     dismiss: {
