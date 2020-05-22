@@ -40,12 +40,10 @@ function App() {
         onScreen: false
       },
       onRemoval: (id, removedBy) => {
-        if (removedBy !== 'timeout') {
-          var a = document.createElement('a')
-          a.setAttribute('href', footer.instagramLink)
-          a.setAttribute('target', '_blank')
-          a.click()
-        }
+        var a = document.createElement('a')
+        a.setAttribute('href', footer.instagramLink)
+        a.setAttribute('target', '_blank')
+        a.click()
       }
     })
   }, [])
