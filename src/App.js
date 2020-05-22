@@ -36,12 +36,13 @@ function App() {
       animationIn: ['animated', 'fadeIn'],
       animationOut: ['animated', 'fadeOut'],
       dismiss: {
-        duration: 5000,
-        onScreen: true
+        duration: 8000,
+        onScreen: false
       },
       onRemoval: (id, removedBy) => {
         if (removedBy !== 'timeout') {
-          window.open(footer.instagramLink, '_blank')
+          var win = window.open(footer.instagramLink, '_blank')
+          win.focus()
         }
       }
     })
