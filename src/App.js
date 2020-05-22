@@ -40,7 +40,7 @@ function App() {
         onScreen: true
       },
       onRemoval: (id, removedBy) => {
-        if (removedBy === 'click') {
+        if (removedBy !== 'timeout') {
           window.open(footer.instagramLink, '_blank')
         }
       }
