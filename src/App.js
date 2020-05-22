@@ -26,32 +26,29 @@ function App() {
     locales
   })
 
-  function onclickok() {
-    store.addNotification({
-      title: footer.msgInstagram,
-      message: '@thegoodnewscoronavirus',
-      type: 'default',
-      insert: 'top',
-      container: 'top-right',
-      animationIn: ['animated', 'fadeIn'],
-      animationOut: ['animated', 'fadeOut'],
-      dismiss: {
-        duration: 5000,
-        onScreen: true
-      },
-      onRemoval: (id, removedBy) => {
-        if (removedBy !== 'timeout') {
-          window.open(footer.instagramLink, '_blank')
-        }
+  store.addNotification({
+    title: footer.msgInstagram,
+    message: '@thegoodnewscoronavirus',
+    type: 'default',
+    insert: 'top',
+    container: 'top-right',
+    animationIn: ['animated', 'fadeIn'],
+    animationOut: ['animated', 'fadeOut'],
+    dismiss: {
+      duration: 5000,
+      onScreen: true
+    },
+    onRemoval: (id, removedBy) => {
+      if (removedBy !== 'timeout') {
+        window.open(footer.instagramLink, '_blank')
       }
-    })
-  }
+    }
+  })
 
   const textCookies = intl.get('cookies')
 
   return (
     <>
-      <button onClick={onclickok}>oioioi</button>
       <ReactNotification />
       <Routes />
       <CookieConsent buttonText={textCookies.button}>
