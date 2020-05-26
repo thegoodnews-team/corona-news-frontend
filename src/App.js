@@ -13,11 +13,17 @@ function App() {
     es: require('./locales/es.json')
   }
 
-  const currentLocale = localStorage.getItem('goodnewscoronavirus')
-    ? localStorage.getItem('goodnewscoronavirus')
-    : locales[navigator.language]
-      ? navigator.language
-      : 'en-US'
+  let currentLocale = localStorage.getItem('goodnewscoronavirus')
+
+  if (!currentLocale) {
+    if (navigator.language.includes('es')) {
+      currentLocale = 'es'
+    } else if (navigator.language.includes('pt')) {
+      currentLocale = 'pt-BR'
+    } else {
+      currentLocale = 'en-US'
+    }
+  }
 
   localStorage.setItem('goodnewscoronavirus', currentLocale)
 
