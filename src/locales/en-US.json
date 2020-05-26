@@ -1,12 +1,14 @@
 {
   "header": {
     "news": "News",
+    "services": "Free Services",
     "future": "Future after covid",
     "about": "About"
   },
   "json-data": {
     "newsLink": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=503048262&single=true&output=csv",
-    "future": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1458968004&single=true&output=csv"
+    "future": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1458968004&single=true&output=csv",
+    "freeServices": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=121427844&single=true&output=csv"
   },
   "about": {
     "mission": "Mission",
@@ -43,6 +45,11 @@
     "arrow": "Filter articles by category",
     "selector": "Search article",
     "author": "Author"
+  },
+  "freeService": {
+    "title": "What free service are you looking for?",
+    "arrow": "Filter free services by category",
+    "selector": "Search free services"
   },
   "card": {
     "source": "Source:",
