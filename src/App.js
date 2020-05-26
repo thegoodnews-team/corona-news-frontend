@@ -9,7 +9,8 @@ import './index.css'
 function App() {
   const locales = {
     'pt-BR': require('./locales/pt-BR.json'),
-    'en-US': require('./locales/en-US.json')
+    'en-US': require('./locales/en-US.json'),
+    es: require('./locales/es.json')
   }
 
   const currentLocale = localStorage.getItem('goodnewscoronavirus')
