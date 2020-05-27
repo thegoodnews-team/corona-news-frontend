@@ -1,8 +1,8 @@
 {
   "header": {
-    "news": "News",
-    "future": "Future after covid",
-    "about": "About"
+    "news": "Noticias",
+    "future": "El futuro depois del Covid",
+    "about": "Acerca"
   },
   "json-data": {
     "newsLink": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=481999511&single=true&output=csv",
@@ -10,46 +10,46 @@
   },
   "about": {
     "mission": "Mission",
-    "creators": "Creators",
-    "collaborators": "Collaborators",
-    "msg1": "The Covid-19 crisis points out, naturally, to a hopeless moment. There are so many negative aspects that we forget that there are amazing news: number of healed people, searches for a vaccine in an unprecedented speed, collaboration between international community and civil society, that is why we need to expand our point of view.",
-    "msg2": "And that’s why “The Good News Coronavirus” was created: to be a light of hope to those who feel drowned in an ocean of bad news, in spite of being important to the pandemic preventions, cause nothing but anxiety and despair",
-    "msg3": "Through this portal, the society will know that there is a world of possibilities and that the defeat of the coronavirus will be in history as the moment that we got connected and built a better future",
-    "msg4": "This portal has no political engagement whatsoever, nor any support coming from any government or his third parties, with its idealization and development being entitlement of members of the civil society",
-    "msg5": "The people of this group are in favor of  social distancing as the best approach to fight the covid-19 and strongly advise that all the measures recommended by the World Health Organization (WHO) are followed.",
+    "creators": "Creadores",
+    "collaborators": "Colaboradores",
+    "msg1": "La crisis de Covid-19 señala a nosotros, naturalmente, a un momento desesperado. Existen tantos aspectos negativos que nosotros olvidamos que existen buenas noticias: el número de la gente curada, la investigacion a una vacuna y a una velocidad sin precedentes, colaboración de comunidad internacional y la sociedad civil y mucho mas. Y es por conta de eso que necesitamos expandir nuestros puntos de vista.",
+    "msg2": "Y es por eso que habemos creado The Good News Coronavirus: que sea una una luz de esperanza para aquellos que se sienten ahogados en un océano de malas noticias, a pesar de su importancia para la concientizacion de la gente, causan mucha que ansiedad y desesperación.",
+    "msg3": "Con este portal, la sociedad sabrá que un mundo de posibilidades puede existir y que la derrota del coronavirus estará en la historia como el momento en que nosotros habemos conectado y construidi un futuro mejor.",
+    "msg4": "Este portal no sigue ningún espectro político, ni ningún apoyo proveniente de ningún gobierno o de sus terceros, con su idealización y desarrollo que es una iniciativa interamiente de miembros de la sociedad civil.",
+    "msg5": "Las personas de este grupo son favorables del distanciamiento social como la mejor erramienta para lucha contra el covid-19 y recomiendan encarecidamente que se sigan todas las medidas recomendadas por la Organización Mundial de la Salud (OMS).",
     "people": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1528195957&single=true&output=csv"
   },
   "recovery": {
     "content": "https://covid19-server.chrismichael.now.sh/api/v1/AllReports",
-    "description": "People healed ",
-    "description2": "from coronavírus"
+    "description": "Personas curadas ",
+    "description2": "de coronavirus"
   },
   "footer": {
     "contact": "Contact",
     "support": "Support",
     "instagramLink": "https://www.instagram.com/thegoodnewscoronavirusen",
-    "msgInstagram": "Click here and follows us on instagram",
+    "msgInstagram": "Clica aca e sigue a nosotros en Instagram",
     "instagramName": "@thegoodnewscoronavirusen"
   },
   "ad": {
-    "donate": "This ad's revenue will be donated to help fight Covid."
+    "donate": "La renta de esta propaganda va será donada a ayuda a combatir a Covid."
   },
   "sticky": {
-    "msg1": "It’s worth reminding that these news do not change the actual situation in the world. ",
-    "msg2": "Stay home and wash your hands."
+    "msg1": "Importante recordar que estas noticias no cambian la situación real en el mundo. ",
+    "msg2": "Quedate en casa y salva vidas."
   },
   "future": {
-    "title": "What article are you looking for?",
-    "arrow": "Filter articles by category",
-    "selector": "Search article",
-    "author": "Author"
+    "title": "Que noticiario estás a buscar?",
+    "arrow": "Filtrar artículos por categoría",
+    "selector": "Buscar",
+    "author": "Autor"
   },
   "card": {
-    "source": "Source:",
-    "knowmore": "Learn more at:"
+    "source": "Origen:",
+    "knowmore": "Obtenga más información en:"
   },
   "cookies": {
-    "consent": "We use cookies to personalise ads and to analyse our traffic. We don't share your information.",
-    "button": "I understand"
+    "consent": "Utilizamos cookies propias y de terceros para mejorar nuestros servicios, elaborar información estadística y analizar el tráfico.Adicionalmente, no compartimos tu informacion con ningun terceros",
+    "button": "Yo acepto"
   }
 }
