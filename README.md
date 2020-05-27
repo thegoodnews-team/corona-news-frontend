@@ -1,4 +1,3 @@
-
 # The Good News Corona Virus (As boas notícias do Corona Vírus)
 ## Sobre o projeto
 O “The Good News Coronavírus” foi concebido para ser um farol de esperança para quem se sente afogado em um oceano de más notícias, que apesar de serem importantes para a prevenção da pandemia, causam ansiedade e desespero.
