@@ -50,6 +50,11 @@
     "selector": "Buscar artigos",
     "author": "Autor"
   },
+  "freeService": {
+    "title": "Qual o serviço gratuito que você está buscando?",
+    "arrow": "Filtre serviços gratuitos por categoria",
+    "selector": "Buscar serviços gratuitos"
+  },
   "card": {
     "source": "Fonte:",
     "knowmore": "Saiba mais em:"
