@@ -9,14 +9,21 @@ import './index.css'
 function App() {
   const locales = {
     'pt-BR': require('./locales/pt-BR.json'),
-    'en-US': require('./locales/en-US.json')
+    'en-US': require('./locales/en-US.json'),
+    es: require('./locales/es.json')
   }
 
-  const currentLocale = localStorage.getItem('goodnewscoronavirus')
-    ? localStorage.getItem('goodnewscoronavirus')
-    : locales[navigator.language]
-      ? navigator.language
-      : 'en-US'
+  let currentLocale = localStorage.getItem('goodnewscoronavirus')
+
+  if (!currentLocale) {
+    if (navigator.language.includes('es')) {
+      currentLocale = 'es'
+    } else if (navigator.language.includes('pt')) {
+      currentLocale = 'pt-BR'
+    } else {
+      currentLocale = 'en-US'
+    }
+  }
 
   localStorage.setItem('goodnewscoronavirus', currentLocale)
 

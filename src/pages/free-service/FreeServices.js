@@ -2,10 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import CardSearch from '../card-search/CardSearch'
+import intl from 'react-intl-universal'
 
 export default function FreeServices({ color, spreadsheetLink }) {
-  return <CardSearch color={color} spreadsheetLink={spreadsheetLink} labelTitle='Qual serviço gratuito você está buscando?'
-    labelFilter='Filtrar serviços por categoria' labelSearch='Buscar serviços' analyticsCategory='SERVICES'></CardSearch>
+  const service = intl.get('freeService')
+
+  return <CardSearch color={color} spreadsheetLink={spreadsheetLink} labelTitle={service.title}
+    labelFilter={service.arrow} labelSearch={service.selector} analyticsCategory='SERVICES'></CardSearch>
 }
 
 FreeServices.propTypes = {

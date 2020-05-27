@@ -44,21 +44,21 @@ const Footer = () => {
             </a>
           </div>
 
-          {intl.options.currentLocale === 'en-US' ? (
+          {intl.options.currentLocale === 'pt-BR' ? (
             <>
+              <div className="col-md-4 mb-md-0 mb-3 text-center agencia">
+                <a
+                  href="https://agenciaaids.com.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => send({ name: 'AIDS-LOGO', category: 'FOOTER', type: 'CLICK' })}>
+                  <img className="footer-logo--agenciaAids" src={AgenciaAindsLogo} />
+                </a>
+              </div>
             </>
           )
             : (
               <>
-                <div className="col-md-4 mb-md-0 mb-3 text-center agencia">
-                  <a
-                    href="https://agenciaaids.com.br/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => send({ name: 'AIDS-LOGO', category: 'FOOTER', type: 'CLICK' })}>
-                    <img className="footer-logo--agenciaAids" src={AgenciaAindsLogo} />
-                  </a>
-                </div>
               </>
             )
           }
