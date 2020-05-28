@@ -14,11 +14,8 @@ function App() {
   }
 
   let currentLocale = localStorage.getItem('goodnewscoronavirus')
-
   if (!currentLocale) {
-    if (navigator.language.includes('es')) {
-      currentLocale = 'es'
-    } else if (navigator.language.includes('pt')) {
+    if (navigator.language === 'pt-BR') {
       currentLocale = 'pt-BR'
     } else {
       currentLocale = 'en-US'
