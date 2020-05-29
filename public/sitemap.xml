@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+	http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+	<url>
+		<loc>https://thegoodnewscoronavirus.com/</loc>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://thegoodnewscoronavirus.com/donate</loc>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://thegoodnewscoronavirus.com/services</loc>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://thegoodnewscoronavirus.com/about</loc>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://thegoodnewscoronavirus.com/initiative</loc>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://thegoodnewscoronavirus.com/future</loc>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://thegoodnewscoronavirus.com/donate</loc>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://thegoodnewscoronavirus.com/news</loc>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+</urlset>
