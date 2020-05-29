@@ -22,16 +22,10 @@ export default function Routes() {
           </MainLayout>
         </Route>
 
-        <Route exact path="/news">
-          <MainLayout>
-            <Home />
-          </MainLayout>
-        </Route>
-
         <Route exact path="/initiative">
           <ThemeProvider value={themes.purple} >
             <MainLayout>
-              <Initiatives color={themes.purple} spreadsheetLink={content.initiatives} />
+              <Initiatives spreadsheetLink={content.initiatives} />
             </MainLayout>
           </ThemeProvider>
         </Route>
@@ -39,7 +33,7 @@ export default function Routes() {
         <Route exact path="/services">
           <ThemeProvider value={themes.green} >
             <MainLayout>
-              <FreeServices color={themes.green} spreadsheetLink={content.freeServices}></FreeServices>
+              <FreeServices spreadsheetLink={content.freeServices}></FreeServices>
             </MainLayout>
           </ThemeProvider>
         </Route>
@@ -47,7 +41,7 @@ export default function Routes() {
         <Route exact path="/future">
           <ThemeProvider value={themes.darkKhaki} >
             <MainLayout>
-              <FutureAfterCovid color={themes.darkKhaki} spreadsheetLink={content.future}></FutureAfterCovid>
+              <FutureAfterCovid spreadsheetLink={content.future}></FutureAfterCovid>
             </MainLayout>
           </ThemeProvider>
         </Route>
@@ -55,7 +49,7 @@ export default function Routes() {
         <Route exact path="/donate">
           <ThemeProvider value={themes.pink} >
             <MainLayout>
-              <Donation color={themes.pink} spreadsheetLink={content.donation}></Donation>
+              <Donation spreadsheetLink={content.donation}></Donation>
             </MainLayout>
           </ThemeProvider>
         </Route>
