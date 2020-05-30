@@ -21,16 +21,20 @@ code {
 }
 
 .notification p {
-  margin-left: 20px;
 }
 
 .notification .notificationTitle {
   font-weight: 600;
   margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .notification .notificationDescription {
   font-weight: 400;
-  margin-left: 50px;
   margin-top: -7px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
