@@ -14,6 +14,5 @@ export default function FreeServices({ spreadsheetLink }) {
 }
 
 FreeServices.propTypes = {
-  color: PropTypes.string.isRequired,
   spreadsheetLink: PropTypes.string.isRequired
 }
