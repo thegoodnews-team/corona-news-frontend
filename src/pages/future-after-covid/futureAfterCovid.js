@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import CardSearch from '../card-search/CardSearch'
 import intl from 'react-intl-universal'
 
-export default function FutureAfterCovid({ color, spreadsheetLink }) {
+export default function FutureAfterCovid({ spreadsheetLink }) {
   const themeColor = useContext(ThemeContext)
   const future = intl.get('future')
 
@@ -13,6 +13,5 @@ export default function FutureAfterCovid({ color, spreadsheetLink }) {
 }
 
 FutureAfterCovid.propTypes = {
-  color: PropTypes.string.isRequired,
   spreadsheetLink: PropTypes.string.isRequired
 }

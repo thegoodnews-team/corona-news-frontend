@@ -29,7 +29,9 @@ function App() {
     locales
   })
 
-  function notificationCard(title, description, notificationClass) {
+  const footerMsg = intl.get('footer')
+
+  const notificationCard = (title, description) => {
     return (
       <div className='notification'>
         <p className="notificationTitle">{title}</p>
@@ -38,29 +40,47 @@ function App() {
     )
   }
 
-  useEffect(() => {
-    const footer = intl.get('footer')
-
+  const showInstagramPopupCall = ({ msgInstagram, instagramName, instagramLink }) => {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-      store.addNotification({
-        title: footer.msgInstagram,
-        message: footer.instagramName,
-        type: 'default',
-        insert: 'bottom',
-        content: notificationCard(footer.msgInstagram, footer.instagramName),
-        container: 'bottom-center',
-        animationIn: ['animated fadeIn'],
-        animationOut: ['animated fadeOut'],
-        dismiss: {
-          duration: 8000,
-          onScreen: false
-        },
-        onRemoval: (id, removedBy) => {
-          if (removedBy !== 'timeout') {
-            window.open(footer.instagramLink, '_self')
+      store.addNotification(
+        {
+          title: msgInstagram,
+          message: instagramName,
+          type: 'default',
+          insert: 'bottom',
+          content: notificationCard(msgInstagram, instagramName),
+          container: 'bottom-center',
+          animationIn: ['animated fadeIn'],
+          animationOut: ['animated fadeOut'],
+          dismiss: {
+            duration: 4000,
+            onScreen: false
+          },
+          onRemoval: (id, removedBy) => {
+            if (removedBy !== 'timeout') {
+              window.open(instagramLink, '_blank')
+            }
           }
-        }
-      })
+        })
+    }
+  }
+
+  const getCookieValue = (cookieName) => {
+    const name = `${cookieName}=`
+    const decodedCookie = decodeURIComponent(document.cookie)
+    const coockies = decodedCookie.split(';') || []
+
+    const cookie = coockies.find((item) => {
+      return item.trim().startsWith(name)
+    })
+
+    return cookie && cookie.trim().substring(name.length, cookie.length)
+  }
+
+  useEffect(() => {
+    const coockieConsentValue = getCookieValue('CookieConsent')
+    if (coockieConsentValue && coockieConsentValue === 'true') {
+      showInstagramPopupCall(footerMsg)
     }
   }, [])
 
@@ -70,7 +90,7 @@ function App() {
     <>
       <ReactNotification />
       <Routes />
-      <CookieConsent buttonText={textCookies.button}>
+      <CookieConsent buttonText={textCookies.button} onAccept={() => { showInstagramPopupCall(footerMsg) }}>
         {textCookies.consent}
       </CookieConsent>
     </>

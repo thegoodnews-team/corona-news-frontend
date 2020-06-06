@@ -11,6 +11,5 @@ export default function Initiatives({ spreadsheetLink }) {
 }
 
 Initiatives.propTypes = {
-  color: PropTypes.string.isRequired,
   spreadsheetLink: PropTypes.string.isRequired
 }
