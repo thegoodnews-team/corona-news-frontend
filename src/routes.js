@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Switch, Route } from 'react-router-dom'
 import Home from './pages/home'
 import About from './pages/about'
 import { MainLayout } from './pages/MainLayout'
@@ -8,13 +8,34 @@ import Initiatives from './pages/initiatives'
 import FreeServices from './pages/free-service/FreeServices'
 import FutureAfterCovid from './pages/future-after-covid/futureAfterCovid'
 import Donation from './pages/donation'
+import './utils/Locales'
 import intl from 'react-intl-universal'
+import alert from './utils/Alert'
+import { getCookieValue } from './utils/Cookies'
+import CookieConsent from 'react-cookie-consent'
 
 export default function Routes() {
-  const content = intl.get('json-data')
+  const alertMsg = intl.get('alert')
+
+  useEffect(() => {
+    const coockieConsentValue = getCookieValue('CookieConsent')
+    if (coockieConsentValue && coockieConsentValue === 'true') {
+      alert(alertMsg)
+    }
+  }, [])
+
+  const textCookies = intl.get('cookies')
 
   return (
-    <BrowserRouter>
+    <>
+      <CookieConsent
+        buttonText={textCookies.button}
+        onAccept={() => {
+          alert(alertMsg)
+        }}
+      >
+        {textCookies.consent}
+      </CookieConsent>
       <Switch>
         <Route exact path="/">
           <MainLayout>
@@ -25,7 +46,7 @@ export default function Routes() {
         <Route exact path="/initiative">
           <ThemeProvider value={themes.purple} >
             <MainLayout>
-              <Initiatives spreadsheetLink={content.initiatives} />
+              <Initiatives />
             </MainLayout>
           </ThemeProvider>
         </Route>
@@ -33,7 +54,7 @@ export default function Routes() {
         <Route exact path="/services">
           <ThemeProvider value={themes.green} >
             <MainLayout>
-              <FreeServices spreadsheetLink={content.freeServices}></FreeServices>
+              <FreeServices />
             </MainLayout>
           </ThemeProvider>
         </Route>
@@ -41,7 +62,7 @@ export default function Routes() {
         <Route exact path="/future">
           <ThemeProvider value={themes.darkKhaki} >
             <MainLayout>
-              <FutureAfterCovid spreadsheetLink={content.future}></FutureAfterCovid>
+              <FutureAfterCovid />
             </MainLayout>
           </ThemeProvider>
         </Route>
@@ -49,7 +70,7 @@ export default function Routes() {
         <Route exact path="/donate">
           <ThemeProvider value={themes.pink} >
             <MainLayout>
-              <Donation spreadsheetLink={content.donation}></Donation>
+              <Donation />
             </MainLayout>
           </ThemeProvider>
         </Route>
@@ -68,6 +89,6 @@ export default function Routes() {
           </MainLayout>
         </Route>
       </Switch>
-    </BrowserRouter>
+    </>
   )
 }
