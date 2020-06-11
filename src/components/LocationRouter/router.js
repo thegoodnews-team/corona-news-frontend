@@ -11,14 +11,16 @@ const router = () => {
   const { path } = useRouteMatch()
 
   const storedLocale = localStorage.getItem('goodnewscoronavirus')
-  if (storedLocale && storedLocale !== location) {
+
+  if (storedLocale && !hasLocation(location)) {
     return (
-      <Redirect to={`/${storedLocale}/`} />
+      <Redirect to={`/${storedLocale}/${location}`} />
     )
   }
 
   const rootPath = hasLocation(location) ? path : ''
-
+  const checkedLocation = hasLocation(location) ? location : 'pt'
+  localStorage.setItem('goodnewscoronavirus', checkedLocation)
   loadLocale(location)
 
   return (
@@ -31,6 +33,7 @@ const router = () => {
                 key={el.key}
                 path={`${rootPath}${el.path}`}
                 exact={el.exact}
+                  strict={el.strict}
                 render={
                   props => {
                     return (
@@ -49,11 +52,7 @@ const router = () => {
       }
 
       <Route>
-        <ThemeProvider>
-          <MainLayout>
-            <Home />
-          </MainLayout>
-        </ThemeProvider>
+        <Redirect to={`/${checkedLocation}/`} />
       </Route>
     </Switch>
   )

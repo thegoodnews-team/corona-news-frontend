@@ -7,11 +7,11 @@ import Donation from '../../pages/donation'
 import { themes } from '../context/ThemeContext'
 
 export default [
-  { path: '/', component: Home, key: 'HOME_PAGE', theme: themes.blue, exact: true },
-  { path: '/news', component: Home, key: 'HOME_NEWS_PAGE', theme: themes.blue, exact: true },
-  { path: '/initiative', component: Initiatives, key: 'INITIATIVES_PAGE', theme: themes.purple, exact: true },
-  { path: '/services', component: FreeServices, key: 'FREESERVICES_PAGE', theme: themes.green, exact: true },
-  { path: '/donate', component: Donation, key: 'DONATION_PAGE', theme: themes.pink, exact: true },
-  { path: '/about', component: About, key: 'ABOUT_PAGE', theme: themes.orange, exact: true },
-  { path: '/future', component: FutureAfterCovid, key: 'FUTURE_PAGE', theme: themes.darkKhaki, exact: true }
+  { path: '/', component: Home, key: 'HOME_PAGE', theme: themes.blue, exact: true, strict: true },
+  { path: '/news', component: Home, key: 'HOME_NEWS_PAGE', theme: themes.blue, exact: true, strict: true },
+  { path: '/initiative', component: Initiatives, key: 'INITIATIVES_PAGE', theme: themes.purple, exact: true, strict: true },
+  { path: '/services', component: FreeServices, key: 'FREESERVICES_PAGE', theme: themes.green, exact: true, strict: true },
+  { path: '/donate', component: Donation, key: 'DONATION_PAGE', theme: themes.pink, exact: true, strict: true },
+  { path: '/about', component: About, key: 'ABOUT_PAGE', theme: themes.orange, exact: true, strict: true },
+  { path: '/future', component: FutureAfterCovid, key: 'FUTURE_PAGE', theme: themes.darkKhaki, exact: true, strict: true }
 ]

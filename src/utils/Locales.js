@@ -12,7 +12,7 @@ export const hasLocation = location => {
   return load(location) && true
 }
 
-const loadLocale = async locale => {
+const loadLocale = locale => {
   const currentLocale = load(locale) || load('pt')
 
   const loadedLocale = () => {
