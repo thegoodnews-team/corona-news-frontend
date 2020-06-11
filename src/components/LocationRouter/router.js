@@ -4,7 +4,7 @@ import { MainLayout } from '../../pages/MainLayout'
 import { Switch, Route, useParams, useRouteMatch, Redirect } from 'react-router-dom'
 import { ThemeProvider } from '../context/ThemeContext'
 import loadLocale, { hasLocation } from '../../utils/Locales'
-import Home from '../../pages/home'
+import filterRoutes from './filterRoutes'
 
 const router = () => {
   const { location } = useParams()
@@ -26,29 +26,31 @@ const router = () => {
   return (
     <Switch>
       {
-        config.map(
-          el => {
-            return (
-              <Route
-                key={el.key}
-                path={`${rootPath}${el.path}`}
-                exact={el.exact}
+        config
+          .filter(filterRoutes(location))
+          .map(
+            el => {
+              return (
+                <Route
+                  key={el.key}
+                  path={`${rootPath}${el.path}`}
+                  exact={el.exact}
                   strict={el.strict}
-                render={
-                  props => {
-                    return (
-                      <ThemeProvider value={el.theme}>
-                        <MainLayout>
-                          <el.component {...props}/>
-                        </MainLayout>
-                      </ThemeProvider >
-                    )
+                  render={
+                    props => {
+                      return (
+                        <ThemeProvider value={el.theme}>
+                          <MainLayout>
+                            <el.component {...props}/>
+                          </MainLayout>
+                        </ThemeProvider >
+                      )
+                    }
                   }
-                }
-              />
-            )
-          }
-        )
+                />
+              )
+            }
+          )
       }
 
       <Route>
