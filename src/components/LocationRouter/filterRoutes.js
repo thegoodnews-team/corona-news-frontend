@@ -5,6 +5,6 @@ const routesByLocation = {
 
 export default function filterRoutes(location) {
   return function filterFunction(routeConfig) {
-    return location === 'pt' || routesByLocation[location].includes(routeConfig.path)
+    return !location || location === 'pt' || routesByLocation[location].includes(routeConfig.path)
   }
 }

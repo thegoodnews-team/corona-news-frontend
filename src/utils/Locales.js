@@ -12,6 +12,10 @@ export const hasLocation = location => {
   return load(location) && true
 }
 
+export const isLocaleValid = locale => {
+  return ['en', 'pt', 'es'].includes(locale)
+}
+
 const loadLocale = locale => {
   const currentLocale = load(locale) || load('pt')
 
