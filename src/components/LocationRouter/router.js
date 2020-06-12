@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import config from './routesConfig'
 import { MainLayout } from '../../pages/MainLayout'
 import { Switch, Route, useParams, useRouteMatch, Redirect } from 'react-router-dom'
 import { ThemeProvider } from '../context/ThemeContext'
 import loadLocale, { hasLocation } from '../../utils/Locales'
 import filterRoutes from './filterRoutes'
+import { getCookieValue } from '../../utils/Cookies'
+import showNotification from '../../utils/Alert'
+import intl from 'react-intl-universal'
+import CookieConsent from 'react-cookie-consent'
 
 const router = () => {
   const { location } = useParams()
@@ -22,8 +26,18 @@ const router = () => {
   const checkedLocation = hasLocation(location) ? location : 'pt'
   localStorage.setItem('goodnewscoronavirus', checkedLocation)
   loadLocale(location)
+  const alert = intl.get('alert')
+  const textCookies = intl.get('cookies')
+
+  useEffect(() => {
+    const coockieConsentValue = getCookieValue('CookieConsent')
+    if (coockieConsentValue && coockieConsentValue === 'true') {
+      showNotification(alert)
+    }
+  }, [])
 
   return (
+    <>
     <Switch>
       {
         config
@@ -57,6 +71,10 @@ const router = () => {
         <Redirect to={`/${checkedLocation}/`} />
       </Route>
     </Switch>
+      <CookieConsent buttonText={textCookies.button} onAccept={() => { showNotification(alert) }}>
+        {textCookies.consent}
+      </CookieConsent>
+    </>
   )
 }
 

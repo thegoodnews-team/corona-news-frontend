@@ -33,6 +33,11 @@
     "msgInstagram": "Click here and follows us on instagram",
     "instagramName": "@thegoodnewscoronavirusen"
   },
+  "alert": {
+    "alertTitle": "Click here and follows us on instagram",
+    "alertMsg": "@thegoodnewscoronavirusen",
+    "alertLink": "https://www.instagram.com/thegoodnewscoronavirusen"
+  },
   "ad": {
     "donate": "This ad's revenue will be donated to help fight Covid."
   },
