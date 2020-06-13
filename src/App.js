@@ -33,35 +33,42 @@ function App() {
 
   const notificationCard = (title, description) => {
     return (
-      <div className='notification'>
+      <div className="notification">
         <p className="notificationTitle">{title}</p>
         <p className="notificationDescription">{description}</p>
       </div>
     )
   }
 
-  const showInstagramPopupCall = ({ msgInstagram, instagramName, instagramLink }) => {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-      store.addNotification(
-        {
-          title: msgInstagram,
-          message: instagramName,
-          type: 'default',
-          insert: 'bottom',
-          content: notificationCard(msgInstagram, instagramName),
-          container: 'bottom-center',
-          animationIn: ['animated fadeIn'],
-          animationOut: ['animated fadeOut'],
-          dismiss: {
-            duration: 4000,
-            onScreen: false
-          },
-          onRemoval: (id, removedBy) => {
-            if (removedBy !== 'timeout') {
-              window.open(instagramLink, '_blank')
-            }
+  const showInstagramPopupCall = ({
+    msgInstagram,
+    instagramName,
+    instagramLink
+  }) => {
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      store.addNotification({
+        title: msgInstagram,
+        message: instagramName,
+        type: 'default',
+        insert: 'bottom',
+        content: notificationCard(msgInstagram, instagramName),
+        container: 'bottom-center',
+        animationIn: ['animated fadeIn'],
+        animationOut: ['animated fadeOut'],
+        dismiss: {
+          duration: 4000,
+          onScreen: false
+        },
+        onRemoval: (id, removedBy) => {
+          if (removedBy !== 'timeout') {
+            window.open(instagramLink, '_self')
           }
-        })
+        }
+      })
     }
   }
 
@@ -90,7 +97,12 @@ function App() {
     <>
       <ReactNotification />
       <Routes />
-      <CookieConsent buttonText={textCookies.button} onAccept={() => { showInstagramPopupCall(footerMsg) }}>
+      <CookieConsent
+        buttonText={textCookies.button}
+        onAccept={() => {
+          showInstagramPopupCall(footerMsg)
+        }}
+      >
         {textCookies.consent}
       </CookieConsent>
     </>
