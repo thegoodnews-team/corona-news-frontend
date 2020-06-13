@@ -10,7 +10,7 @@ function App() {
   const locales = {
     'pt-BR': require('./locales/pt-BR.json'),
     'en-US': require('./locales/en-US.json'),
-    es: require('./locales/es.json'),
+    es: require('./locales/es.json')
   }
 
   let currentLocale = localStorage.getItem('goodnewscoronavirus')
@@ -26,7 +26,7 @@ function App() {
 
   intl.init({
     currentLocale,
-    locales,
+    locales
   })
 
   const footerMsg = intl.get('footer')
@@ -43,7 +43,7 @@ function App() {
   const showInstagramPopupCall = ({
     msgInstagram,
     instagramName,
-    instagramLink,
+    instagramLink
   }) => {
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
@@ -61,13 +61,13 @@ function App() {
         animationOut: ['animated fadeOut'],
         dismiss: {
           duration: 4000,
-          onScreen: false,
+          onScreen: false
         },
         onRemoval: (id, removedBy) => {
           if (removedBy !== 'timeout') {
             window.open(instagramLink, '_self')
           }
-        },
+        }
       })
     }
   }
