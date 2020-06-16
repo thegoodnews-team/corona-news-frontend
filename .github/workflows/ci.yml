@@ -30,6 +30,15 @@ jobs:
       run: npm run build
 
       
+    - name: Update Docker Staging Image
+      if: github.ref == 'refs/heads/dev'
+      uses: actions-hub/gcloud@master
+      env:
+        PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
+        APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+      with:
+        args: builds submit --tag gcr.io/goodnews-278114/dev
+
     - name: Deploy Staging
       if: github.ref == 'refs/heads/dev'
       uses: actions-hub/gcloud@master
@@ -37,7 +46,7 @@ jobs:
         PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
-        args: app deploy app.staging.yaml --version=dev
+        args: run deploy dev --image gcr.io/goodnews-278114/dev --platform managed --region us-east4
         
     - name: Deploy Production
       if: github.ref == 'refs/heads/master'
