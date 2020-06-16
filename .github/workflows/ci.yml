@@ -47,6 +47,16 @@ jobs:
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
         args: run deploy dev --image gcr.io/goodnews-278114/dev --platform managed --region us-east4
+
+      
+    - name: Update Docker Production Image
+      if: github.ref == 'refs/heads/master'
+      uses: actions-hub/gcloud@master
+      env:
+        PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
+        APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+      with:
+        args: builds submit --tag gcr.io/goodnews-278114/master
         
     - name: Deploy Production
       if: github.ref == 'refs/heads/master'
@@ -55,4 +65,4 @@ jobs:
         PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
         APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
       with:
-        args: app deploy --stop-previous-version
+        args: run deploy master --image gcr.io/goodnews-278114/master --platform managed --region us-east4
