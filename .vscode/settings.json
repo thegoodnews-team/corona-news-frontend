@@ -1,6 +1,5 @@
 {
   "eslint.alwaysShowStatus": true,
-  "editor.formatOnSave": true,
   "eslint.format.enable": true,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,

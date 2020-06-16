@@ -31,6 +31,11 @@
     "msgInstagram": "Clica aca e sigue a nosotros en Instagram",
     "instagramName": "@thegoodnewscoronavirusen"
   },
+  "alert": {
+    "alertTitle": "Clica aca e sigue a nosotros en Instagram",
+    "alertMsg": "@thegoodnewscoronavirusen",
+    "alertLink": "https://www.instagram.com/thegoodnewscoronavirusen"
+  },
   "ad": {
     "donate": "La renta de esta propaganda va será donada a ayuda a combatir a Covid."
   },
