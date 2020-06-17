@@ -22,8 +22,8 @@ const router = () => {
     )
   }
 
-  const rootPath = hasLocation(location) ? path : 'pt'
-  const checkedLocation = hasLocation(location) ? location : 'pt'
+  const rootPath = hasLocation(location) ? path : 'en'
+  const checkedLocation = hasLocation(location) ? location : 'en'
   localStorage.setItem('goodnewscoronavirus', checkedLocation)
   loadLocale(location)
   const alert = intl.get('alert')
