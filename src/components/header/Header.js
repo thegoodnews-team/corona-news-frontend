@@ -34,9 +34,9 @@ const Header = () => {
           <Link key={index} to={item} className={`nav-link ${style.navItem} ${pathname === '/' + item ? style.active : ''}`} onClick={ () => { scrollTop(); hideMobileNavLinks() } }> {pages[item]} </Link>
         ))
       }
-      <Link className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'pt' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('pt') } }> PT </Link>
-      <Link className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'en' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('en') } }> EN </Link>
-      <Link className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'es' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('es') } }> ES </Link>
+      <Link to='' className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'pt' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('pt') } }> PT </Link>
+      <Link to='' className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'en' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('en') } }> EN </Link>
+      <Link to='' className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'es' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('es') } }> ES </Link>
     </>
   )
 

@@ -17,7 +17,7 @@ export const isLocaleValid = locale => {
 }
 
 const loadLocale = locale => {
-  const currentLocale = load(locale) || load('pt')
+  const currentLocale = load(locale) || load('en')
 
   const loadedLocale = () => {
     const obj = {}

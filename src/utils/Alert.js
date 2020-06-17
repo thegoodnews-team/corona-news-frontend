@@ -36,7 +36,7 @@ const showNotification = ({
       },
       onRemoval: (id, removedBy) => {
         if (removedBy !== 'timeout') {
-          window.open(alertLink, '_blank')
+          window.open(alertLink, '_self')
         }
       }
     })
