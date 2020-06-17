@@ -58,7 +58,7 @@ const Header = () => {
       <nav className={`navbar navbar-expand-lg navbar-light sticky-top ${style.nav} ${themes[theme + '-primary']}`}>
         <div className={`container ${style.containerPadX}`}>
 
-          <a className={`navbar-brand ${style.brand}`} href="/">
+          <a className={`navbar-brand ${style.brand}`} href={'/' + localStorage.getItem('goodnewscoronavirus') + '/news'}>
             <img className={style.logoIcon} src={logo} alt='The Good News Corona Virus' />
           </a>
 

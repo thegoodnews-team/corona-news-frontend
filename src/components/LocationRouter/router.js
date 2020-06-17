@@ -15,17 +15,25 @@ const router = () => {
   const { path } = useRouteMatch()
 
   const storedLocale = localStorage.getItem('goodnewscoronavirus')
+  const mappedLanguages = {
+    'pt-BR': 'pt',
+    'en-US': 'en',
+    en: 'en',
+    pt: 'pt',
+    es: 'es'
+  }
 
   if (isLocaleValid(storedLocale) && !hasLocation(location)) {
+    const redirectTo = mappedLanguages[storedLocale]
     return (
-      <Redirect to={`/${storedLocale}/${location}`} />
+      <Redirect to={`/${redirectTo}/${location}`} />
     )
   }
 
-  const rootPath = hasLocation(location) ? path : 'en'
-  const checkedLocation = hasLocation(location) ? location : 'en'
+  const rootPath = hasLocation(location) ? path : (navigator.language === 'pt-BR' ? 'pt' : 'en')
+  const checkedLocation = hasLocation(location) ? location : (navigator.language === 'pt-BR' ? 'pt' : 'en')
   localStorage.setItem('goodnewscoronavirus', checkedLocation)
-  loadLocale(location)
+  loadLocale(location || (navigator.language === 'pt-BR' ? 'pt' : 'en'))
   const alert = intl.get('alert')
   const textCookies = intl.get('cookies')
 
