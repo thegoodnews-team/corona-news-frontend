@@ -14,7 +14,7 @@ export const FeedBanner = ({ displayBanner }) => {
   const [brazilRecovered, setBrazilRecovered] = useState('')
   const theme = useContext(ThemeContext)
   const recoveryData = intl.get('recovery')
-  const locale = intl.options.currentLocale
+  const locale = localStorage.getItem('goodnewscoronavirus')
 
   useEffect(() => {
     (async () => {
@@ -33,7 +33,7 @@ export const FeedBanner = ({ displayBanner }) => {
       <div className={`${style.counterBannerTitle} ${style.displayMdInline}`}> {recoveryData.description} <span> {recoveryData.description2}</span></div>
       <div className={style.displayMdInline}>
 
-        {locale === 'pt-BR' ? (
+        {locale === 'pt' ? (
           <>
             <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' /> {brazilRecovered}</span>
           </>

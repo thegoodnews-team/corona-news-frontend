@@ -44,7 +44,7 @@ const Footer = () => {
             </a>
           </div>
 
-          {intl.options.currentLocale === 'pt-BR' ? (
+          {localStorage.getItem('goodnewscoronavirus') === 'pt' ? (
             <>
               <div className="col-md-4 mb-md-0 mb-3 text-center agencia">
                 <a
