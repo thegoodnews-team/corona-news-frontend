@@ -26,12 +26,12 @@ const Header = () => {
       toggler.collapse('hide')
     }
   }
-
   const navLinks = () => (
     <>
       {
+
         Object.keys(pages).map((item, index) => (
-          <Link key={index} to={item} className={`nav-link ${style.navItem} ${pathname === '/' + item ? style.active : ''}`} onClick={ () => { scrollTop(); hideMobileNavLinks() } }> {pages[item]} </Link>
+          <Link key={index} to={item} className={`nav-link ${style.navItem} ${pathname === ('/' + localStorage.getItem('goodnewscoronavirus') + '/') + item ? style.active : ''}`} onClick={ () => { scrollTop(); hideMobileNavLinks() } }> {pages[item]} </Link>
         ))
       }
       <Link to='' className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'pt' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('pt') } }> PT </Link>
