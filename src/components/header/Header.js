@@ -26,12 +26,12 @@ const Header = () => {
       toggler.collapse('hide')
     }
   }
-
   const navLinks = () => (
     <>
       {
+
         Object.keys(pages).map((item, index) => (
-          <Link key={index} to={item} className={`nav-link ${style.navItem} ${pathname === '/' + item ? style.active : ''}`} onClick={ () => { scrollTop(); hideMobileNavLinks() } }> {pages[item]} </Link>
+          <Link key={index} to={item} className={`nav-link ${style.navItem} ${pathname === ('/' + localStorage.getItem('goodnewscoronavirus') + '/') + item ? style.active : ''}`} onClick={ () => { scrollTop(); hideMobileNavLinks() } }> {pages[item]} </Link>
         ))
       }
       <Link to='' className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'pt' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('pt') } }> PT </Link>
@@ -58,7 +58,7 @@ const Header = () => {
       <nav className={`navbar navbar-expand-lg navbar-light sticky-top ${style.nav} ${themes[theme + '-primary']}`}>
         <div className={`container ${style.containerPadX}`}>
 
-          <a className={`navbar-brand ${style.brand}`} href="/">
+          <a className={`navbar-brand ${style.brand}`} href={'/' + localStorage.getItem('goodnewscoronavirus') + '/news'}>
             <img className={style.logoIcon} src={logo} alt='The Good News Corona Virus' />
           </a>
 
