@@ -53,7 +53,6 @@ export default function CardSearch({ color, spreadsheetLink, labelTitle, labelFi
   function filter(searchText = '') {
     let filterServices = allServices
     const normalizedSearchText = normalizeText(searchText)
-
     const categoriesNameWithFilterActive = categories
       .filter(category => category.filterActive)
       .map(category => category.label)
@@ -66,10 +65,16 @@ export default function CardSearch({ color, spreadsheetLink, labelTitle, labelFi
 
     if (normalizedSearchText) {
       filterServices = filterServices.filter(service => {
+        if (service.description) {
+          return (
+            normalizeText(service.category).includes(normalizedSearchText) ||
+            normalizeText(service.title).includes(normalizedSearchText) ||
+            normalizeText(service.description).includes(normalizedSearchText)
+          )
+        }
         return (
           normalizeText(service.category).includes(normalizedSearchText) ||
-          normalizeText(service.title).includes(normalizedSearchText) ||
-          normalizeText(service.description).includes(normalizedSearchText)
+            normalizeText(service.title).includes(normalizedSearchText)
         )
       })
     }
