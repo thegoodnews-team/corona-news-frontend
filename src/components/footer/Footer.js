@@ -17,6 +17,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-4 mt-md-0 my-3 mb-5">
             <h2 className="footer-title">{footer.contact}:</h2>
+
             <a
               href={footer.instagramLink}
               target="_blank"
@@ -24,6 +25,19 @@ const Footer = () => {
               onClick={() => send({ name: 'INSTAGRAM', category: 'FOOTER', type: 'CLICK' })}>
               <img className="footer-social-icon" src={InstagramIcon} />
             </a>
+
+            {localStorage.getItem('goodnewscoronavirus') === 'pt' ? (
+              <>
+                <a
+                  href="https://twitter.com/thegoodnewscv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => send({ name: 'TWITTER', category: 'FOOTER', type: 'CLICK' })}>
+                  <img className="footer-social-icon" src={EmailIcon} />
+                </a>
+              </>
+            ) : ''
+            }
 
             <a
               href="mailto:thegoodnewscoronavirus@gmail.com"
@@ -57,10 +71,7 @@ const Footer = () => {
               </div>
             </>
           )
-            : (
-              <>
-              </>
-            )
+            : ''
           }
 
         </div>
