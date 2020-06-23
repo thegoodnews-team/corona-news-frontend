@@ -3,6 +3,7 @@ import intl from 'react-intl-universal'
 import ThoughtWorksLogo from '../../assets/tw.png'
 import InstagramIcon from '../../assets/insta.svg'
 import EmailIcon from '../../assets/email.svg'
+import TwitteIcon from '../../assets/twitter.svg'
 import AgenciaAindsLogo from '../../assets/agencia-aids.png'
 import send from '../../analitycs'
 
@@ -33,7 +34,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => send({ name: 'TWITTER', category: 'FOOTER', type: 'CLICK' })}>
-                  <img className="footer-social-icon" src={EmailIcon} />
+                  <img className="footer-social-icon" src={TwitteIcon} />
                 </a>
               </>
             ) : ''
