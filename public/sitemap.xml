@@ -8,84 +8,82 @@
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/pt</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/pt/donate</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/pt/services</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/pt/about</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/pt/initiative</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/pt/future</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/pt/news</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 <!-- EN -->
   <url>
 		<loc>https://thegoodnewscoronavirus.com/en</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/en/services</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/en/about</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/en/future</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/en/news</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 
 	<!-- ES -->
   <url>
 		<loc>https://thegoodnewscoronavirus.com/es</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/es/about</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/es/future</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 	<url>
 		<loc>https://thegoodnewscoronavirus.com/es/news</loc>
 		<changefreq>daily</changefreq>
-		<priority>1</priority>
+		
 	</url>
 </urlset>
