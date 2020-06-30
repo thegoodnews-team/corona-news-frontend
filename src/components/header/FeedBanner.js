@@ -6,7 +6,7 @@ import ThemeContext from '../context/ThemeContext'
 import themes from '../context/themes.module.css'
 import PropTypes from 'prop-types'
 import intl from 'react-intl-universal'
-import recovered from '../../utils/Recovered'
+import getItems from '../../utils/fetchUrl'
 import formatNumber from '../../utils/FormatNumber'
 
 export const FeedBanner = ({ displayBanner }) => {
@@ -20,7 +20,7 @@ export const FeedBanner = ({ displayBanner }) => {
     (async () => {
       const { content } = recoveryData
 
-      const data = await recovered(content)
+      const data = await getItems(content)
       setWorldRecovered(formatNumber(data.reports[0].recovered))
       setBrazilRecovered(formatNumber(data.reports[0].table[0].find(c => c.Country === 'Brazil').TotalRecovered))
     })()

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import intl from 'react-intl-universal'
 import CardsGrid from '../../components/cards-grid'
-import getItemsFromSpreadsheet from '../../utils/spreadsheet'
+import getItemsFromSpreadsheet from '../../utils/fetchUrl'
 
 export default function Home() {
   const [news, setNews] = useState([])

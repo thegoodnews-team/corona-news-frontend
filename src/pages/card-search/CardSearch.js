@@ -5,7 +5,7 @@ import Selector from '../../components/services/selector'
 import Badge from '../../components/services/badge'
 import toHexColor from '../../utils/ColorPicker'
 import Search from '../../components/services/search'
-import getservicesFromSpreadsheet from '../../utils/spreadsheet'
+import getservicesFromSpreadsheet from '../../utils/fetchUrl'
 
 import './style.css'
 import Grid from '../../components/services/grid'

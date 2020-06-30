@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
 import Person from './Person'
-import getItemsFromSpreadsheet from '../../utils/spreadsheet'
+import getItemsFromSpreadsheet from '../../utils/fetchUrl'
 import intl from 'react-intl-universal'
 
 const About = () => {

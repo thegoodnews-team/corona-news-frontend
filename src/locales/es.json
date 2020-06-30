@@ -5,7 +5,7 @@
     "about": "Acerca"
   },
   "json-data": {
-    "newsLink": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=481999511&single=true&output=csv",
+    "newsLink": "https://goodnews-278114.firebaseio.com/news-es.json",
     "future": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1221630249&single=true&output=csv"
   },
   "about": {
