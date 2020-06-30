@@ -6,7 +6,7 @@
   },
   "json-data": {
     "newsLink": "https://goodnews-278114.firebaseio.com/news-es.json",
-    "future": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1221630249&single=true&output=csv"
+    "future": "https://goodnews-278114.firebaseio.com/future-es.json"
   },
   "about": {
     "mission": "Mission",
@@ -17,7 +17,7 @@
     "msg3": "Con este portal, la sociedad sabrá que un mundo de posibilidades puede existir y que la derrota del coronavirus estará en la historia como el momento en que nosotros habemos conectado y construidi un futuro mejor.",
     "msg4": "Este portal no sigue ningún espectro político, ni ningún apoyo proveniente de ningún gobierno o de sus terceros, con su idealización y desarrollo que es una iniciativa interamiente de miembros de la sociedad civil.",
     "msg5": "Las personas de este grupo son favorables del distanciamiento social como la mejor erramienta para lucha contra el covid-19 y recomiendan encarecidamente que se sigan todas las medidas recomendadas por la Organización Mundial de la Salud (OMS).",
-    "people": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1528195957&single=true&output=csv"
+    "people": "https://goodnews-278114.firebaseio.com/people.json"
   },
   "recovery": {
     "content": "https://covid19-server.chrismichael.now.sh/api/v1/AllReports",

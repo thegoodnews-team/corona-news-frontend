@@ -7,8 +7,8 @@
   },
   "json-data": {
     "newsLink": "https://goodnews-278114.firebaseio.com/news-en.json",
-    "future": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1458968004&single=true&output=csv",
-    "freeServices": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=121427844&single=true&output=csv"
+    "future": "https://goodnews-278114.firebaseio.com/future-en.json",
+    "freeServices": "https://goodnews-278114.firebaseio.com/freeServices-en.json"
   },
   "about": {
     "mission": "Mission",
@@ -19,7 +19,7 @@
     "msg3": "Through this portal, the society will know that there is a world of possibilities and that the defeat of the coronavirus will be in history as the moment that we got connected and built a better future",
     "msg4": "This portal has no political engagement whatsoever, nor any support coming from any government or his third parties, with its idealization and development being entitlement of members of the civil society",
     "msg5": "The people of this group are in favor of  social distancing as the best approach to fight the covid-19 and strongly advise that all the measures recommended by the World Health Organization (WHO) are followed.",
-    "people": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1528195957&single=true&output=csv"
+    "people": "https://goodnews-278114.firebaseio.com/people.json"
   },
   "recovery": {
     "content": "https://covid19-server.chrismichael.now.sh/api/v1/AllReports",
