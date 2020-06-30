@@ -9,10 +9,10 @@
   },
   "json-data": {
     "newsLink": "https://goodnews-278114.firebaseio.com/news-pt.json",
-    "initiatives": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=288463825&single=true&output=csv",
-    "freeServices": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=2015075532&single=true&output=csv",
-    "donation": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=328239309&single=true&output=csv",
-    "future": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=699412348&single=true&output=csv"
+    "initiatives": "https://goodnews-278114.firebaseio.com/initiatives-pt.json",
+    "freeServices": "https://goodnews-278114.firebaseio.com/freeServices-pt.json",
+    "donation": "https://goodnews-278114.firebaseio.com/donation-pt.json",
+    "future": "https://goodnews-278114.firebaseio.com/future-pt.json"
   },
   "about": {
     "mission": "Missão",
@@ -23,7 +23,7 @@
     "msg3": "Através desse portal a sociedade vai saber que existe um amanhã de possibilidades e que a derrota ao Coronavírus vai entrar na história como o momento em que nos conectamos  e construímos um futuro melhor.",
     "msg4": "Esse portal não tem qualquer direcionamento político, nenhum relacionamento ou suporte vindo de qualquer nível de governo ou seus terceiros, tendo sua idealização e desenvolvimento inteiramente partido de membros da sociedade civil.",
     "msg5": "As pessoas  desse grupo são favoráveis ao isolamento social como melhor medida para o combate ao Covid-19 e defendem que todas as medidas e recomendação da Organização Mundial de Saúde (OMS) no combate ao Covid-19 sejam seguidas.",
-    "people": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1528195957&single=true&output=csv"
+    "people": "https://goodnews-278114.firebaseio.com/people.json"
   },
   "recovery": {
     "content": "https://covid19-server.chrismichael.now.sh/api/v1/AllReports",
