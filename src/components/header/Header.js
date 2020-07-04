@@ -36,7 +36,6 @@ const Header = () => {
       }
       <Link to='' className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'pt' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('pt') } }> PT </Link>
       <Link to='' className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'en' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('en') } }> EN </Link>
-      <Link to='' className={`${style.intlNavItem} ${localStorage.getItem('goodnewscoronavirus') === 'es' ? style.intlNavItemActive : ''}`} onClick={ () => { setLocale('es') } }> ES </Link>
     </>
   )
 

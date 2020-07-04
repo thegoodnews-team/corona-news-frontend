@@ -28,6 +28,38 @@ export default function Card({
     }
   }
 
+  function getDay(dateString) {
+    var d
+    if (localStorage.getItem('goodnewscoronavirus') === 'en') {
+      d = new Date(dateString)
+    } else {
+      var date = dateString.split('/')
+      d = new Date(date[1] + '/' + date[0] + '/' + date[2])
+    }
+    return d.getDate()
+  }
+
+  function getMonth(dateString) {
+    var msEn = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    var msPt = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
+    var days = []
+    var day = []
+    var d
+
+    if (localStorage.getItem('goodnewscoronavirus') === 'en') {
+      d = new Date(dateString)
+      days = msEn
+      day = d.getDay()
+    } else {
+      days = msPt
+      var date = dateString.split('/')
+      d = new Date(date[1] + '/' + date[0] + '/' + date[2])
+      day = d.getDay()
+    }
+
+    return days[day]
+  }
+
   return (
     <>
       <div className="card">
@@ -43,24 +75,29 @@ export default function Card({
             })
           }
         >
+
+          <div className="card-header-date">
+            <div className="card-header-date-day">{getDay(date)}</div>
+            <div className="card-header-date-month">{getMonth(date)}</div>
+          </div>
+
           <div className="news">
             <div
-              className="news-img"
+              className="news-img2"
               style={{ backgroundImage: `url('${linkImg}')` }}
             />
-
             <div className="card-body card-body-height">
+              <div className="card-body-header-category">{fonte}</div>
               <p className="card-text">{title}</p>
             </div>
-
           </div>
+
         </a>
-        <div className="card-footer bg-transparent text-footer-size">
-          <div className="float-left news-fonte w-50">{fonte}</div>
-          <ShareBtn onClick={() => onShareVia()} />
-          <div className={HasNavigatorShare() ? 'float-right margin-right' : 'float-right'}>{date}</div>
-        </div>
+
+        <ShareBtn onClick={() => onShareVia()} />
+
       </div>
+
     </>
   )
 }
@@ -80,7 +117,7 @@ function ShareBtn({ onClick }) {
       <div className="float-right">
         <img
           onClick={onClick}
-          className="share "
+          className="share"
           src={Share}
           alt="icon clock"
         ></img>

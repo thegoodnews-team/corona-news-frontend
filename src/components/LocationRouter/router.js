@@ -19,8 +19,7 @@ const router = () => {
     'pt-BR': 'pt',
     'en-US': 'en',
     en: 'en',
-    pt: 'pt',
-    es: 'es'
+    pt: 'pt'
   }
 
   if (isLocaleValid(storedLocale) && !hasLocation(location)) {

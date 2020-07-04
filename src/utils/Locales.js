@@ -3,8 +3,7 @@ import intl from 'react-intl-universal'
 const load = location => {
   return {
     pt: require('../locales/pt-BR.json'),
-    en: require('../locales/en-US.json'),
-    es: require('../locales/es.json')
+    en: require('../locales/en-US.json')
   }[location]
 }
 
@@ -13,7 +12,7 @@ export const hasLocation = location => {
 }
 
 export const isLocaleValid = locale => {
-  return ['en', 'pt', 'es', 'pt-BR', 'en-US'].includes(locale)
+  return ['en', 'pt', 'pt-BR', 'en-US'].includes(locale)
 }
 
 const loadLocale = locale => {
