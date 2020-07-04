@@ -9,7 +9,7 @@
 .card-body-header-category {
   position: absolute;
   font-size: 13px;
-  top: 199px;
+  top: 249px;
   left: 0;
   padding: 8px 14px;
   line-height: 15px;
@@ -18,17 +18,16 @@
 .share {
   position: absolute;
   font-size: 13px;
-  top: 302px;
+  top: 352px;
   right: 0;
-  margin-right: 12px;
-  margin-top: 12px;
+  margin: 12px;
   line-height: 30px;
   height: 15px;
   width: 15px;
 }
 
 .ad {
-  height: 345px;
+  height: auto;
 }
 
 .card-header-date,
@@ -66,7 +65,7 @@
 }
 
 .news > .news-img2 {
-  height: 230px;
+  height: 280px;
   width: auto;
   background-position: center center;
   background-size: cover;

@@ -24,6 +24,13 @@ export default function Card({
       const data = {
         text: `[${date}] [${cardProp.source} ${fonte}]  ${title}. ${cardProp.knowmore} ${buildURL()}`
       }
+
+      sendAnalitycs({
+        name: link,
+        category: analyticsCategory,
+        type: 'SHAREVIA'
+      })
+
       navigator.share(data)
     }
   }
@@ -123,7 +130,9 @@ function ShareBtn({ onClick }) {
         ></img>
       </div>
     )
-  } else return null
+  } else {
+    return null
+  }
 }
 
 function HasNavigatorShare() {
