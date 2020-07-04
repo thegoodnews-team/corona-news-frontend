@@ -1,5 +1,5 @@
 
-export default function nFormatter(num, digits = 2) {
+export default function nFormatter(num, digits = 3) {
   var si = [
     { value: 1, symbol: '' },
     { value: 1E3, symbol: 'k' },
