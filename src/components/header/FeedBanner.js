@@ -22,7 +22,7 @@ export const FeedBanner = ({ displayBanner }) => {
 
       const data = await getItems(content)
       setWorldRecovered(formatNumber(data.reports[0].recovered))
-      setBrazilRecovered(formatNumber(data.reports[0].table[0].find(c => c.Country === 'Brazil').TotalRecovered))
+      setBrazilRecovered(formatNumber(data.reports[0].table[0].find(c => c.Country === 'Brazil').TotalRecovered.replace(',', '')))
     })()
   }, [])
 
