@@ -56,12 +56,12 @@ export default function Card({
     if (localStorage.getItem('goodnewscoronavirus') === 'en') {
       d = new Date(dateString)
       days = msEn
-      day = d.getDay()
+      day = d.getMonth()
     } else {
       days = msPt
       var date = dateString.split('/')
       d = new Date(date[1] + '/' + date[0] + '/' + date[2])
-      day = d.getDay()
+      day = d.getMonth()
     }
 
     return days[day]
