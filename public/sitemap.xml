@@ -65,25 +65,4 @@
 		
 	</url>
 
-	<!-- ES -->
-  <url>
-		<loc>https://thegoodnewscoronavirus.com/es</loc>
-		<changefreq>daily</changefreq>
-		
-	</url>
-	<url>
-		<loc>https://thegoodnewscoronavirus.com/es/about</loc>
-		<changefreq>daily</changefreq>
-		
-	</url>
-	<url>
-		<loc>https://thegoodnewscoronavirus.com/es/future</loc>
-		<changefreq>daily</changefreq>
-		
-	</url>
-	<url>
-		<loc>https://thegoodnewscoronavirus.com/es/news</loc>
-		<changefreq>daily</changefreq>
-		
-	</url>
 </urlset>

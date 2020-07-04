@@ -1,6 +1,5 @@
 const routesByLocation = {
-  en: ['/', '/news', '/services', '/future', '/about'],
-  es: ['/', '/news', '/future', '/about']
+  en: ['/', '/news', '/services', '/future', '/about']
 }
 
 export default function filterRoutes(location) {
