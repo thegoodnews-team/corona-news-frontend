@@ -6,7 +6,6 @@ import ThemeContext from '../context/ThemeContext'
 import themes from '../context/themes.module.css'
 import PropTypes from 'prop-types'
 import intl from 'react-intl-universal'
-import getItems from '../../utils/fetchUrl'
 import formatNumber from '../../utils/FormatNumber'
 
 export const FeedBanner = ({ displayBanner }) => {
@@ -15,6 +14,12 @@ export const FeedBanner = ({ displayBanner }) => {
   const theme = useContext(ThemeContext)
   const recoveryData = intl.get('recovery')
   const locale = localStorage.getItem('goodnewscoronavirus')
+
+  const getItems = async (link) => {
+    const response = await fetch(link)
+    const data = await response.json()
+    return data
+  }
 
   useEffect(() => {
     (async () => {
