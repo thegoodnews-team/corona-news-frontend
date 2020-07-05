@@ -8,11 +8,11 @@
     "about": "Sobre"
   },
   "json-data": {
-    "newsLink": "https://goodnews-278114.firebaseio.com/news-pt.json",
-    "initiatives": "https://goodnews-278114.firebaseio.com/initiatives-pt.json",
-    "freeServices": "https://goodnews-278114.firebaseio.com/freeServices-pt.json",
-    "donation": "https://goodnews-278114.firebaseio.com/donation-pt.json",
-    "future": "https://goodnews-278114.firebaseio.com/future-pt.json"
+    "newsLink": "News-pt-BR",
+    "initiatives": "Iniciativas",
+    "freeServices": "Serviços gratuitos",
+    "donation": "Donate",
+    "future": "Articles-pt-BR"
   },
   "about": {
     "mission": "Missão",
@@ -23,7 +23,7 @@
     "msg3": "Através desse portal a sociedade vai saber que existe um amanhã de possibilidades e que a derrota ao Coronavírus vai entrar na história como o momento em que nos conectamos  e construímos um futuro melhor.",
     "msg4": "Esse portal não tem qualquer direcionamento político, nenhum relacionamento ou suporte vindo de qualquer nível de governo ou seus terceiros, tendo sua idealização e desenvolvimento inteiramente partido de membros da sociedade civil.",
     "msg5": "As pessoas  desse grupo são favoráveis ao isolamento social como melhor medida para o combate ao Covid-19 e defendem que todas as medidas e recomendação da Organização Mundial de Saúde (OMS) no combate ao Covid-19 sejam seguidas.",
-    "people": "https://goodnews-278114.firebaseio.com/people.json"
+    "people": "Pessoas"
   },
   "recovery": {
     "content": "https://covid19-server.chrismichael.now.sh/api/v1/AllReports",

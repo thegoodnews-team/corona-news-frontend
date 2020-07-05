@@ -12,7 +12,8 @@
     "react-intl-universal": "^2.2.5",
     "react-notifications-component": "^2.4.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "tabletop": "^1.6.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
