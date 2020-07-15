@@ -1,5 +1,5 @@
 
-export default function nFormatter(num, digits = 1) {
+export function formatter(num, digits = 1) {
   var si = [
     { value: 1, symbol: '' },
     { value: 1E3, symbol: 'k' },
@@ -17,4 +17,17 @@ export default function nFormatter(num, digits = 1) {
     }
   }
   return (num / si[i].value).toFixed(digits).replace(rx, '$1') + si[i].symbol
+}
+
+function format(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+}
+
+function removeComma(num) {
+  return num.toString().replace(/\D+/g, '')
+}
+
+export function formatNumber(num) {
+  var number = removeComma(num)
+  return format(number)
 }

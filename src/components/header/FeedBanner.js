@@ -6,7 +6,7 @@ import ThemeContext from '../context/ThemeContext'
 import themes from '../context/themes.module.css'
 import PropTypes from 'prop-types'
 import intl from 'react-intl-universal'
-import formatNumber from '../../utils/FormatNumber'
+import { formatter, formatNumber } from '../../utils/FormatNumber'
 
 export const FeedBanner = ({ displayBanner }) => {
   const [worldRecovered, setWorldRecovered] = useState('')
@@ -26,8 +26,8 @@ export const FeedBanner = ({ displayBanner }) => {
       const { content } = recoveryData
 
       const data = await getItems(content)
-      setWorldRecovered(formatNumber(data.reports[0].recovered))
-      setBrazilRecovered(formatNumber(data.reports[0].table[0].find(c => c.Country === 'Brazil').TotalRecovered.toString().replace(',', '').replace(',', '')))
+      setWorldRecovered(formatter(data.reports[0].recovered))
+      setBrazilRecovered(formatNumber(data.reports[0].table[0].find(c => c.Country === 'Brazil').TotalRecovered.toString()))
     })()
   }, [])
 
