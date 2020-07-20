@@ -28,10 +28,10 @@ Todo commit em master automaticamente é carregado para [Produçao](http://thego
 
 ## Idealizadores
 
-  - (Fernando Fernandes)[https://www.linkedin.com/in/flasfl/]
-  - (Maciel Melo)[https://www.linkedin.com/in/macielmelo/]
-  - (Rafaela Fernandes)[https://www.linkedin.com/in/rafaela-fernandes/]
-  - (Daniel Barros)[https://www.linkedin.com/in/danielnbarros/]
+  - [Fernando Fernandes](https://www.linkedin.com/in/flasfl/)
+  - [Maciel Melo](https://www.linkedin.com/in/macielmelo/)
+  - [Rafaela Fernandes](https://www.linkedin.com/in/rafaela-fernandes/)
+  - [Daniel Barros](https://www.linkedin.com/in/danielnbarros/)
 
 ## Apoiadores
   - (Thougtworks)[https://www.thoughtworks.com/locations/brasil]
