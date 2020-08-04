@@ -22,7 +22,7 @@ export const FeedBanner = ({ displayBanner }) => {
   }
 
   useEffect(() => {
-    ;(async () => {
+    (async () => {
       const { world, brazil } = recoveryData
 
       const worldData = await getItems(world)
@@ -75,5 +75,5 @@ export const FeedBanner = ({ displayBanner }) => {
 export default FeedBanner
 
 FeedBanner.propTypes = {
-  displayBanner: PropTypes.string.isRequired,
+  displayBanner: PropTypes.string.isRequired
 }
