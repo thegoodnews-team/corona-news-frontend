@@ -22,38 +22,58 @@ export const FeedBanner = ({ displayBanner }) => {
   }
 
   useEffect(() => {
-    (async () => {
-      const { content } = recoveryData
+    ;(async () => {
+      const { world, brazil } = recoveryData
 
-      const data = await getItems(content)
-      setWorldRecovered(formatter(data.reports[0].recovered))
-      setBrazilRecovered(formatNumber(data.reports[0].table[0].find(c => c.Country === 'Brazil').TotalRecovered.toString()))
+      const worldData = await getItems(world)
+      const brazilData = await getItems(brazil)
+      setWorldRecovered(formatter(worldData.totalRecovered))
+      setBrazilRecovered(formatNumber(brazilData[0].totalRecovered))
     })()
   }, [])
 
   return (
-    <a className={`${style.counterBanner} ${themes[theme + '-secundary']}`} style={{ display: displayBanner }}
-      href='https://www.worldometers.info/coronavirus' target='_blank' rel="noopener noreferrer">
-
-      <div className={`${style.counterBannerTitle} ${style.displayMdInline}`}> {recoveryData.description} <span> {recoveryData.description2}</span></div>
+    <a
+      className={`${style.counterBanner} ${themes[theme + '-secundary']}`}
+      style={{ display: displayBanner }}
+      href="https://www.worldometers.info/coronavirus"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div className={`${style.counterBannerTitle} ${style.displayMdInline}`}>
+        {' '}
+        {recoveryData.description} <span> {recoveryData.description2}</span>
+      </div>
       <div className={style.displayMdInline}>
-
         {locale === 'pt' ? (
           <>
-            <span className={style.counterBannerText}><img src={brFlag} className={style.counterBannerFlag} alt='Bandeira do Brasil' /> {brazilRecovered}</span>
+            <span className={style.counterBannerText}>
+              <img
+                src={brFlag}
+                className={style.counterBannerFlag}
+                alt="Bandeira do Brasil"
+              />{' '}
+              {brazilRecovered}
+            </span>
           </>
-        ) : <></>
-        }
-        <span className={style.counterBannerText}><img src={worldFlag} className={style.counterBannerFlag} alt='Mundo' />{worldRecovered}</span>
-
+        ) : (
+          <></>
+        )}
+        <span className={style.counterBannerText}>
+          <img
+            src={worldFlag}
+            className={style.counterBannerFlag}
+            alt="Mundo"
+          />
+          {worldRecovered}
+        </span>
       </div>
-
-    </a >
+    </a>
   )
 }
 
 export default FeedBanner
 
 FeedBanner.propTypes = {
-  displayBanner: PropTypes.string.isRequired
+  displayBanner: PropTypes.string.isRequired,
 }
