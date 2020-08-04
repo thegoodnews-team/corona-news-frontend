@@ -22,7 +22,8 @@
     "people": "Pessoas"
   },
   "recovery": {
-    "content": "https://covid19-server.chrismichael.now.sh/api/v1/AllReports",
+    "brazil": "https://api.coronatracker.com/v3/stats/worldometer/country?countryCode=BR",
+    "world": "https://api.coronatracker.com/v3/stats/worldometer/global",
     "description": "People healed ",
     "description2": "from coronavírus"
   },
