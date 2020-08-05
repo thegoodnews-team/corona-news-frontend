@@ -43,22 +43,6 @@ export default function Routes() {
           </MainLayout>
         </Route>
 
-        <Route exact path="/initiative">
-          <ThemeProvider value={themes.purple} >
-            <MainLayout>
-              <Initiatives />
-            </MainLayout>
-          </ThemeProvider>
-        </Route>
-
-        <Route exact path="/services">
-          <ThemeProvider value={themes.green} >
-            <MainLayout>
-              <FreeServices />
-            </MainLayout>
-          </ThemeProvider>
-        </Route>
-
         <Route exact path="/future">
           <ThemeProvider value={themes.darkKhaki} >
             <MainLayout>
