@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import intl from 'react-intl-universal'
 import CardsGrid from '../../components/cards-grid'
 import getItemsFromSpreadsheet from '../../utils/fetchUrl'
+import VaccineStatus from './VaccineStatus'
 
 export default function Home() {
   const [news, setNews] = useState([])
@@ -17,5 +18,10 @@ export default function Home() {
     loadContent()
   }, [])
 
-  return <CardsGrid content={news} analyticsCategory="NEWS" />
+  return (
+    <>
+      <VaccineStatus numOfDosesBrazil={130} numOfDosesWorld={9482349} />
+      <CardsGrid content={news} analyticsCategory="NEWS" />
+    </>
+  )
 }
