@@ -5,7 +5,7 @@ import getItemsFromSpreadsheet from '../../utils/fetchUrl'
 import VaccineStatus from './VaccineStatus'
 import csv from 'csvtojson'
 import request from 'request'
-import { formatter, formatNumber } from '../../utils/FormatNumber'
+import { formatNumber } from '../../utils/FormatNumber'
 
 export default function Home() {
   const [news, setNews] = useState([])
@@ -36,7 +36,7 @@ export default function Home() {
   }, [])
   return (
     <>
-      <VaccineStatus numOfDosesBrazil={formatNumber(brazil)} numOfDosesWorld={formatter(world)} />
+      <VaccineStatus numOfDosesBrazil={formatNumber(brazil)} numOfDosesWorld={world} />
       <CardsGrid content={news} analyticsCategory="NEWS" />
     </>
   )
