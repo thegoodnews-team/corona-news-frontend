@@ -64,5 +64,9 @@
   "cookies": {
     "consent": "Utilizamos cookies para personalizar anúncios e analisar nosso tráfego. Nós não compartilhamos suas informações.",
     "button": "Eu entendi"
+  },
+  "vaccine": {
+    "brazil": "pessoas vacinadas no Brasil",
+    "world": "pessoas vacinadas no mundo"
   }
 }
