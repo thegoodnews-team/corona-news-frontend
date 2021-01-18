@@ -16,11 +16,11 @@ export default function VaccineStatus({ numOfDosesBrazil, numOfDosesWorld }) {
   )
 
   const worldCount = (
-    <h2 className="fw-light">
+    <h3 className="fw-light">
       🇧🇷
       <br />
       {`${numOfDosesWorld.toLocaleString(lang)} ${vaccineProp.world}`}
-    </h2>
+    </h3>
   )
 
   return (
