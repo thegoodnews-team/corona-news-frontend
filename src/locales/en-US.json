@@ -23,7 +23,7 @@
   "recovery": {
     "brazil": "https://api.coronatracker.com/v3/stats/worldometer/country?countryCode=BR",
     "world": "https://api.coronatracker.com/v3/stats/worldometer/global",
-    "description": "People healed ",
+    "description": "Vaccinated people ",
     "description2": "from coronavírus"
   },
   "footer": {

@@ -1,12 +1,14 @@
 import React, { useEffect, useState, useContext } from 'react'
 import style from './css/bannerfeed.module.css'
 import brFlag from './assets/brazil.svg'
+import { formatter } from '../../utils/FormatNumber'
 import worldFlag from './assets/planet-earth.svg'
 import ThemeContext from '../context/ThemeContext'
 import themes from '../context/themes.module.css'
 import PropTypes from 'prop-types'
 import intl from 'react-intl-universal'
-import { formatter, formatNumber } from '../../utils/FormatNumber'
+import csv from 'csvtojson'
+import request from 'request'
 
 export const FeedBanner = ({ displayBanner }) => {
   const [worldRecovered, setWorldRecovered] = useState('')
@@ -15,20 +17,19 @@ export const FeedBanner = ({ displayBanner }) => {
   const recoveryData = intl.get('recovery')
   const locale = localStorage.getItem('goodnewscoronavirus')
 
-  const getItems = async (link) => {
-    const response = await fetch(link)
-    const data = await response.json()
-    return data
-  }
-
   useEffect(() => {
     (async () => {
-      const { world, brazil } = recoveryData
+      csv()
+        .fromStream(request.get('https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/Brazil.csv'))
+        .then(json => {
+          setBrazilRecovered(formatter(json[json.length - 1].total_vaccinations))
+        })
 
-      const worldData = await getItems(world)
-      const brazilData = await getItems(brazil)
-      setWorldRecovered(formatter(worldData.totalRecovered))
-      setBrazilRecovered(formatNumber(brazilData[0].totalRecovered))
+      csv()
+        .fromStream(request.get(' https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv'))
+        .then(json => {
+          setWorldRecovered(formatter(json[json.length - 26].total_vaccinations))
+        })
     })()
   }, [])
 
