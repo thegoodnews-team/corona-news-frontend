@@ -42,7 +42,6 @@ export const FeedBanner = ({ displayBanner }) => {
       rel="noopener noreferrer"
     >
       <div className={`${style.counterBannerTitle} ${style.displayMdInline}`}>
-        {' '}
         {recoveryData.description} <span> {recoveryData.description2}</span>
       </div>
       <div className={style.displayMdInline}>
@@ -60,14 +59,17 @@ export const FeedBanner = ({ displayBanner }) => {
         ) : (
           <></>
         )}
-        <span className={style.counterBannerText}>
-          <img
-            src={worldFlag}
-            className={style.counterBannerFlag}
-            alt="Mundo"
-          />
-          {worldRecovered}
-        </span>
+        {locale !== 'pt' ? (
+          <span className={style.counterBannerText}>
+            <img
+              src={worldFlag}
+              className={style.counterBannerFlag}
+              alt="Mundo"
+            />
+            {worldRecovered}
+          </span>
+        ) : (<></>)
+        }
       </div>
     </a>
   )
