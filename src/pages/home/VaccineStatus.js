@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import BrazilIcon from '../../assets/brazil-flag.svg'
 import intl from 'react-intl-universal'
 import vaccine from '../../assets/vacina.svg'
 import CountUp from 'react-countup'

@@ -36,13 +36,9 @@ export default function Card({
   }
 
   function getDay(dateString) {
-    var d
-    if (localStorage.getItem('goodnewscoronavirus') === 'en') {
-      d = new Date(dateString)
-    } else {
-      var date = dateString.split('/')
-      d = new Date(date[1] + '/' + date[0] + '/' + date[2])
-    }
+    var date = dateString.split('/')
+    var d = new Date(date[1] + '/' + date[0] + '/' + date[2])
+
     return d.getDate()
   }
 
@@ -54,15 +50,13 @@ export default function Card({
     var d
 
     if (localStorage.getItem('goodnewscoronavirus') === 'en') {
-      d = new Date(dateString)
       days = msEn
-      day = d.getMonth()
     } else {
       days = msPt
-      var date = dateString.split('/')
-      d = new Date(date[1] + '/' + date[0] + '/' + date[2])
-      day = d.getMonth()
     }
+    var date = dateString.split('/')
+    d = new Date(date[1] + '/' + date[0] + '/' + date[2])
+    day = d.getMonth()
 
     return days[day]
   }

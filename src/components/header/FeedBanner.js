@@ -28,7 +28,8 @@ export const FeedBanner = ({ displayBanner }) => {
       csv()
         .fromStream(request.get(' https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.csv'))
         .then(json => {
-          setWorldRecovered(formatter(json[json.length - 26].total_vaccinations))
+          const worlds = json.filter(c => c.location === 'World')
+          setWorldRecovered(formatter(worlds[worlds.length - 1].total_vaccinations))
         })
     })()
   }, [])
