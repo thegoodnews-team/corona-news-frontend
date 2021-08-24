@@ -5,8 +5,8 @@
     "about": "About"
   },
   "json-data": {
-    "newsLink": "News-en-US",
-    "future": "Articles-en-US",
+    "newsLink": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=503048262&single=true&output=csv",
+    "future": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1458968004&single=true&output=csv",
     "freeServices": "Free-Services"
   },
   "about": {
@@ -18,7 +18,7 @@
     "msg3": "Through this portal, the society will know that there is a world of possibilities and that the defeat of the coronavirus will be in history as the moment that we got connected and built a better future",
     "msg4": "This portal has no political engagement whatsoever, nor any support coming from any government or his third parties, with its idealization and development being entitlement of members of the civil society",
     "msg5": "The people of this group are in favor of  social distancing as the best approach to fight the covid-19 and strongly advise that all the measures recommended by the World Health Organization (WHO) are followed.",
-    "people": "Pessoas"
+    "people": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNKZ8-SjW1e8oyt_DNGgdlHjJGbUTZuaX88LSgD5oDR7_ctYXM3Sh5NojrCxIRSHkwgiKuCi6XQmOh/pub?gid=1528195957&single=true&output=csv"
   },
   "recovery": {
     "brazil": "https://api.coronatracker.com/v3/stats/worldometer/country?countryCode=BR",

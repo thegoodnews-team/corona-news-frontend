@@ -19,6 +19,7 @@ export default function CardSearch({ color, spreadsheetLink, labelTitle, labelFi
   useEffect(() => {
     getservicesFromSpreadsheet(spreadsheetLink)
       .then(service => {
+        console.log(service)
         setServices(service.reverse())
         setAllServices(service)
         setCategories([...getCategories(service)])
